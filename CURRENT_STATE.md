@@ -13,8 +13,8 @@
 | **会员级别** | Google AI Ultra 30 TB |  **已确认** | Google One 首页已显示 "Google AI Ultra, 30 TB" (Melvin Guo) |
 | **订阅成本** | ₺2,949.99 / 月 |  **已确认** | Apple 订阅页面截图证实，12 月 7 日自动续费 |
 | **YouTube Premium** | 个人与品牌频道会员 |  **已确认** | 个人身份与 yoursolar 品牌频道均显示 Premium 标识 |
-| **Colab 算力** | 约 2,000 ~ 2,500 CU/月 | ⏳ 待握手回读 | 本地 `google-colab-cli` v0.7.5 已安装就绪，待单次 OAuth 激活 |
-| **G4 96GB GPU** | NVIDIA RTX PRO 6000 Ada | ⏳ 待开机测试 | `colab new --gpu G4` 待验证分配延迟与 CU 扣费率 |
+| **Colab 算力** | 约 2,000 ~ 2,500 CU/月 |  **已确认 (2,500.00 CU)** | `colab usage` 回读当前满额余额：2,500.00 计算单元 |
+| **G4 96GB GPU** | NVIDIA RTX PRO 6000 Ada/Blackwell |  **实测开机验证成功** | `colab run --gpu G4` 秒级分配：NVIDIA RTX PRO 6000 Blackwell Server Edition (97,887 MiB ~96GB 显存，176GB 内存，236GB 磁盘，CUDA 13.0)；执行完毕后已自动安全终止 |
 | **Cloud Credits** | 约 $100 / 月 | ⏳ 待激活 | 待注册 Google Cloud Developer Program 绑定账单 |
 | **Google Flow** | 约 25,000 点 / 月 | ⏳ 待使用 | 网页后台已确认包含，待短剧音画生成时调用 |
 | **Antigravity** | Gemini 4 Argon + Claude Opus |  **已就绪** | 顶级模型池在 AGY 中可用，云端 Remote Agents 已灰度放量 |
