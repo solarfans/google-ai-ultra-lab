@@ -11,6 +11,10 @@ import os
 import time
 import base64
 
+# Silence tqdm and huggingface verbose progress bars completely
+os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
+os.environ["TQDM_DISABLE"] = "1"
+
 print("==================================================")
 print("🎬 [REMOTE G4] 楚氏春秋·外传章 - Shot 02 刘禅御书房定妆生成")
 print("==================================================")

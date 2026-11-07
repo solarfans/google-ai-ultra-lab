@@ -88,8 +88,12 @@ def main():
         if in_b64:
             b64_lines.append(line_s)
         else:
-            print(f"  [G4 CLOUD] {line_s}")
-            remote_logs.append(line_s)
+            # Filter out noisy progress bar updates to prevent AGY screen spam
+            if any(k in line_s for k in ["%|", "B/s", "it/s", "reconstructing file", "downloading bytes"]):
+                continue
+            if line_s:
+                print(f"  [G4 CLOUD] {line_s}")
+                remote_logs.append(line_s)
 
     proc.stdout.close()
     returncode = proc.wait()
