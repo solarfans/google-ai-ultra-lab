@@ -1,7 +1,7 @@
 # Google AI Ultra Lab — Current State & Ledger
 
 **最后更新**：2026-11-07 SGT  
-**项目状态**：`V1_0_0_INITIATED / AGY_TAKEOVER / REPO_CREATED / COLAB_CLI_INSTALLED`  
+**项目状态**：`EP01_FULL_5_SHOTS_DELIVERED / FINAL_MP4_COMPOSED / ZERO_BURN_VERIFIED / MASTER_AUDIO_EXTRACTED`  
 **负责席位**：Antigravity Desktop (MacBook)  
 
 ---
@@ -25,7 +25,13 @@
 ## 2. 工程规划与执行状态
 
 - **战略路线图**：已确立并归档至 [**ROADMAP.md**](./ROADMAP.md)，涵盖短剧工业化、TikTok/YouTube 自动化爆款矩阵、有声书长音频三大引擎。
-- **G4 容器实跑首镜落地**：已成功在 G4 96GB Blackwell 上跑通 Shot 02（刘禅御书房定妆出图，1344x768），纯推理仅 2.01s，实际消耗 0.00 CU，高清资产已归档。
+- **G4 批量渲染通关 (5 镜全量集齐)**：
+  - 首镜 Shot 02 定妆出图验证通过（2.01s，0.00 CU）；
+  - 剩余 4 镜（Shot 01、03、04、05）在 G4 单容器中批量完成推理，纯 GPU 耗时仅 **4.58s**，实际扣减 **0.00 CU**，全量资产 1344x768 归档入库。
+- **第 1 集成片全流程自动编排落地**：
+  - 打造端到端编排脚本 [**scripts/compose_short_drama.py**](./scripts/compose_short_drama.py)；
+  - 自动调度 Neural 级多角色对白配音（内侍/刘禅/诸葛亮）、动态运镜（Zoom/Pan/OTS）、高对比度中文字幕卡与雨夜氛围混音；
+  - 输出首部完整 32.5 秒成品短剧 [**pipelines/short_drama/chu_shi_chun_qiu_ep01_final.mp4**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_final.mp4) (5.24 MB)、独立字幕 [**chu_shi_chun_qiu_ep01.srt**](./pipelines/short_drama/chu_shi_chun_qiu_ep01.srt) 及无损音频母带 [**chu_shi_chun_qiu_ep01_master.mp3**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_master.mp3)。
 - **本地私有无审查大模型节点**：已完成 Ollama + Metal 部署与 32K 上下文扩容，实现按需智能收口与双轨记忆，完整架构详见 [**docs/local_uncensored_llm_node.md**](./docs/local_uncensored_llm_node.md)。
 - **Cloudflare 基础设施资产库**：已梳理蒸馏全景域名与凭据规范，归档至 [**references/cloudflare_infra_knowledge.md**](./references/cloudflare_infra_knowledge.md)。
 - **算力守门员 Skill**：已安装并固化 `google-ai-ultra` 算力计量与防漏跑规则。
@@ -34,6 +40,6 @@
 
 ## 3. 下一步行动计划
 
-1. **G4 容器实跑验证**：通过 `ultra_meter.py run` 启动 G4 容器，渲染《楚氏春秋》第 2 镜（刘禅御书房定妆出图，1344x768），验证单镜耗时与实际 CU 扣减。
-2. **生成物回传与质检**：拉取图像至本地资产库 `pipelines/short_drama/assets/` 进行人物特征与画质确认。
-3. **推进第 1 集全量 5 镜视效**：定妆确认后批量出图并接驳 MiniMax H3 进行 5 秒动态转绘。
+1. **测试发布渠道验证**：将生成的首集成片测试推送至 YouTube 品牌频道（yoursolar 已激活 Premium）或 TikTok，验证平台画质转码与版权机制。
+2. **生成式视频动作升级**：探索在 G4 Blackwell 上接驳 Wan2.1 / CogVideoX 扩散模型，为关键帧注入更丰富的肢体与口型微动态。
+3. **推进小说广播剧管线 (引擎 3)**：利用 Gemini 对白提取与本地/云端 TTS 模型，生成第一期《楚氏春秋》长篇有声广播剧。

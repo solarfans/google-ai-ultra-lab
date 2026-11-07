@@ -45,15 +45,17 @@
 
 ## 三、推进路线图概览（详见 ROADMAP.md）
 
-- **阶段 1：算力基线验证与首镜画格实测（Day 1 - 3, 正在进行）**
+- **阶段 1：算力基线验证与首镜画格实测（已达成）**
   - [x] 安装官方 `google-colab-cli` 命令行工具与 OAuth 本地自动握手。
   - [x] 成功开机 G4 96GB 容器验证硬件参数与自动安全关机（0 算力漏扣）。
   - [x] 建立 `google-ai-ultra` 算力计量与防漏扣专属 Skill。
   - [x] 审计社区前沿开源项目（`HGhub` 短剧客户端、`9B Uncensored` 恶斗剧本模型），归档至 [`references/external_tools_audit.md`](./references/external_tools_audit.md)。
   - [x] 提取《楚氏春秋》外传章 5 镜短剧规范（`pipelines/short_drama/chu_shi_chun_qiu_ep01.json`）。
-  - [ ] **当前即时执行**：Colab G4 运行 Shot 02 定妆出图与 5 秒视频生成，验证单镜真实 CU 消耗。
-- **阶段 2：MVP 成片交付与海外发布渠道打通（Day 4 - 8）**
-  - [ ] 批量跑通《楚氏春秋》第一集 5 镜视效，ffmpeg 自动合成 30s 完整成片。
+  - [x] **基准测试**：Colab G4 运行 Shot 02 定妆出图（1344x768），实测推理 2.01s，单镜扣减 0.00 CU。
+- **阶段 2：MVP 成片交付与海外发布渠道打通（推进中）**
+  - [x] 批量跑通《楚氏春秋》第一集全量 5 镜视效画格（Colab G4 单容器批跑 4.58s，0.00 CU 扣减）。
+  - [x] 研发端到端短剧合成编排引擎（`scripts/compose_short_drama.py`），整合多角色 Neural 配音、动态运镜、中文字幕卡与雨夜氛围混音。
+  - [x] 交付首部 32.5 秒完整短剧成品视频 `chu_shi_chun_qiu_ep01_final.mp4` (5.24 MB)、`chu_shi_chun_qiu_ep01.srt` 及母带音频。
   - [ ] 试水海外 TikTok 与 YouTube Shorts 自动排期发布测试。
 - **阶段 3：自动化内容管线与 24/7 无人值守发布（Day 9 - 18）**
   - [ ] 充分发挥 MacBook 24 小时开机中枢优势，打通热点选题到视频自动上架全流程。

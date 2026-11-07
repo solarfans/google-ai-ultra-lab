@@ -16,3 +16,5 @@ venv/
 *.log
 .DS_Store
 services/telegram_bot/data/
+pipelines/short_drama/assets/clips/
+pipelines/short_drama/assets/concat_list.txt
