@@ -21,8 +21,16 @@
 
 ---
 
-## 2. 下一步行动计划
+## 2. 工程规划与执行状态
 
-1. **终端 OAuth 单次授权**：在已登录 Ultra 账号的 Chrome 中完成 `colab usage` 的单次点击放行。
-2. **G4 开机短跑测试**：运行 5 分钟测试脚本，回读实际 GPU 硬件参数、显存与扣费速率后立即关机。
-3. **第一部分镜脚本起草**：为 30 秒 MVP 短剧选定剧本框架并开始出定妆首帧。
+- **战略路线图**：已确立并归档至 [**ROADMAP.md**](./ROADMAP.md)，涵盖短剧工业化、TikTok/YouTube 自动化爆款矩阵、有声书长音频三大引擎。
+- **外部工具审计**：已完成 `Minireel/HGhub` 与 `DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED` 评估并归档至 [`references/external_tools_audit.md`](./references/external_tools_audit.md)。
+- **算力守门员 Skill**：已安装并固化 `google-ai-ultra` 算力计量与防漏跑规则。
+
+---
+
+## 3. 下一步行动计划
+
+1. **G4 容器实跑验证**：通过 `ultra_meter.py run` 启动 G4 容器，渲染《楚氏春秋》第 2 镜（刘禅御书房定妆出图，1344x768），验证单镜耗时与实际 CU 扣减。
+2. **生成物回传与质检**：拉取图像至本地资产库 `pipelines/short_drama/assets/` 进行人物特征与画质确认。
+3. **推进第 1 集全量 5 镜视效**：定妆确认后批量出图并接驳 MiniMax H3 进行 5 秒动态转绘。
