@@ -60,7 +60,7 @@ def get_cf_auth():
 | `solarfans.cc`<br>`www.solarfans.cc` | **Cloudflare Pages**<br>(`solarfans-ai-lab.pages.dev`) | 静态前端 / 生产部署 | 官方门户网站。<br>源码仓库: `solarfans/solarfans-ai-lab` |
 | `ops.solarfans.cc` | **Cloudflare Access + Worker + KV** | 本机 AgentOps SQLite 投影 | 私有运维看板，需要 One-Time PIN 邮箱校验。<br>规范: `ai-agent-lab-canon#50` |
 | `mcp.solarfans.cc` | **Cloudflare Tunnel (Remote)**<br>(ID: `326dc18f-...`) | 本机 `127.0.0.1:8765` | ALB Track B ChatGPT MCP 穿透网关。<br>守护进程: `cc.solarfans.ai-local-bridge.track-b-cloudflared` |
-| `llm.solarfans.cc` | **Cloudflare Tunnel (Remote)**<br>+ Edge WAF API Key | 本机 `127.0.0.1:11434` (Ollama) | 本地无审查大模型 (DeepSeek-V4-Pro / Qwen3.5 9B) 全球穿透接入点，供 iPhone/Chatbox 等全终端使用。<br>- 鉴权方式: HTTP Bearer Token<br>- 默认 Key: `sk-ella-solarfans-2026`<br>- 边缘防护: 403 阻断无 Key 扫描 |
+| `llm.solarfans.cc` | **Cloudflare Tunnel (Remote)**<br>+ Edge WAF API Key | 本机 `127.0.0.1:11434` (Ollama) | 本地无审查大模型 (DeepSeek-V4-Pro / Qwen3.5 9B) 全球穿透接入点，供 iPhone/Chatbox 等全终端使用。<br>- 鉴权方式: HTTP Bearer Token<br>- 凭据读取: `CF_WAF_BEARER_KEY` (存入 `~/.hermes/.env`)<br>- 边缘防护: 403 阻断无 Key 扫描 |
 | `hooks.solarfans.cc` | **Cloudflare Tunnel** + Edge WAF | 本机 Webhook 接收端口 | 自动化事件回调与告警。带有签名验证 WAF 规则。 |
 | `instabox-direct-mcp-v1.wowsengkang.workers.dev` | **Cloudflare Workers** + KV | 边缘 Serverless | InstaBox Direct MCP 托管。<br>源码仓库: `solarfans/instabox-ops` |
 

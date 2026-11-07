@@ -14,11 +14,14 @@
   - 磁盘文件大小：5.6 GB
   - 统一内存常驻：约 4.7 GB (100% GPU 显存接管，0% CPU 阻塞)
 - **实测推理速率**：**43.89 tokens/秒**，首字延迟 < 0.2 秒
-- **上下文架构配置**：
-  - 架构原生支持：262,144 Tokens (256K)
-  - 活跃上下文配置：**32,768 Tokens (32K，约 40,000 汉字)**
-  - 单次最大输出限制：**4,096 Tokens**
-  - KV Cache 配置：`q8_0` + `OLLAMA_FLASH_ATTENTION=1` (仅占 ~1.5 GB 显存)
+- **多层上下文架构规范 (Multi-Tier Context Specifications)**：
+  - **GGUF 架构原生上限**：262,144 Tokens (256K)
+  - **Ollama 共享模型别名 (`uncensored`) 默认上限**：65,536 Tokens (64K)
+  - **Hermes / OpenClaw 客户端登记上限**：65,536 Tokens (64K)
+  - **Ella (Telegram Bot) 运行时配置**：
+    - 请求上下文 (`num_ctx`)：**32,768 Tokens (32K)**（平衡长篇推演与移动端长轮询延迟，实际中文字符数依分词器与内容波动，预估 2.5 万~4 万字）
+    - 单次最大生成 (`num_predict`)：**4,096 Tokens (4K)**
+  - **KV Cache 硬件参数**：`OLLAMA_KV_CACHE_TYPE=q8_0` + `OLLAMA_FLASH_ATTENTION=1` (32K 仅耗约 1.5GB 显存，64K 耗约 3.0GB 显存)
 
 ---
 
@@ -59,7 +62,7 @@
          `http://127.0.0.1:11434/v1`                                  `https://llm.solarfans.cc/v1`
          - 适用：Hermes / OpenClaw / AGY / 本机脚本                     - 适用：iPhone / iPad Chatbox 移动端
          - 特性：内核级 Socket，断网离线可用                            - 隧道：Cloudflare Remote Managed Tunnel
-         - 切换指令：`/model uncensored`                               - 防护：Edge WAF API Key (`sk-ella-solarfans-2026`)
+         - 切换指令：`/model uncensored`                               - 防护：Edge WAF API Key (`${CF_WAF_BEARER_KEY}`)
                                                                         - 未授权请求 403 阻断，零算力损耗
 ```
 
@@ -72,7 +75,7 @@
 ### 2. Chatbox 客户端配置 (iPhone / Mac / PC)
 - **模型提供商 (Model Provider)**: `OpenAI API`
 - **API 域名 (API Host)**: `https://llm.solarfans.cc` (或 `https://llm.solarfans.cc/v1`)
-- **API Key**: `sk-ella-solarfans-2026`
+- **API Key**: 从受保护环境 `~/.hermes/.env` 读取 `CF_WAF_BEARER_KEY`
 - **模型名称 (Model Name)**: `uncensored`
 
 ---
