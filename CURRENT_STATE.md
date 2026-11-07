@@ -18,13 +18,16 @@
 | **Cloud Credits** | 约 $100 / 月 | ⏳ 待激活 | 待注册 Google Cloud Developer Program 绑定账单 |
 | **Google Flow** | 约 25,000 点 / 月 | ⏳ 待使用 | 网页后台已确认包含，待短剧音画生成时调用 |
 | **Antigravity** | Gemini 4 Argon + Claude Opus |  **已就绪** | 顶级模型池在 AGY 中可用，云端 Remote Agents 已灰度放量 |
+| **本地 M3 Pro 算力** | Apple Silicon M3 Pro 36GB |  **已部署运行 (43.9 tok/s)** | 本地私有无审查大模型 (9B Heretic Uncensored)，32K 上下文，配备 Telegram Ella 守护进程与 Cloudflare 全球穿透 |
 
 ---
 
 ## 2. 工程规划与执行状态
 
 - **战略路线图**：已确立并归档至 [**ROADMAP.md**](./ROADMAP.md)，涵盖短剧工业化、TikTok/YouTube 自动化爆款矩阵、有声书长音频三大引擎。
-- **外部工具审计**：已完成 `Minireel/HGhub` 与 `DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED` 评估并归档至 [`references/external_tools_audit.md`](./references/external_tools_audit.md)。
+- **G4 容器实跑首镜落地**：已成功在 G4 96GB Blackwell 上跑通 Shot 02（刘禅御书房定妆出图，1344x768），纯推理仅 2.01s，实际消耗 0.00 CU，高清资产已归档。
+- **本地私有无审查大模型节点**：已完成 Ollama + Metal 部署与 32K 上下文扩容，实现按需智能收口与双轨记忆，完整架构详见 [**docs/local_uncensored_llm_node.md**](./docs/local_uncensored_llm_node.md)。
+- **Cloudflare 基础设施资产库**：已梳理蒸馏全景域名与凭据规范，归档至 [**references/cloudflare_infra_knowledge.md**](./references/cloudflare_infra_knowledge.md)。
 - **算力守门员 Skill**：已安装并固化 `google-ai-ultra` 算力计量与防漏跑规则。
 
 ---

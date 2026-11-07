@@ -18,6 +18,7 @@
   - **Google Cloud Credits**：约 $100/月（Google Developer Program 渠道）。
   - **Google Flow / Flow Music**：约 25,000 ~ 30,000 credits/月。
   - **Antigravity 顶级配额**：Gemini 4 Argon、Claude Opus、Gemini 3.8 Flash 及云端 Remote Agents。
+  - **本地混合算力底座**：MacBook M3 Pro 承载私有无审查大模型 (`uncensored`, 32K 上下文, 43.9 tok/s, Metal GPU 加速)，配备 Telegram Bot Ella (v2.1 按需智能收口) 与 Cloudflare 穿透网关。详见 [**docs/local_uncensored_llm_node.md**](./docs/local_uncensored_llm_node.md)。
 
 ---
 
