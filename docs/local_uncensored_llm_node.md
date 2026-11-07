@@ -66,17 +66,16 @@
                                                                         - 未授权请求 403 阻断，零算力损耗
 ```
 
-### 1. Hermes / OpenClaw 接入配置
-- **Base URL**: `http://127.0.0.1:11434/v1`
-- **Model ID**: `uncensored`
-- **API Key**: 任意字符（如 `ollama`，本地直连免鉴权）
-- **操作**: 在 Hermes 或 OpenClaw 中发送 `/model uncensored` 即可手动接管。
+### 1. 架构定位边界与分工（Owner 决议）
+- **Hermes / OpenClaw 核心 Agent 体系**：保持专注使用云端顶级旗舰大模型（`gpt-6.1-terra` / `cpa-codex-plus`），**明确不接入本地 9B 模型**。彻底避免 20,000+ Tokens 的海量工具提示词导致本地 85 秒的冷启动预处理耗时，让复杂工程 Agent 维持最强推理与极速响应。
+- **本地无审查大模型 (`uncensored`) 核心使命**：专职承载 Telegram 移动专属中枢（Ella v2.2）、AI 短剧恶斗反转剧本构思与无审查私有对话，轻装上阵、0 延迟、0 审查。
 
-### 2. Chatbox 客户端配置 (iPhone / Mac / PC)
-- **模型提供商 (Model Provider)**: `OpenAI API`
-- **API 域名 (API Host)**: `https://llm.solarfans.cc` (或 `https://llm.solarfans.cc/v1`)
-- **API Key**: 从受保护环境 `~/.hermes/.env` 读取 `CF_WAF_BEARER_KEY`
-- **模型名称 (Model Name)**: `uncensored`
+### 2. 移动端/全终端接入矩阵
+- **主阵地 (Telegram Bot)**：直接与后台守护程序 `com.solarfans.ella-bot` 对话（秒级响应、支持按需自然语言收口与永久记忆）。
+- **备选公网穿透 (Chatbox / API)**：
+  - **API 域名**: `https://llm.solarfans.cc/v1`
+  - **API Key**: 从受保护环境 `~/.hermes/.env` 读取 `CF_WAF_BEARER_KEY`
+  - **模型名称**: `uncensored`
 
 ---
 
