@@ -1,0 +1,77 @@
+{
+  "project": "楚氏春秋·开局围宫 (v2 电影级汉代重构)",
+  "source_chapter": "001.txt (外传章)",
+  "target_runtime": "30s",
+  "resolution": "1344x768",
+  "aspect_ratio": "16:9",
+  "fps": 24,
+  "style_guidelines": {
+    "era": "正统汉代/三国蜀汉 (Authentic Three Kingdoms Han Dynasty)",
+    "forbid_styles": "严禁日本战国、武士刀、和服、乌帽子、阵羽织、动漫卡通、恐怖怪脸",
+    "color_palette": "玄黑、朱红、明黄金丝、古铜暖光、暴雨冷青 (High saturation cinematic historical drama)"
+  },
+  "characters": {
+    "LiuShan": {
+      "name": "刘禅 (Liu Shan)",
+      "identity": "蜀汉后主皇帝",
+      "visual_anchor": "28-year-old handsome Chinese emperor, wearing authentic Han Dynasty imperial ceremonial Xuan-Yi (玄衣纁裳，交领右衽黑色丝绸锦袍配朱红边缘与汉代金龙暗纹), wearing Han imperial Tongtian Guan (汉代通天冠) with jade hairpin, clean-shaven or neat trimmed goatee, sharp determined eyes, regal aura, zero anime, zero samurai."
+    },
+    "ZhugeLiang": {
+      "name": "诸葛亮 (Zhuge Liang)",
+      "identity": "蜀汉丞相 / 武乡侯",
+      "visual_anchor": "54-year-old dignified Chinese scholar-statesman, refined intellectual face with neat long black and gray beard (三缕美髯), wearing traditional Chinese Han scholar robe (汉代交领大袖深衣青黑儒服), wearing authentic Chinese Jinxian Guan (进贤冠文官礼冠), holding a classic Chinese white crane feather fan (正统白鹅毛扇). Wise, solemn, profound sorrow, zero Japanese kimono, zero eboshi."
+    },
+    "Eunuch": {
+      "name": "内侍 (Palace Eunuch)",
+      "identity": "年轻汉宫内官",
+      "visual_anchor": "20-year-old young Chinese court eunuch, wearing Han Dynasty azure blue servant Hanfu (汉代交领青衣内侍服), wearing a simple black cloth cap (小冠帻), terrified expression, stumbled on crimson carpet."
+    },
+    "NobleLady": {
+      "name": "世家女子 (Noble Lady Warrior)",
+      "identity": "世家门阀死士",
+      "visual_anchor": "22-year-old fierce noble Chinese female warrior, wearing dark crimson Hanfu martial dress (汉代交领窄袖武士劲装), high Chinese hair bun with bronze hairpin, drawing a straight double-edged Chinese Han Jian (八面汉剑，直刃，严禁日本武士弯刀)."
+    }
+  },
+  "shots": [
+    {
+      "shot_id": 1,
+      "speaker": "【内侍】",
+      "title": "太监仓皇跪报",
+      "prompt": "A cinematic medium shot inside an authentic Han dynasty imperial palace study. In the center on the crimson carpet, a panicked 20-year-old young Chinese court servant wearing azure blue Hanfu court servant robe stumbles to his knees, pointing trembling hands toward the palace doors. Bronze incense burner on carved dark wood table emitting swirls of smoke. Warm flickering candlelight, storm lightning flashing through wooden latticed windows in background, masterpiece, 8k, photorealistic Chinese historical drama, authentic Han Dynasty.",
+      "negative_prompt": "Japanese, samurai, kimono, katana, anime, cartoon, deformed face, creepy eyes, melted face, ugly, monochrome, black and white",
+      "seed": 102
+    },
+    {
+      "shot_id": 2,
+      "speaker": "【刘禅】",
+      "title": "刘禅从容提笔",
+      "prompt": "A cinematic close-up portrait of 28-year-old Chinese Emperor Liu Shan, handsome dignified facial features, clear determined eyes showing hidden ambition, sitting calmly behind a massive dark sandalwood imperial desk. Wearing authentic Han Dynasty imperial Xuan-Yi (traditional black silk ceremonial robe with crimson red borders and gold Han dragon embroidery), wearing a Chinese emperor Tongtian cap with jade pin. Holding a Chinese calligraphy brush in hand, writing calmly. Warm golden candlelight illuminating his face and robe, vibrant colors, photorealistic, 8k resolution, authentic Three Kingdoms Han dynasty.",
+      "negative_prompt": "Japanese, kimono, samurai, katana, jinbaori, anime, cartoon, creepy, ugly, deformed eyes, monochrome, black and white, blurry",
+      "seed": 204
+    },
+    {
+      "shot_id": 3,
+      "speaker": "【诸葛亮】",
+      "title": "诸葛亮白羽扇入殿",
+      "prompt": "A cinematic medium-wide shot of Chancellor Zhuge Liang stepping into the imperial palace hall. A 54-year-old dignified Chinese statesman with neat long beard, wearing authentic Chinese Han Dynasty scholar robe (dark silk Hanfu with crimson borders) and Chinese Jinxian Guan headdress, gracefully holding a white crane feather fan in his right hand. Palace doors open behind him revealing rain and distant lightning. Elite Han palace guards in iron scale armor holding halberds stand beside him. Photorealistic, 8k resolution, cinematic Chinese historical epic, authentic Three Kingdoms.",
+      "negative_prompt": "Japanese, samurai, kimono, katana, eboshi, ninja, anime, cartoon, distorted faces, melted face, ugly, black and white, monochrome",
+      "seed": 305
+    },
+    {
+      "shot_id": 4,
+      "speaker": "【刘禅】",
+      "title": "君臣对峙·刘禅冷笑搁笔",
+      "prompt": "A dramatic cinematic medium shot of Emperor Liu Shan sitting at his sandalwood imperial desk. He slowly puts down his calligraphy brush, lifting cold mocking eyes and a subtle sneer directly at the chancellor across the room. Wearing imperial Han dragon robe in rich black and crimson silk, golden candlelight flickering across his regal expression. Intense psychological confrontation, sharp focus, 35mm film still, photorealistic, 8k resolution, authentic Chinese Three Kingdoms.",
+      "negative_prompt": "Japanese, samurai, kimono, katana, anime, cartoon, distorted eyes, melted face, ugly, duplicate, black and white, monochrome",
+      "seed": 408
+    },
+    {
+      "shot_id": 5,
+      "speaker": "【诸葛亮】",
+      "title": "拔剑阻拦·诸葛亮叹息",
+      "prompt": "A dynamic cinematic medium shot. In the foreground, a 22-year-old Chinese noble lady warrior in dark crimson Hanfu draws a straight double-edged Chinese Han Jian sword (gleaming cold silver blade). Beside her, Chancellor Zhuge Liang gently raises his white crane feather fan to halt her sword, closing his eyes in profound sorrow and grief, three-strand long beard blowing gently. Heavy candlelight and shadow, deep emotional drama, photorealistic, 8k resolution, authentic Han Dynasty.",
+      "negative_prompt": "katana, curved sword, Japanese, samurai, kimono, anime, cartoon, deformed fingers, melted face, ugly, monochrome, black and white",
+      "seed": 512
+    }
+  ]
+}
