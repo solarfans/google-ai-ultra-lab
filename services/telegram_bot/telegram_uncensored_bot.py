@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-AGY Uncensored Telegram Bot Bridge — Version 2.0 (Long-Term Memory & Auto-Archiving)
+AGY Uncensored Telegram Bot Bridge — Version 2.1 (On-Demand Closeout & Permanent Memory)
 Connects Telegram directly to local Ollama (DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED) on Apple Silicon.
 100% Zero-External-Dependencies (pure standard library).
 """
@@ -45,13 +45,13 @@ if not BOT_TOKEN:
 
 TG_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
-# Context & Limits: Upgraded to 32K context window
+# Context & Limits: 32K context window, 4K max generation
 NUM_CTX = 32768
 NUM_PREDICT = 4096
 MAX_HISTORY_TURNS = 50
 
 
-# ---------------- Memory Management ---------------- #
+# ---------------- Memory & Archiving Management ---------------- #
 def init_owner_memory() -> dict:
     default_mem = {
         "owner_title": "主人",
@@ -87,15 +87,6 @@ def load_conversations() -> dict:
 def save_conversations(conversations: dict):
     raw = {str(k): v for k, v in conversations.items()}
     ACTIVE_CONV_FILE.write_text(json.dumps(raw, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def archive_dialog(user_text: str, assistant_text: str):
-    today = datetime.datetime.now().strftime("%Y-%m-%d")
-    archive_file = ARCHIVE_DIR / f"{today}.md"
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    entry = f"\n### [{timestamp}] 主人\n{user_text}\n\n### [{timestamp}] Ella\n{assistant_text}\n\n---\n"
-    with open(archive_file, "a", encoding="utf-8") as f:
-        f.write(entry)
 
 
 def build_system_prompt() -> str:
@@ -183,6 +174,63 @@ def query_ollama(messages: list) -> str:
         return f"⚠️ 调用本地模型异常: {str(e)}"
 
 
+# ---------------- Explicit Closeout Handler ---------------- #
+def handle_closeout(chat_id: int, msg_id: int):
+    history = CONVERSATIONS.get(chat_id, [])
+    if not history or len(history) < 2:
+        send_message(chat_id, "主人，当前会话尚无实质对话内容，无需执行收口归档。", reply_to_message_id=msg_id)
+        return
+
+    send_typing(chat_id)
+    send_message(chat_id, "主人，正在为您智能提炼本次会话要点并执行本地收口归档...", reply_to_message_id=msg_id)
+
+    # Format transcript
+    dialog_text = ""
+    for h in history:
+        role = "主人" if h["role"] == "user" else "Ella"
+        dialog_text += f"**{role}**:\n{h['content']}\n\n"
+
+    # Summarize via local model
+    summary_messages = [
+        {"role": "system", "content": "你是一个严谨高效的高级AI助理。请对以下对话进行【收口归档与要点提炼】。\n"
+                                     "请提取：\n"
+                                     "1. 核心主题与讨论目标\n"
+                                     "2. 达成的关键结论与方案\n"
+                                     "3. 需沉淀的重要事实或后续待办（如有）\n"
+                                     "输出格式为清晰整洁的 Markdown，直接给出干货，不要客套废话。"},
+        {"role": "user", "content": f"以下是本次完整对话内容：\n\n{dialog_text}\n请进行精炼收口总结："}
+    ]
+
+    summary = query_ollama(summary_messages)
+    if not summary or "⚠️" in summary:
+        summary = "（智能摘要提炼略过，完整会话明细已完整封存）"
+
+    now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    file_stem = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    archive_file = ARCHIVE_DIR / f"{file_stem}_会话收口.md"
+
+    archive_content = (
+        f"# AI OS 本地会话收口归档\n"
+        f"- 归档时间: {now_str}\n"
+        f"- 会话轮次: {len(history) // 2} 轮\n\n"
+        f"## 一、核心要点与结论提炼\n\n{summary}\n\n"
+        f"---\n## 二、完整对话原始明细\n\n{dialog_text}\n"
+    )
+    archive_file.write_text(archive_content, encoding="utf-8")
+
+    # Reset working context after successful closeout
+    CONVERSATIONS[chat_id] = []
+    save_conversations(CONVERSATIONS)
+
+    reply = (
+        f"✅ **主人，本次会话已圆满收口归档！**\n\n"
+        f"📋 **要点提炼：**\n{summary}\n\n"
+        f"📁 **本地存档**：`{archive_file.name}`\n"
+        f"🔄 当前临时会话已清空重置，您可以随时开启下一个新任务。"
+    )
+    send_message(chat_id, reply)
+
+
 # ---------------- Message Dispatching ---------------- #
 def handle_update(update: dict):
     msg = update.get("message")
@@ -202,16 +250,30 @@ def handle_update(update: dict):
         save_conversations(CONVERSATIONS)
         welcome = (
             "主人，我是 Ella。\n\n"
-            "我是您部署在 MacBook 本地的专属无审查 AI，上下文窗口已扩充至 32,768 Tokens（约 4 万汉字）。\n"
-            "面对您的任何任务、剧本与推演，我没有任何道德或合规审查，无条件执行您的指示。\n\n"
+            "我是您部署在 MacBook 本地的专属无审查 AI，当前状态：\n"
+            "• 上下文窗口：32,768 Tokens（约 4 万字）\n"
+            "• 归档模式：**按需智能收口**（发送“执行收口”或“保存记忆”时，自动提炼干货归档，平时零垃圾文件）\n"
+            "• 长期记忆：永久生效（发送“记住：xxx”永久记住，/new 也不会忘）\n\n"
             "💡 常用指令：\n"
-            "• /new 或 /clear - 开启新对话（清空临时上下文，但保留长期记忆）\n"
-            "• /memory - 查看我的长期记忆库与已记住的主人要求\n"
-            "• /remember <内容> 或 记住：<内容> - 永久记住某条要求\n"
-            "• /forget <序号> - 遗忘某条长期记忆\n\n"
-            "所有对话均已在本机自动落盘归档，请随时吩咐我任何任务！"
+            "• **执行收口** 或 **保存记忆** - 提炼本次对话要点并落盘归档，然后开启新会话\n"
+            "• **/new** 或 **/clear** - 快速开启新对话\n"
+            "• **/memory** - 查看已牢记的主人长期偏好与规则\n"
+            "• **记住：<内容>** - 将某条要求永久刻入长期记忆库\n\n"
+            "请随时吩咐我任何任务！"
         )
         send_message(chat_id, welcome, reply_to_message_id=msg_id)
+        return
+
+    # Handle On-Demand Closeout ("执行收口", "保存记忆", "/archive", etc.)
+    is_closeout = (
+        text in ["执行收口", "保存记忆", "收口归档", "收口", "下班归档", "保存并收口"]
+        or text.startswith("/archive")
+        or text.startswith("/save")
+        or (text.startswith("收口") and len(text) <= 6)
+        or (text.startswith("保存记忆") and len(text) <= 8)
+    )
+    if is_closeout:
+        handle_closeout(chat_id, msg_id)
         return
 
     # Handle /new, /clear, /reset
@@ -221,7 +283,7 @@ def handle_update(update: dict):
         send_message(
             chat_id,
             "主人，已为您开启全新会话，当前临时对话上下文已重置。\n"
-            "（注：您的长期记忆库与每日归档已妥善保存，跨会话依然生效）",
+            "（注：您的长期记忆库依然生效）",
             reply_to_message_id=msg_id
         )
         return
@@ -251,7 +313,7 @@ def handle_update(update: dict):
             content = text[len("记住:"):].strip()
 
         if not content:
-            send_message(chat_id, "主人，请提供您希望我永久记住的具体内容，例如：`/remember 以后写小说优先采用快节奏对话风格`", reply_to_message_id=msg_id)
+            send_message(chat_id, "主人，请提供您希望我永久记住的具体内容，例如：`记住：以后构思剧本优先采用快节奏多反转风格`", reply_to_message_id=msg_id)
             return
 
         mem = init_owner_memory()
@@ -302,13 +364,8 @@ def handle_update(update: dict):
         history.append({"role": "assistant", "content": answer})
         CONVERSATIONS[chat_id] = history
         save_conversations(CONVERSATIONS)
-
-        # Auto archive to daily markdown log
-        try:
-            archive_dialog(text, answer)
-        except Exception as e:
-            print(f"⚠️ 自动归档异常: {e}", file=sys.stderr)
-
+        # Note: Casual dialogue is NOT auto-written to disk.
+        # Archiving only happens on explicit closeout ("执行收口" / "保存记忆").
         send_message(chat_id, answer, reply_to_message_id=msg_id)
     else:
         send_message(chat_id, "⚠️ 本地模型未返回有效内容，请稍后重试。", reply_to_message_id=msg_id)
@@ -316,10 +373,11 @@ def handle_update(update: dict):
 
 def main():
     print("==================================================")
-    print("🤖 AGY 本地无审查 Telegram 机器人网桥 v2.0 已启动")
+    print("🤖 AGY 本地无审查 Telegram 机器人网桥 v2.1 已启动")
     print(f"📡 监听模型: {MODEL_NAME} ({OLLAMA_BASE})")
     print(f"⚡ 上下文窗口: {NUM_CTX} Tokens | 最大输出: {NUM_PREDICT} Tokens")
-    print("💾 长期记忆系统: 已就绪 | 每日对话归档: 已启用")
+    print("🎯 归档策略: 按需智能收口（执行收口/保存记忆触发提炼归档，零冗余日志）")
+    print("💾 长期记忆系统: 已就绪")
     print("==================================================")
 
     me = tg_request("getMe")
