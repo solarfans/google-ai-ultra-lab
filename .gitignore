@@ -1,0 +1,17 @@
+# Environment variables & secrets
+.env
+*.env
+*token*.json
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Assets & temporary files
+*.tmp
+*.log
+.DS_Store
