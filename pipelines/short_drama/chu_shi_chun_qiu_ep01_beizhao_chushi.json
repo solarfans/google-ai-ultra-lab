@@ -1,185 +1,116 @@
 {
-  "project": "楚氏春秋·第一集：北赵楚氏·假山觉醒 (Chu Shi Chun Qiu - Ep01: Awakening of the Young Master)",
-  "version": "2.1.0-qwen-minimax-h3",
-  "source_chapter": "第一章_北赵楚氏 + 第二章_转世重生 (原著开篇重构)",
-  "platform_target": "红果短剧 / 抖音横竖屏精品剧 (Douyin / Hongguo Premium Mini-Drama)",
+  "project": "楚氏春秋·第一集：空难惊魂·异界重生 (Chu Shi Chun Qiu - Ep01: Crash & Rebirth)",
+  "version": "2.2.0-novel-canon",
+  "source_chapter": "第一章_北赵楚氏 + 第二章_转世重生 + 第三章_颠倒乾坤 (100%原著精准对齐)",
+  "platform_target": "红果短剧 / 抖音横竖屏精品微短剧",
   "engine_specs": {
-    "keyframe_generator": "Qwen/Qwen-Image-2.1 (7B Single-Stream DiT + Qwen3-VL conditioning)",
-    "video_generator": "MiniMax-H3 Singularity v1.3 (33B Native AV-DiT + NVFP4)",
+    "keyframe_generator": "Qwen/Qwen-Image-2.1 (7B Single-Stream DiT + Qwen3-VL)",
+    "video_generator": "Real 3D Dynamic Video (Diffusers SVD-XT, 1024x576, motion_bucket=145)",
     "resolution": "1344x768",
     "aspect_ratio": "16:9",
     "base_fps": 24,
-    "target_runtime": "32.0s",
+    "target_runtime": "36.0s",
     "zero_burn_enforced": true
   },
   "global_guardrails": {
-    "negative_prompt": "不要出现任何字幕、水印或英文乱码，text, watermark, subtitles, English letters, blurry, deformed limbs, chubby cheeks, baby face, deformed mouth, smiling, cartoon, anime doll, creepy eyes, plastic skin, modern clothes, western face, 3d render, cgi, low quality",
-    "aesthetic_principles": "影视级少年化（9-10岁英气小世子，骨相端正，拒绝幼童肥）；微表情克制眼神杀；前世帝王法相九龙虚影叠化。"
+    "negative_prompt": "不要出现任何字幕、水印或英文乱码，text, watermark, subtitles, English letters, blurry, deformed limbs, chubby cheeks, baby face, deformed mouth, smiling, cartoon, anime doll, creepy eyes, plastic skin, 3d render, cgi, low quality",
+    "aesthetic_principles": "现代波音客机空难写实震撼；古代太守府古朴厚重；9岁英气世子骨相清冷；绝对真实物理运镜，杜绝静态PPT。"
   },
   "characters": {
+    "modern_protagonist": {
+      "id": "modern_protagonist",
+      "name_zh": "现代楚铮 (空难前)",
+      "name_en": "MODERN PROTAGONIST · 30岁",
+      "visual_prompt": "Inside a modern commercial Boeing airliner cabin plunging violently through a stormy night sky. A 30-year-old handsome Chinese professional businessman wearing a dark tailored suit and loosened tie, sweat dripping from his brow, trembling hands holding an illuminated smartphone. Dramatic flashing red emergency cabin lights, falling yellow oxygen masks, master cinematic lighting, 8k resolution, ultra-photorealistic.",
+      "negative_prompt": "text, watermark, subtitles, English letters, blurry, deformed fingers, smiling, cartoon"
+    },
     "young_chu_zheng": {
       "id": "young_chu_zheng",
-      "name_zh": "楚 铮 (少年)",
+      "name_zh": "楚 铮 (穿越后少年)",
       "name_en": "YOUNG CHU ZHENG · 9岁",
-      "title_line1": "北赵第一世家幼子 · 千古一帝转世",
-      "title_line2": "假山喋血醒来，满门不知幼弟已成杀神",
-      "h3_subject_tag": "<Subject 1>",
-      "h3_audio_tag": "<Audio 1>",
-      "qwen_image_prompt": "Cinematic 35mm film still of a noble 9-year-old Chinese aristocratic young master Chu Zheng, sculpted sharp aristocratic bone structure, cold intense eyes harboring supreme imperial intellect and ruthless majesty, clear skin with realistic pores. Dressed in luxurious authentic Han-dynasty dark ink-black silk tailored noble robes with subtle dark gold dragon-scale embroidery, high waist silk sash with white mutton-fat jade pendant, hair neatly tied in a small dark jade Guan crown. Soft spring morning sunlight casting cinematic shadows, 8k resolution, Chinese historical palace drama aesthetics.",
-      "h3_definition": "<Subject 1> (S1) is a noble 9-year-old Chinese aristocratic boy Chu Zheng in tailored black Han silk robes with sharp regal features and cold piercing imperial gaze.",
-      "voice_timbre_spec": "<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Young noble boy voice layered with a subtle deep, echoing imperial resonance speaking Mandarin with chilling composure.",
-      "voice_seed_wav": "native_young_chu_zheng_seed.wav",
-      "ref_image": "ref_young_chu_zheng_1344x768.png"
+      "visual_prompt": "Cinematic 35mm film still of 9-year-old noble Chinese boy Chu Zheng sitting up on a massive carved dark sandalwood bed in an ancient Han-dynasty mansion room. He has a clean-cut aristocratic bone structure, cold analytical adult intellect in his deep piercing dark eyes, a small white bandage with a faint scarlet blood spot on his fair forehead. Wearing loose white silk inner sleep robes. Soft morning sunlight filtering through carved paper window lattice, natural skin pores, zero plastic, 8k resolution.",
+      "negative_prompt": "chubby cheeks, baby face, deformed mouth, smiling, cartoon, anime doll, creepy eyes, plastic skin, modern clothes, text, watermark, subtitles"
     },
-    "zhao_ying": {
-      "id": "zhao_ying",
-      "name_zh": "赵 应 (小王爷)",
-      "name_en": "ZHAO YING · 14岁",
-      "title_line1": "昌平王府小王爷 · 皇室宗亲",
-      "title_line2": "跋扈倨傲，轻视世家豪族",
-      "h3_subject_tag": "<Subject 2>",
-      "h3_audio_tag": "<Audio 2>",
-      "qwen_image_prompt": "A handsome but arrogant 14-year-old Chinese royal prince Zhao Ying, sneering haughty expression, narrow disdainful eyes, wearing an ornate royal purple and crimson Han silk robe embroidered with golden pheasants, tall gold filigree prince crown with red tassel. Master cinematic dramatic lighting, royal palace garden background, photorealistic 8k.",
-      "h3_definition": "<Subject 2> (S2) is an arrogant 14-year-old royal prince Zhao Ying in ornate purple and crimson silk robes with a sneering disdainful smirk.",
-      "voice_timbre_spec": "<Audio 2> is the voice-timbre reference for <Subject 2> (S2). Haughty, aggressive adolescent royal voice speaking Mandarin.",
-      "voice_seed_wav": "native_zhao_ying_seed.wav",
-      "ref_image": "ref_zhao_ying_1344x768.png"
-    },
-    "young_chu_xuan": {
-      "id": "young_chu_xuan",
-      "name_zh": "楚 轩 (少年长兄)",
-      "name_en": "YOUNG CHU XUAN · 13岁",
-      "title_line1": "楚太守长子 · 稳重持重",
-      "title_line2": "平原城世家子弟领袖",
-      "h3_subject_tag": "<Subject 3>",
-      "h3_audio_tag": "<Audio 3>",
-      "qwen_image_prompt": "A dignified 13-year-old Chinese aristocratic young scholar Chu Xuan, composed refined handsome face, calm protective eyes, wearing an elegant Han jade-green wide-sleeved silk robe with white silk inner collar, hair tied with white jade ribbon. Realistic lighting, 8k.",
-      "h3_definition": "<Subject 3> (S3) is a dignified 13-year-old aristocratic young scholar Chu Xuan in jade-green Han silk robes with calm protective poise.",
-      "voice_timbre_spec": "<Audio 3> is the voice-timbre reference for <Subject 3> (S3). Gentle, composed young scholar voice speaking Mandarin.",
-      "voice_seed_wav": "native_young_chu_xuan_seed.wav",
-      "ref_image": "ref_young_chu_xuan_1344x768.png"
+    "mrs_chu": {
+      "id": "mrs_chu",
+      "name_zh": "楚夫人 (太守夫人)",
+      "name_en": "MADAM CHU · 35岁",
+      "visual_prompt": "A beautiful 35-year-old Chinese noble lady Madam Chu, tear-stained pale refined face, distraught expression, kneeling on the dark polished flagstone floor of an ancient bedroom, hands clutched in frantic prayer before bed. Wearing authentic Han-dynasty high-waisted embroidered silk noble robes, disheveled dark hair with dangling jade hairpin. Realistic cinematic warm candlelight, 8k.",
+      "negative_prompt": "modern clothes, smiling, cartoon, deformed hands, western face, text, watermark, subtitles"
     }
   },
   "shots": [
     {
       "shot_id": 1,
-      "scene_title": "平原畅春园·北赵第一豪门排场",
-      "speaker": null,
-      "dialogue_line": null,
+      "scene_title": "现代客机空难·剧烈失重与红光闪烁",
+      "speaker": "narrator",
+      "dialogue_line": "两万米高空，波音客机遭遇恐怖气流剧烈失控，机身撕裂，红光狂闪！",
       "length_frames": 73,
-      "duration_sec": 3.04,
-      "shot_type": "Wide Cinematic Establishing Shot",
-      "camera_motion": "Slow majestic crane shot pushing down toward the grand royal palace garden",
-      "qwen_image_prompt": "Cinematic wide establishing 35mm film still of the ancient imperial palace garden Changchun Garden in Northern Zhao dynasty. Towering red pavilion walls, carved white marble balustrades, blooming early spring plum blossoms, ancient green cypress trees under gentle morning sunlight. Aristocratic Han-dynasty noble children playing on the lush grass lawn in distance. Master epic cinematic lighting, 8k resolution, authentic Chinese historical aesthetic.",
-      "h3_structured_prompt": {
-        "subject_definitions": "A grand ancient Chinese imperial royal garden Changchun Garden with red walls, marble bridges, and lush spring scenery.",
-        "summary": "Wide cinematic shot showcasing the immense wealth and imperial scale of the Northern Zhao aristocracy.",
-        "retention_analysis": "Retain towering red pavilion walls, delicate white marble carvings, and misty morning sunlight.",
-        "detailed_description": "The camera cranes slowly down across ancient tiled roofs. Early spring morning sunlight glints off carved stone bridges and tranquil garden ponds, while aristocratic noble youths in silk robes gather in the courtyard.",
-        "overall_soundscape": "Gentle morning breeze rustling through ancient cypress branches at 00:00.200, distant crisp palace wind chimes, cheerful muffled banter of noble children.",
-        "non_diegetic_music": "Leave for post-production"
-      },
-      "seed": 2026110811
+      "duration_sec": 4.5,
+      "qwen_prompt": "Cinematic wide interior shot of a modern commercial airliner cabin violently shaking and plunging through a stormy night. Overhead oxygen masks dangling and swinging wildly, red emergency cabin lights flashing against panicked passengers strapped in their seats. Rain and lightning violently lashing against the cabin windows outside. Master cinematic disaster movie realism, motion blur, 8k resolution.",
+      "negative_prompt": "text, watermark, subtitles, English letters, blurry, deformed limbs, smiling, cartoon",
+      "seed": 2026110821,
+      "motion_bucket": 150
     },
     {
       "shot_id": 2,
-      "scene_title": "畅春园假山前·小王爷赵应挑衅",
-      "speaker": "zhao_ying",
-      "dialogue_line": "两位好威风啊！不过是我赵家养的一条鹰犬，也配在皇家行宫摆谱？",
+      "scene_title": "绝命短信·客机轰然坠海",
+      "speaker": "modern_protagonist",
+      "dialogue_line": "我颤抖着按出最后一条短信：我爱你，永别了……下一秒，飞机撞入无尽黑夜！",
       "length_frames": 124,
-      "duration_sec": 5.17,
-      "shot_type": "Medium Shot Two-Shot",
-      "camera_motion": "Slow track left focusing on Prince Zhao Ying's sneering confrontation",
-      "qwen_image_prompt": "Medium shot of an arrogant 14-year-old royal prince Zhao Ying in ornate purple and gold pheasant-embroidered Han silk robes, sneering contemptuously with crossed arms, facing 13-year-old Chu Xuan in jade-green robe. Tense standoff on green garden lawn in front of tall carved ornamental rockery. Realistic cinematic dramatic lighting, 8k.",
-      "h3_structured_prompt": {
-        "subject_definitions": "<Subject 2> (S2) is an arrogant 14-year-old royal prince Zhao Ying in ornate purple and crimson silk robes with a sneering disdainful smirk.\n<Audio 2> is the voice-timbre reference for <Subject 2> (S2). Haughty, aggressive adolescent royal voice speaking Mandarin.",
-        "summary": "[reference generation + audio reference] Prince Zhao Ying aggressively confronts the Chu family brothers with aristocratic contempt.",
-        "retention_analysis": "Preserve Zhao Ying's ornate purple robe, arrogant smirk, and the tense confrontational posture against the garden rockery.",
-        "detailed_description": "The camera tracks left slowly. Prince Zhao Ying steps forward aggressively, his chin tilted up in mockery as he sneers down at the Chu brothers: <Subject 2> (S2) sneers arrogantly, <d>[Mandarin] 两位好威风啊！不过是我赵家养的一条鹰犬，也配在皇家行宫摆谱？ </d> He closes his mouth after speaking.",
-        "overall_soundscape": "Rustle of heavy embroidered silk fabric as Zhao Ying steps forward at 00:00.300, followed by abrupt silence among surrounding noble children.",
-        "non_diegetic_music": "Leave for post-production"
-      },
-      "seed": 2026110812
+      "duration_sec": 6.5,
+      "qwen_prompt": "Close-up OTS shot of trembling hands holding an illuminated mobile phone screen displaying the outgoing message. Through the shaking airplane window, massive turbulent ocean waves rise to swallow the aircraft in the dark stormy night. Violent lightning flash illuminating the violent impact. Epic disaster film realism, 8k.",
+      "negative_prompt": "text, watermark, subtitles, English letters, blurry, deformed hands, cartoon",
+      "seed": 2026110822,
+      "motion_bucket": 145
     },
     {
       "shot_id": 3,
-      "scene_title": "假山高处·小楚铮失足坠落",
-      "speaker": null,
-      "dialogue_line": null,
+      "scene_title": "时空流转·古朴太守府卧房",
+      "speaker": "narrator",
+      "dialogue_line": "黑暗吞噬了所有意识……再睁开眼，已是古色古香的太守府雕花大床！",
       "length_frames": 73,
-      "duration_sec": 3.04,
-      "shot_type": "Low-angle Action Follow Shot",
-      "camera_motion": "Rapid dynamic tilt-down tracking the falling boy toward the stone base",
-      "qwen_image_prompt": "Action shot of 9-year-old noble boy Chu Zheng in tailored black silk robe falling backward from a tall ancient mossy grey limestone rockery, his dark silk sleeves flapping in mid-air, jade pendant flying loose. Blurred panicked faces of children below reaching out. Intense motion blur, dramatic cinematic suspense lighting, 8k.",
-      "h3_structured_prompt": {
-        "subject_definitions": "A 9-year-old aristocratic noble boy Chu Zheng in black silk robes falling from a tall stone rockery.",
-        "summary": "Suspenseful dynamic shot capturing the young master slipping and tumbling from the rocky precipice.",
-        "retention_analysis": "Retain dark silk robes, limestone rock texture, and the rapid vertical falling motion.",
-        "detailed_description": "The camera snaps down rapidly with dynamic motion. Young Chu Zheng's foot slips on a damp rock ridge, and his small body tumbles backward through the air toward the rugged stone pavement below.",
-        "overall_soundscape": "Sharp crumble of small loose stones breaking at 00:00.150, sudden frantic screams of noble children echoing across the garden courtyard.",
-        "non_diegetic_music": "Leave for post-production"
-      },
-      "seed": 2026110813
+      "duration_sec": 5.0,
+      "qwen_prompt": "Cinematic medium shot of an ancient Chinese aristocratic bedroom in Han dynasty. A grand dark sandalwood canopy bed with silk curtains, bronze incense burner releasing fragrant pale smoke curls into the morning sunbeams. A young boy lying motionless under embroidered crimson silk quilts with a bandage on his forehead. Peaceful, mysterious, 8k resolution.",
+      "negative_prompt": "modern furniture, electric lights, bright colors, text, watermark, subtitles, cartoon",
+      "seed": 2026110823,
+      "motion_bucket": 125
     },
     {
       "shot_id": 4,
-      "scene_title": "假山青石喋血·额角见红与帝王抬眸",
-      "speaker": null,
-      "dialogue_line": null,
-      "length_frames": 141,
-      "duration_sec": 5.88,
-      "shot_type": "Extreme Macro Close-up Eye Detail",
-      "camera_motion": "Subtle ultra-slow macro push-in focusing on the opening eye and blood trail",
-      "qwen_image_prompt": "Extreme macro close-up 35mm film still of 9-year-old young Chu Zheng lying on cool grey limestone. A vivid trickle of scarlet blood trails down his sculpted fair alabaster forehead past his sharp dark eyebrow. His long dark eyelashes tremble, and his deep dark eye slowly opens—revealing an astonishingly cold, piercing, supreme imperial gaze harboring centuries of ruthlessness. Master photorealistic skin texture, pores, 8k resolution.",
-      "h3_structured_prompt": {
-        "subject_definitions": "Extreme macro close-up of young Chu Zheng's face with a thin trickle of blood on his forehead as his cold imperial eyes snap open.",
-        "summary": "Pivotal dramatic turning point: the young boy's gaze awakens from innocent child to a ruthless reborn emperor.",
-        "retention_analysis": "Retain the scarlet blood trickle on fair skin, sharp sculpted bone structure, and the terrifying coldness in his dark pupil.",
-        "detailed_description": "The camera pushes in with microscopic precision. The少年's eyelashes flutter. A single drop of crimson blood drips onto the stone. His eyes open completely—not with fear or tears, but with the chilling, absolute authority of a sovereign awakening from a long nightmare.",
-        "overall_soundscape": "A deep, resonant sub-bass pulse thrumming at 00:00.400, followed by the quiet, slow drip of a single blood droplet onto cold stone.",
-        "non_diegetic_music": "Leave for post-production"
-      },
-      "seed": 2026110814
+      "scene_title": "母爱泣血·楚夫人跪地磕头求神",
+      "speaker": "mrs_chu",
+      "dialogue_line": "大仙开恩！放过我孩儿吧！有什么罪全报应在我身上，只要他能活下来！",
+      "length_frames": 124,
+      "duration_sec": 6.5,
+      "qwen_prompt": "Medium shot of elegant noble mother Madam Chu weeping bitterly, kneeling on the cold stone floor beside the carved canopy bed, kowtowing repeatedly with hands trembling on the floor. Her dark embroidered silk robes pooled around her, loose jade hairpins dangling. Authentic Han historical drama realism, dramatic warm sidelighting, 8k.",
+      "negative_prompt": "smiling, relaxed, modern clothes, deformed face, cartoon, text, watermark, subtitles",
+      "seed": 2026110824,
+      "motion_bucket": 135
     },
     {
       "shot_id": 5,
-      "scene_title": "帝王觉醒·前世法相虚影与冷语誓言",
+      "scene_title": "抚面惊醒·现代灵魂入主幼童身躯",
       "speaker": "young_chu_zheng",
-      "dialogue_line": "前世尔等将朕逼上绝路，这一世……朕要这天下尽归楚氏！",
-      "length_frames": 192,
-      "duration_sec": 8.00,
-      "shot_type": "Medium Close-up with Double Exposure Silhouette",
-      "camera_motion": "Slow steady low-angle push-in as the boy rises with terrifying composure",
-      "qwen_image_prompt": "A powerful cinematic 35mm film still of 9-year-old Chu Zheng slowly rising to sit on the stone floor, his face calm and emotionless despite the blood on his forehead, his eyes burning with supreme imperial authority. Behind him in the rippling air, a majestic semi-transparent double-exposure phantom of an ancient Han emperor wearing a twelve-tasseled imperial jade crown (Mianliu) and black dragon robe looms large. Epic master lighting, volumetric morning rays, 8k resolution.",
-      "h3_structured_prompt": {
-        "subject_definitions": "<Subject 1> (S1) is a 9-year-old aristocratic noble boy Chu Zheng in black silk robes, seated with a thin line of blood on his forehead and an awe-inspiring imperial emperor silhouette looming behind him.\n<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Young noble boy voice layered with a deep, echoing imperial resonance speaking Mandarin.",
-        "summary": "[reference generation + audio reference] Young Chu Zheng awakens his former emperor soul and makes his chilling vow of conquest.",
-        "retention_analysis": "Preserve the blood mark, the towering imperial phantom silhouette, and Chu Zheng's unshakeable regal posture.",
-        "detailed_description": "A low-angle camera pushes in slowly. The morning air ripples with subtle golden heat distortion around young Chu Zheng as the towering emperor phantom manifests behind him. He speaks with calm, chilling finality: <Subject 1> (S1) whispers with absolute cold majesty, <d>[Mandarin] 前世尔等将朕逼上绝路，这一世……朕要这天下尽归楚氏！ </d> He closes his mouth after speaking.",
-        "overall_soundscape": "A low metallic dragon hum vibrating in the air at 00:00.600, followed by a sudden sharp gust of autumn wind swirling fallen plum blossom petals across the stone courtyard.",
-        "non_diegetic_music": "Leave for post-production"
-      },
-      "seed": 2026110815
+      "dialogue_line": "这双幼小的手……这不是我的身体！飞机坠海，我竟然穿越了？！",
+      "length_frames": 141,
+      "duration_sec": 6.8,
+      "qwen_prompt": "Cinematic close-up of 9-year-old boy Chu Zheng sitting bolt upright in the ancient bed, staring down in profound shock at his small fair hands. His forehead bears a neat bandage with a faint blood stain. His dark eyes shift rapidly from utter disbelief to razor-sharp adult intellectual composure. Master photorealistic skin texture, natural pores, 8k resolution.",
+      "negative_prompt": "chubby cheeks, baby face, deformed mouth, smiling, cartoon, anime doll, creepy eyes, plastic skin, modern clothes, text, watermark, subtitles",
+      "seed": 2026110825,
+      "motion_bucket": 140
     },
     {
       "shot_id": 6,
-      "scene_title": "全场震撼·太守府大门轰开·狂澜初起",
-      "speaker": null,
-      "dialogue_line": null,
+      "scene_title": "推窗放眼·北赵第一豪门霸业启程",
+      "speaker": "narrator",
+      "dialogue_line": "北赵平原城，手握十万重兵的第一世家。这一世，我为楚五公子！",
       "length_frames": 90,
-      "duration_sec": 3.75,
-      "shot_type": "Dynamic Pull-Back to Wide Shot",
-      "camera_motion": "Fast pull-back from shocked children to the massive red gates of Governor Chu's palace bursting open",
-      "qwen_image_prompt": "Dramatic wide cinematic shot in Changchun Garden. Prince Zhao Ying and older brothers Chu Xuan and Chu Yuan frozen in utter shock and pale horror, recoiling from the small boy. The camera whips to the massive vermilion iron-studded gates of the Northern Zhao Governor Mansion bursting open, black-armored cavalry guards rushing through. Intense wind, swirling dust, cinematic climax, 8k.",
-      "h3_structured_prompt": {
-        "subject_definitions": "Shocked royal children recoiling in terror, while the massive gates of Governor Chu's palace slam open with black cavalry.",
-        "summary": "Episode climax: the imperial presence terrifies the courtyard, and the Governor's heavy cavalry mobilizes.",
-        "retention_analysis": "Retain Prince Zhao Ying's pale fearful expression and the heavy charging iron gates of the governor mansion.",
-        "detailed_description": "The camera pulls back sharply. Prince Zhao Ying stumbles back a step in genuine terror, his arrogance shattered by the boy's gaze. The scene transitions dynamically to the grand mansion gates swinging wide open as armored guards sprint forth.",
-        "overall_soundscape": "Heavy thunderous thud of iron gates crashing open at 00:00.500, galloping war horse hooves, and a sudden rising crescendo of martial horns in distance.",
-        "non_diegetic_music": "Leave for post-production"
-      },
-      "seed": 2026110816
+      "duration_sec": 6.0,
+      "qwen_prompt": "Cinematic slow push shot looking past young Chu Zheng standing by an open carved lattice window. Outside lies the magnificent sprawling capital of Pingyuan County, towering vermilion walls, fluttering battle banners, marching armored cavalry patrols in the morning mist. Epic historical scale, atmospheric cinematic masterpiece, 8k.",
+      "negative_prompt": "modern buildings, skyscrapers, cars, deformed limbs, text, watermark, subtitles, cartoon",
+      "seed": 2026110826,
+      "motion_bucket": 130
     }
   ]
 }
