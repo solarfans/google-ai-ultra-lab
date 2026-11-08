@@ -15,7 +15,7 @@
 | **YouTube Premium** | 个人与品牌频道会员 |  **已确认** | 个人身份与 yoursolar 品牌频道均显示 Premium 标识 |
 | **Colab 算力** | 约 2,000 ~ 2,500 CU/月 |  **已确认 (2,497.44 CU)** | `colab usage` 回读当前余额：2,497.44 CU，活跃实例 0 |
 | **G4 96GB GPU** | NVIDIA RTX PRO 6000 Ada/Blackwell |  **已验证，当前 0 活跃** | 实例已彻底关机自毁，无任何后台漏费风险 |
-| **Cloud Credits** | Ultra / Google Builders Hub 标示 US$100/月 | **2026-11 当月已申请、页面显示余额 SGD 128.28** | 2026-11-08 Owner 截图：Builders Hub Benefits `My Billing Account`、`Remaining balance: $128.28`（界面本地货币 SGD）；以后各月发放/是否自动续领尚未验证 |
+| **Cloud Credits** | Ultra / Google Builders Hub 标示 US$100/月 | **2026-11 已入账 / BOTH_CREDITS_ACTIVE / BILLING_VERIFIED** | Google Cloud Billing → Credits 实际账单：`Google Developer Program premium benefit - CREDIT_TYPE_MONTHLY`，Available / 100%，SGD 128.28；后续月份自动发放、适用产品与抵扣顺序仍待验证 |
 | **Google Flow** | 约 25,000 点 / 月 | ⏳ 待使用 | 网页后台已确认包含 |
 | **Antigravity** | Gemini 4 Argon + Claude Opus |  **已就绪** | 顶级模型池在 AGY 中可用 |
 | **本地 M3 Pro 算力** | Apple Silicon M3 Pro 36GB |  **已部署运行 (43.9 tok/s)** | 本地私有无审查大模型 (9B Heretic Uncensored)，32K 上下文 |
@@ -46,13 +46,13 @@
 
 ## 4. Google Cloud Billing 与 Ultra 开发者赠金（2026-11-08 SGT）
 
-**Owner screenshot-backed / November credit applied at benefit UI; independent Billing credit-ledger reconciliation pending.** 仅记录订阅权益，不修改 AGY 算力/内容生产工作流。
+**BOTH_CREDITS_ACTIVE / BILLING_VERIFIED — Owner screenshot-backed Google Cloud Billing Credits ledger (2026-11-08 SGT).** 仅记录订阅权益，不修改 AGY 算力/内容生产工作流。
 
-- Google Cloud **Free Trial** 已激活，Billing UI 账户名为 `My Billing Account`，项目存在；Cloud Billing Overview 明示 **SGD 385** 试用赠金（对应标准 **US$300**，是币种换算，**不是 US$385**）、**90 天**、到期日 **2027-02-07**，当时用量为 0。免费试用界面显示 `Upgrade`，Owner 未提供已升级 Paid 的证据；记录为 **Free Trial**。
-- Google Builders Hub `Benefits` → **November '26 / US$100 monthly Gen AI & Cloud credits**，已选择 `My Billing Account`，勾选 `Always use this billing account` 并点击 `Apply`。之后 Benefits 卡片显示本地换算 **SGD 128.28**、`Remaining balance: $128.28` 和 `Google Cloud Billing` 入口；按截图判断 **2026-11 月度福利已应用于所选账单账户**。截图亦显示 `EXPIRING ON: NOV 8, 2027`，但尚不能据此推断各月赠金的独立到期方式。
-- **两类 Credits 不要混同：** SGD 385 是 Cloud Free Trial，一次性、90 天；SGD 128.28 是本期 Ultra/Builders Hub 月度权益的本地币金额。按两张页面显示值合计 **SGD 513.28 名义额度**，但两者各自的适用产品、抵扣顺序及可否在 Free Trial 下实际消费未做 Billing Incentives/Transaction 级别核验，**不可视为已到账、可通用的现金余额**。
-- **待验证：** Cloud Billing → Incentives/Credits 的实际入账明细；本月 Ultra Credits 是否允许 AI Studio Gemini API、Vertex AI、Agent Platform 及其他服务抵扣的具体条件；未来月份是否自动 Apply、是否需要人工领取、赠金有效期及抵扣顺序。不得把勾选默认 Billing Account 解释为已验证自动每月领款。
+- Google Cloud **Free Trial** 已激活，Billing UI 账户名为 `My Billing Account`，项目存在；Cloud Billing → Credits 核实 **SGD 384.83** 试用赠金（对应标准 **US$300**，是币种换算，**不是 US$385**）、**90 天**、到期日 **2027-02-07**，当时用量为 0。免费试用界面显示 `Upgrade`，Owner 未提供已升级 Paid 的证据；记录为 **Free Trial**。
+- Google Builders Hub `Benefits` → **November '26 / US$100 monthly Gen AI & Cloud credits**，已选择 `My Billing Account`，勾选 `Always use this billing account` 并点击 `Apply`。之后 Benefits 卡片显示本地换算 **SGD 128.28**、`Remaining balance: $128.28` 和 `Google Cloud Billing` 入口；按截图判断 **2026-11 月度福利已应用于所选账单账户**。随后 Billing → Credits 显示该项独立 Credit 为 `Google Developer Program premium benefit - CREDIT_TYPE_MONTHLY`，状态 **Available**、剩余 **100%**、原值与剩余值均 **SGD 128.28**，入账已核实。截图亦显示 `EXPIRING ON: NOV 8, 2027`，但尚不能据此推断各月赠金的独立到期方式。
+- **两类 Credits 不要混同：** Google Cloud Billing → Credits 逐项核实：`Free Trial` **SGD 384.83**，Available / 100%；`Google Developer Program premium benefit - CREDIT_TYPE_MONTHLY` **SGD 128.28**，Available / 100%。**合计 SGD 513.11 可用账面 Credit**（两笔独立入账，并非现金余额）。适用产品、抵扣顺序及 Free Trial 状态下具体消费限制仍待验证。
+- **待验证：** 两笔 Credit 的服务适用范围、AI Studio Gemini API / Vertex AI / Agent Platform 等具体抵扣条件；未来月份是否自动 Apply、是否需要人工领取、月度 Credit 的实际到期时间及抵扣顺序。不得把勾选默认 Billing Account 解释为已验证自动每月领款。
 - **操作边界：** 未申请 Paid Upgrade、未启动 GPU VM/收费资源、未改动付款账户、密钥或部署。既有 Google AI Ultra Apple 订阅与 Colab CU 额度独立于 Cloud Billing 赠金。
-- **证据来源：** Owner 2026-11-08 当前对话的 Google Cloud Free Trial Overview、Billing Overview、Builders Hub Benefits Apply 前/后截图；本记录不包含账户号码、付款资料或个人地址。
+- **证据来源：** Owner 2026-11-08 当前对话的 Google Cloud Free Trial Overview、Builders Hub Benefits Apply 前/后，以及最新 **Google Cloud Billing → Credits / All credits** 截图；本记录不包含账户号码、付款资料或个人地址。
 
 `hermes_surface_impact=NO_HERMES_IMPACT`; `project_ui_impact=NO_UI_IMPACT`。
