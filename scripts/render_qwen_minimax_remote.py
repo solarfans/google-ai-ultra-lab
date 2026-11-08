@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Remote G4 (96GB Blackwell) Execution Script for 《楚氏春秋·正传第一卷：杯底波澜》
+Remote G4 (96GB Blackwell) Execution Script for 《楚氏春秋·第一集：北赵楚氏·假山觉醒》
 Re-architected with Qwen-Image-2.1 + MiniMax-H3 Industrial Engine:
 Stage 1: Generates 1344x768 authentic Han Dynasty keyframes via Qwen-Image-2.1 with reference-locked faces.
 Stage 2: Generates 6 dynamic 3D video clips with native lip-sync, dialogue (<d>[Mandarin]...</d>),
@@ -21,7 +21,7 @@ os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
 os.environ["TQDM_DISABLE"] = "1"
 
 print("==================================================")
-print("🎬 [REMOTE G4] 楚氏春秋·正传第一卷：杯底波澜")
+print("🎬 [REMOTE G4] 楚氏春秋·第一集：北赵楚氏·假山觉醒")
 print("🔥 工业级重构引擎: Qwen-Image-2.1 + MiniMax-H3")
 print("==================================================")
 
@@ -58,196 +58,189 @@ if missing:
 import imageio
 from PIL import Image
 
-# 3. Shot Specifications with FreedomAIG 6-Section Prompting & Qwen-Image Prompts
+# 3. Episode 01: 北赵楚氏·假山觉醒 Shot Specifications
 SHOTS = [
     {
         "id": "shot01",
-        "title": "来兮楼夜宴·玉杯清碰",
+        "title": "平原畅春园·北赵第一豪门排场",
         "role": None,
         "is_anchor": False,
         "length_frames": 73,
         "duration_sec": 3.04,
         "qwen_prompt": (
-            "Extreme macro close-up of two exquisite Chinese mutton-fat white jade wine cups clinking together, "
-            "splashing a single drop of clear amber wine in mid-air. Blurred background of a grand ancient "
-            "Han-dynasty banquet hall with glowing warm crimson silk lanterns and autumn night candlelight reflections. "
-            "35mm film still, master cinematic lighting, 8k resolution, authentic Chinese historical aesthetic."
+            "Cinematic wide establishing 35mm film still of the ancient imperial palace garden Changchun Garden in Northern Zhao dynasty. "
+            "Towering red pavilion walls, carved white marble balustrades, blooming early spring plum blossoms, ancient green cypress trees under gentle morning sunlight. "
+            "Aristocratic Han-dynasty noble children playing on the lush grass lawn in distance. Master epic cinematic lighting, 8k resolution, authentic Chinese historical aesthetic."
         ),
-        "negative_prompt": "不要出现任何字幕、水印或英文乱码，Japanese, samurai, kimono, modern clothes, deformed face, cartoon, text, watermark, subtitles, English letters, blurry, deformed limbs",
+        "negative_prompt": "不要出现任何字幕、水印或英文乱码，text, watermark, subtitles, English letters, blurry, deformed limbs, modern clothes, cartoon, cgi",
         "h3_prompt": (
             "[subject_definitions]\n"
-            "Two exquisite ancient Chinese mutton-fat white jade wine cups held by noble hands in Han dynasty silk sleeves.\n\n"
+            "A grand ancient Chinese imperial royal garden Changchun Garden with red walls, marble bridges, and lush spring scenery.\n\n"
             "[summary]\n"
-            "Extreme macro close-up of two white jade cups gently clinking together in a luxurious Han banquet hall.\n\n"
+            "Wide cinematic shot showcasing the immense wealth and imperial scale of the Northern Zhao aristocracy.\n\n"
             "[retention_analysis]\n"
-            "Retain clear amber wine droplets suspended in mid-air and warm candlelight bokeh in background.\n\n"
+            "Retain towering red pavilion walls, delicate white marble carvings, and misty morning sunlight.\n\n"
             "[detailed_description]\n"
-            "The camera slowly pushes forward with extreme shallow depth of field. The rims of two white jade wine cups touch, causing the amber wine inside to ripple and splash a tiny droplet into the air against the soft glowing lanterns.\n\n"
+            "The camera cranes slowly down across ancient tiled roofs. Early spring morning sunlight glints off carved stone bridges and tranquil garden ponds, while aristocratic noble youths in silk robes gather in the courtyard.\n\n"
             "[overall_soundscape]\n"
-            "A crisp, crystalline chime of high-grade jade cups clinking at 00:00.350, followed by the subtle liquid sloshing of amber wine and distant muffled banquet murmurs.\n\n"
+            "Gentle morning breeze rustling through ancient cypress branches at 00:00.200, distant crisp palace wind chimes, cheerful muffled banter of noble children.\n\n"
             "[non_diegetic_music]\n"
             "Leave for post-production"
         ),
-        "seed": 2026110801,
+        "seed": 2026110811,
         "motion_bucket": 110
     },
     {
         "id": "shot02",
-        "title": "来兮楼主案·五公子发难",
-        "role": "chu_zheng",
-        "is_anchor": True,
-        "length_frames": 141,
-        "duration_sec": 5.88,
-        "qwen_prompt": (
-            "A handsome 24-year-old Chinese noble general Chu Zheng with sharp aristocrat features, slight sardonic smirk, "
-            "intense dark eyes harboring ruthless intellect, leaning casually back against dark carved banquet desk, tapping empty jade cup rim with long finger. "
-            "Dressed in authentic Han black silk tailored martial robe (Xuan-Yi) with subtle dark gold trim, dark hair in noble knot with dark jade hairpin. "
-            "Warm candlelight casting dramatic sharp shadows, ultra-photorealistic, 8k, Chinese historical drama aesthetics."
-        ),
-        "negative_prompt": "不要出现任何字幕、水印或英文乱码，Japanese, samurai, kimono, elderly, beard, woman, modern clothes, cartoon, text, watermark, subtitles, English letters, blurry, deformed limbs",
-        "h3_prompt": (
-            "[subject_definitions]\n"
-            "<Subject 1> (S1) is a handsome 24-year-old Chinese noble warrior general Chu Zheng in authentic Han black silk tailored robe (Xuan-Yi) with sharp cold features and slight sardonic smirk.\n"
-            "<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Deep, resonant, cold noble warrior voice speaking Mandarin.\n\n"
-            "[summary]\n"
-            "[reference generation + audio reference] Medium close-up of young general Chu Zheng delivering a cutting inquiry at the banquet table.\n\n"
-            "[retention_analysis]\n"
-            "Preserve Chu Zheng's cold piercing gaze, black silk robe with gold trim, and jade cup tapping gesture.\n\n"
-            "[detailed_description]\n"
-            "The camera drifts slowly to the right. Chu Zheng sits upright, his intense eyes locking onto the kneeling commander off-screen. He taps his long finger on the jade cup, sneering coldly as he speaks: <Subject 1> (S1) whispers, <d>[Mandarin] 贾将军，熊耳山的贼匪本将限期平定。将军若嫌此令苛苛，不妨现在当着我长兄的面说出来？ </d> He closes his mouth after speaking.\n\n"
-            "[overall_soundscape]\n"
-            "Rhythmic, crisp fingertip tapping against the hollow jade wine cup rim at 00:00.200 and 00:00.650, sudden tense silence falling across the grand banquet hall.\n\n"
-            "[non_diegetic_music]\n"
-            "Leave for post-production"
-        ),
-        "seed": 2026110802,
-        "motion_bucket": 125
-    },
-    {
-        "id": "shot03",
-        "title": "宴席跪拜·战将请罪",
-        "role": "jia_dao",
+        "title": "畅春园假山前·小王爷赵应挑衅",
+        "role": "zhao_ying",
         "is_anchor": True,
         "length_frames": 124,
         "duration_sec": 5.17,
         "qwen_prompt": (
-            "A 42-year-old burly battle-hardened Chinese commander Jia Dao with full black beard, rugged weathered face drenched in nervous oily sweat, "
-            "kneeling on banquet crimson carpet, hands trembling as he bows deeply before imperial desk. Wearing authentic Han-dynasty iron lamellar scale armor "
-            "over brown tunic with bronze tiger pauldron. Highly tense lighting, cinematic realism, 8k."
+            "Medium shot 35mm film still of an arrogant 14-year-old royal prince Zhao Ying in ornate purple and gold pheasant-embroidered Han silk robes, "
+            "tall gold filigree prince crown, sneering contemptuously with crossed arms, facing young scholars in jade robes. Tense standoff on green garden lawn in front of tall carved limestone rockery. "
+            "Realistic cinematic dramatic sidelighting, 8k resolution."
         ),
-        "negative_prompt": "不要出现任何字幕、水印或英文乱码，Japanese, samurai, clean-shaven, smiling, relaxed, modern clothes, cartoon, text, watermark, subtitles, English letters, blurry, deformed limbs",
+        "negative_prompt": "不要出现任何字幕、水印或英文乱码，text, watermark, subtitles, English letters, blurry, deformed face, cartoon, modern clothes",
         "h3_prompt": (
             "[subject_definitions]\n"
-            "<Subject 3> (S3) is a 42-year-old burly battle-hardened Chinese commander Jia Dao in authentic Han iron lamellar scale armor, kneeling nervously.\n"
-            "<Audio 3> is the voice-timbre reference for <Subject 3> (S3). Gruff, panicked, trembling with military respect, speaking Mandarin.\n\n"
+            "<Subject 2> (S2) is an arrogant 14-year-old royal prince Zhao Ying in ornate purple and crimson silk robes with a sneering disdainful smirk.\n"
+            "<Audio 2> is the voice-timbre reference for <Subject 2> (S2). Haughty, aggressive adolescent royal voice speaking Mandarin.\n\n"
             "[summary]\n"
-            "[reference generation + audio reference] Low-angle shot of commander Jia Dao trembling in panic and pleading for military mercy.\n\n"
+            "[reference generation + audio reference] Prince Zhao Ying aggressively confronts the Chu family brothers with aristocratic contempt.\n\n"
             "[retention_analysis]\n"
-            "Retain heavy iron lamellar armor, beaded cold sweat on forehead, and fearful trembling posture.\n\n"
+            "Preserve Zhao Ying's ornate purple robe, arrogant smirk, and the tense confrontational posture against the garden rockery.\n\n"
             "[detailed_description]\n"
-            "A low angle camera captures commander Jia Dao bowing deeply, his hands clutched together in front of his chest. His chest heaves with nervous breath, oil sweat shining on his temples under candlelight. He looks up slightly with panicked eyes: <Subject 3> (S3) shouts nervously, <d>[Mandarin] 卑职在！五公子息怒！卑职明日便亲率精骑入山，不荡平贼巢，绝不收兵！ </d> He closes his mouth after speaking.\n\n"
+            "The camera tracks left slowly. Prince Zhao Ying steps forward aggressively, his chin tilted up in mockery as he sneers down at the Chu brothers: <Subject 2> (S2) sneers arrogantly, <d>[Mandarin] 两位好威风啊！不过是我赵家养的一条鹰犬，也配在皇家行宫摆谱？ </d> He closes his mouth after speaking.\n\n"
             "[overall_soundscape]\n"
-            "Heavy friction of iron lamellar scale armor rattling at 00:00.200, labored panting breath, nervous gulps amidst quiet candlelight flutter.\n\n"
+            "Rustle of heavy embroidered silk fabric as Zhao Ying steps forward at 00:00.300, followed by abrupt silence among surrounding noble children.\n\n"
             "[non_diegetic_music]\n"
             "Leave for post-production"
         ),
-        "seed": 2026110803,
-        "motion_bucket": 105
+        "seed": 2026110812,
+        "motion_bucket": 120
+    },
+    {
+        "id": "shot03",
+        "title": "假山高处·小楚铮失足坠落",
+        "role": None,
+        "is_anchor": False,
+        "length_frames": 73,
+        "duration_sec": 3.04,
+        "qwen_prompt": (
+            "Dramatic action shot of 9-year-old noble boy Chu Zheng in tailored black silk robe falling backward from a tall ancient mossy grey limestone rockery, "
+            "his dark silk sleeves flapping in mid-air, jade pendant flying loose. Blurred panicked faces of children below reaching out. Intense motion blur, dramatic cinematic suspense lighting, 8k."
+        ),
+        "negative_prompt": "不要出现任何字幕、水印或英文乱码，text, watermark, subtitles, English letters, blurry, deformed limbs, cartoon",
+        "h3_prompt": (
+            "[subject_definitions]\n"
+            "A 9-year-old aristocratic noble boy Chu Zheng in black silk robes falling from a tall stone rockery.\n\n"
+            "[summary]\n"
+            "Suspenseful dynamic shot capturing the young master slipping and tumbling from the rocky precipice.\n\n"
+            "[retention_analysis]\n"
+            "Retain dark silk robes, limestone rock texture, and the rapid vertical falling motion.\n\n"
+            "[detailed_description]\n"
+            "The camera snaps down rapidly with dynamic motion. Young Chu Zheng's foot slips on a damp rock ridge, and his small body tumbles backward through the air toward the rugged stone pavement below.\n\n"
+            "[overall_soundscape]\n"
+            "Sharp crumble of small loose stones breaking at 00:00.150, sudden frantic screams of noble children echoing across the garden courtyard.\n\n"
+            "[non_diegetic_music]\n"
+            "Leave for post-production"
+        ),
+        "seed": 2026110813,
+        "motion_bucket": 130
     },
     {
         "id": "shot04",
-        "title": "宴席上座·长公子调和",
-        "role": "chu_xuan",
+        "title": "假山青石喋血·额角见红与帝王抬眸",
+        "role": "young_chu_zheng",
         "is_anchor": True,
         "length_frames": 141,
         "duration_sec": 5.88,
         "qwen_prompt": (
-            "An elegant 28-year-old Chinese aristocratic statesman Chu Xuan with gentle refined face, calm inscrutable eyes like deep fathomless water, "
-            "subtle composed smile concealing intense ambition, holding a slender white jade wine pitcher, pouring wine into a cup. Wearing authentic Han jade-green "
-            "wide-sleeved silk robe (Shenyi) with white jade crown. Soft warm banquet candlelight, dignified imperial poise, 8k."
+            "Extreme macro close-up 35mm film still of 9-year-old young Chu Zheng lying on cool grey limestone. "
+            "A vivid trickle of scarlet blood trails down his sculpted fair alabaster forehead past his sharp dark eyebrow. "
+            "His long dark eyelashes tremble, and his deep dark eye slowly opens—revealing an astonishingly cold, piercing, supreme imperial gaze harboring centuries of ruthlessness. "
+            "Master photorealistic skin texture, natural pores, 8k resolution, zero plastic, authentic cinematic realism."
         ),
-        "negative_prompt": "不要出现任何字幕、水印或英文乱码，Japanese, kimono, samurai, deformed eyes, beard, armor, modern clothes, cartoon, text, watermark, subtitles, English letters, blurry, deformed limbs",
+        "negative_prompt": "不要出现任何字幕、水印或英文乱码，chubby cheeks, baby face, deformed mouth, smiling, cartoon, anime doll, creepy eyes, plastic skin, modern clothes, text, watermark, subtitles",
         "h3_prompt": (
             "[subject_definitions]\n"
-            "<Subject 2> (S2) is an elegant 28-year-old Chinese aristocratic statesman Chu Xuan in authentic Han jade-green wide-sleeved silk robes with serene, calculating poise.\n"
-            "<Audio 2> is the voice-timbre reference for <Subject 2> (S2). Gentle, composed, dignified scholar-official voice speaking Mandarin with subtle authority.\n\n"
+            "Extreme macro close-up of young Chu Zheng's face with a thin trickle of blood on his forehead as his cold imperial eyes snap open.\n\n"
             "[summary]\n"
-            "[reference generation + audio reference] Medium shot of elder brother Chu Xuan gracefully pouring wine while moderating the dispute.\n\n"
+            "Pivotal dramatic turning point: the young boy's gaze awakens from innocent child to a ruthless reborn emperor.\n\n"
             "[retention_analysis]\n"
-            "Keep jade-green scholar robe, white jade crown, steady hands pouring wine, and calm inscrutable smile.\n\n"
+            "Retain the scarlet blood trickle on fair skin, sharp sculpted bone structure, and the terrifying coldness in his dark pupil.\n\n"
             "[detailed_description]\n"
-            "The camera pushes in gently. Chu Xuan tilts a slender white jade wine pitcher with practiced calm, a smooth stream of clear wine filling his jade cup. He raises his tranquil, fathomless eyes, addressing his younger brother with an effortless smile: <Subject 2> (S2) speaks gently, <d>[Mandarin] 小五何必吓唬边军宿将。贾将军效忠的是我楚家，自当竭力用命，断不至于辜负北疆威名。 </d> He closes his mouth after speaking.\n\n"
+            "The camera pushes in with microscopic precision. The boy's eyelashes flutter. A single drop of crimson blood drips onto the stone. His eyes open completely—not with fear or tears, but with the chilling, absolute authority of a sovereign awakening from a long nightmare.\n\n"
             "[overall_soundscape]\n"
-            "A continuous, gentle trickling sound of wine filling the jade cup at 00:00.150–00:01.800, soft rustle of high-grade silk sleeve fabric.\n\n"
+            "A deep, resonant sub-bass pulse thrumming at 00:00.400, followed by the quiet, slow drip of a single blood droplet onto cold stone.\n\n"
             "[non_diegetic_music]\n"
             "Leave for post-production"
         ),
-        "seed": 2026110804,
-        "motion_bucket": 115
+        "seed": 2026110814,
+        "motion_bucket": 105
     },
     {
         "id": "shot05",
-        "title": "深夜黑漆马车·兄弟机锋",
-        "role": "chu_zheng",
+        "title": "帝王觉醒·前世法相虚影与冷语誓言",
+        "role": "young_chu_zheng",
         "is_anchor": False,
-        "ref_role_anchor": "shot02",
+        "ref_role_anchor": "shot04",
         "length_frames": 192,
         "duration_sec": 8.00,
         "qwen_prompt": (
-            "Inside an ancient heavy black-lacquered horse carriage at night, dimly illuminated by glowing red charcoal embers in a small bronze brazier. "
-            "Chu Zheng leaning near window curtain, his sharp cold profile highlighted in deep red charcoal glow, staring with mocking fierce eyes at his brother across the low desk. "
-            "Heavy tension, cinematic masterpiece, 8k."
+            "A powerful cinematic 35mm film still of 9-year-old Chu Zheng slowly rising to sit on the stone floor, his face calm and emotionless despite the blood on his forehead, "
+            "his eyes burning with supreme imperial authority. Behind him in the rippling air, a majestic semi-transparent double-exposure phantom of an ancient Han emperor wearing a twelve-tasseled imperial jade crown (Mianliu) and black dragon robe looms large. "
+            "Epic master lighting, volumetric morning rays, 8k resolution, authentic Han drama."
         ),
-        "negative_prompt": "不要出现任何字幕、水印或英文乱码，Japanese, modern interior, electric lights, bright colors, deformed face, cartoon, text, watermark, subtitles, English letters, blurry, deformed limbs",
+        "negative_prompt": "不要出现任何字幕、水印或英文乱码，chubby cheeks, baby face, deformed mouth, smiling, cartoon, anime doll, creepy eyes, plastic skin, text, watermark, subtitles",
         "h3_prompt": (
             "[subject_definitions]\n"
-            "<Subject 1> (S1) is a 24-year-old Chinese warrior Chu Zheng in black silk robes, bathed in deep crimson charcoal glow inside a carriage.\n"
-            "<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Deep, cold noble warrior voice speaking Mandarin.\n\n"
+            "<Subject 1> (S1) is a 9-year-old aristocratic noble boy Chu Zheng in black silk robes, seated with a thin line of blood on his forehead and an awe-inspiring imperial emperor silhouette looming behind him.\n"
+            "<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Young noble boy voice layered with a deep, echoing imperial resonance speaking Mandarin.\n\n"
             "[summary]\n"
-            "[reference generation + audio reference] Dramatic carriage interior shot of Chu Zheng laying bare his ruthless political philosophy.\n\n"
+            "[reference generation + audio reference] Young Chu Zheng awakens his former emperor soul and makes his chilling vow of conquest.\n\n"
             "[retention_analysis]\n"
-            "Maintain the red charcoal glow on Chu Zheng's sharp cheekbones and the dark wood lattice background of the moving carriage.\n\n"
+            "Preserve the blood mark, the towering imperial phantom silhouette, and Chu Zheng's unshakeable regal posture.\n\n"
             "[detailed_description]\n"
-            "The camera rocks gently with the carriage motion. Glowing red embers in the small bronze brazier cast dancing shadows across Chu Zheng's sculpted cheekbones. He leans forward slightly, staring across the low lacquer table, speaking with quiet, lethal precision: <Subject 1> (S1) whispers ruthlessly, <d>[Mandarin] 这世上越是底细不清的人，用起来才越顺手。因为他的命脉攥在主人手里，一旦有了异心，连个收尸的宗族都没有！ </d> He closes his mouth after speaking.\n\n"
+            "A low-angle camera pushes in slowly. The morning air ripples with subtle golden heat distortion around young Chu Zheng as the towering emperor phantom manifests behind him. He speaks with calm, chilling finality: <Subject 1> (S1) whispers with absolute cold majesty, <d>[Mandarin] 前世尔等将朕逼上绝路，这一世……朕要这天下尽归楚氏！ </d> He closes his mouth after speaking.\n\n"
             "[overall_soundscape]\n"
-            "Low rhythmic rumbling of heavy wooden wheels grinding over wet stone pavement, crackling red charcoal spark pop at 00:01.200, distant rhythmic horse hooves outside.\n\n"
+            "A low metallic dragon hum vibrating in the air at 00:00.600, followed by a sudden sharp gust of autumn wind swirling fallen plum blossom petals across the stone courtyard.\n\n"
             "[non_diegetic_music]\n"
             "Leave for post-production"
         ),
-        "seed": 2026110805,
-        "motion_bucket": 120
+        "seed": 2026110815,
+        "motion_bucket": 115
     },
     {
         "id": "shot06",
-        "title": "幽暗驿馆·长剑出鞘",
-        "role": "chu_zheng",
+        "title": "全场震撼·太守府大门轰开·狂澜初起",
+        "role": None,
         "is_anchor": False,
-        "ref_role_anchor": "shot02",
         "length_frames": 90,
         "duration_sec": 3.75,
         "qwen_prompt": (
-            "Inside a dim ancient courtyard room lit only by cold silver moonlight through carved lattice window. Young general Chu Zheng standing tall in black cape, "
-            "gripping a meteorite black-iron Han straight sword, drawing it half an inch from its ornate scabbard, the cold steel blade reflecting a sharp beam of light across his eyes. "
-            "Dark cinematic atmosphere, dynamic, 8k."
+            "Dramatic wide cinematic shot in Changchun Garden. Prince Zhao Ying and older brothers Chu Xuan and Chu Yuan frozen in utter shock and pale horror, recoiling from the small boy. "
+            "The camera whips to the massive vermilion iron-studded gates of the Northern Zhao Governor Mansion bursting open, black-armored cavalry guards rushing through. Intense wind, swirling dust, cinematic climax, 8k."
         ),
-        "negative_prompt": "不要出现任何字幕、水印或英文乱码，Japanese katana, samurai, bright daylight, kimono, modern weapons, deformed hands, cartoon, text, watermark, subtitles, English letters, blurry, deformed limbs",
+        "negative_prompt": "不要出现任何字幕、水印或英文乱码，text, watermark, subtitles, English letters, blurry, deformed limbs, cartoon",
         "h3_prompt": (
             "[subject_definitions]\n"
-            "<Subject 1> (S1) is Chu Zheng standing in silver moonlight, wearing black cape and drawing a Han straight sword.\n"
-            "<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Cold, determined warrior voice speaking Mandarin.\n\n"
+            "Shocked royal children recoiling in terror, while the massive gates of Governor Chu's palace slam open with black cavalry.\n\n"
             "[summary]\n"
-            "[reference generation + audio reference] Dramatic moonlit action shot of Chu Zheng drawing his blade half an inch.\n\n"
+            "Episode climax: the imperial presence terrifies the courtyard, and the Governor's heavy cavalry mobilizes.\n\n"
             "[retention_analysis]\n"
-            "Retain silver moonlight reflections on black steel blade and intense resolved expression in Chu Zheng's eyes.\n\n"
+            "Retain Prince Zhao Ying's pale fearful expression and the heavy charging iron gates of the governor mansion.\n\n"
             "[detailed_description]\n"
-            "Cold silver moonlight pours through the lattice window. Chu Zheng stands upright, his right thumb flicking the hilt. The straight steel blade slides out half an inch from its dark scabbard, catching a razor-sharp moonbeam that flashes across his eyes. He speaks softly with resolute finality: <Subject 1> (S1) whispers, <d>[Mandarin] 今夜过后，安阳城里，再无退路。 </d> He closes his mouth after speaking.\n\n"
+            "The camera pulls back sharply. Prince Zhao Ying stumbles back a step in genuine terror, his arrogance shattered by the boy's gaze. The scene transitions dynamically to the grand mansion gates swinging wide open as armored guards sprint forth.\n\n"
             "[overall_soundscape]\n"
-            "A sharp, ringing metallic scrape of high-carbon tempered steel drawing from wood and bronze scabbard at 00:00.400, followed by a sudden gust of autumn wind rattling paper lattice windows.\n\n"
+            "Heavy thunderous thud of iron gates crashing open at 00:00.500, galloping war horse hooves, and a sudden rising crescendo of martial horns in distance.\n\n"
             "[non_diegetic_music]\n"
             "Leave for post-production"
         ),
-        "seed": 2026110806,
-        "motion_bucket": 135
+        "seed": 2026110816,
+        "motion_bucket": 130
     }
 ]
 
@@ -381,7 +374,6 @@ try:
 
 except Exception as e:
     print(f"⚠️ Stage 2 视频渲染告警: {e}", file=sys.stderr)
-    # Ensure fallback dummy clips for graceful completion if diffusers SVD fails
     for shot in SHOTS:
         sid = shot["id"]
         mp4_path = f"/tmp/{sid}_clip.mp4"

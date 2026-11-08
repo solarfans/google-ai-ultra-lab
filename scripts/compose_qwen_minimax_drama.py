@@ -18,7 +18,7 @@ ASSETS_DIR = SHORT_DRAMA_DIR / "assets"
 AUDIO_DIR = ASSETS_DIR / "audio"
 SUB_DIR = ASSETS_DIR / "subtitles"
 CLIPS_DIR = ASSETS_DIR / "clips"
-SPEC_FILE = SHORT_DRAMA_DIR / "chu_shi_chun_qiu_qwen_minimax_ep01.json"
+SPEC_FILE = SHORT_DRAMA_DIR / "chu_shi_chun_qiu_ep01_beizhao_chushi.json"
 
 FINAL_MP4 = SHORT_DRAMA_DIR / "chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4"
 FINAL_SRT = SHORT_DRAMA_DIR / "chu_shi_chun_qiu_ep01_qwen_minimax_master.srt"

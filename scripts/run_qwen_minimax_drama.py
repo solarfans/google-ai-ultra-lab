@@ -41,7 +41,7 @@ def get_colab_usage():
 def main():
     root = Path(__file__).resolve().parent.parent
     remote_script = root / "scripts" / "render_qwen_minimax_remote.py"
-    config_file = root / "pipelines" / "short_drama" / "chu_shi_chun_qiu_qwen_minimax_ep01.json"
+    config_file = root / "pipelines" / "short_drama" / "chu_shi_chun_qiu_ep01_beizhao_chushi.json"
     assets_dir = root / "pipelines" / "short_drama" / "assets"
     clips_dir = assets_dir / "clips"
     assets_dir.mkdir(parents=True, exist_ok=True)
