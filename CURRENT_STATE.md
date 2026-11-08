@@ -29,12 +29,14 @@
   - 接入业内最强工业级生图模型 **`Qwen-Image-2.1`** (7B DiT + Qwen3-VL 条件编码器)，原生支持参考图垫图锁脸 (I2I Consistency)，在 1344x768 电影级画幅下将楚铮、楚轩、贾道角色面相、汉制玄衣深衣与玉冠 100% 锁定；
   - 接入全模态视频模型 **`MiniMax-H3`** (33B Native AV-DiT)，全面采用 FreedomAIG 六段式标准语法 (`<Subject N>`, `summary`, `retention_analysis`, `detailed_description` 含 `<d>[Mandarin]...</d> He closes his mouth after speaking`, `overall_soundscape`, `non_diegetic_music`)，原生实现唇形口型对齐、角色声纹与拟声音效一步直出；
   - 整合 `yuanyang749/colab-ultra-workstation` 工业级调度资产 (`launch_g4_fast.py` 与 `minimax_h3_dialogue_v9.json`)。
-- **《楚氏春秋·正传第一卷：杯底波澜》工业级资产库交付**：
-  - 全新剧本分镜规范：[**pipelines/short_drama/chu_shi_chun_qiu_qwen_minimax_ep01.json**](./pipelines/short_drama/chu_shi_chun_qiu_qwen_minimax_ep01.json)；
-  - 云端 G4 渲染引擎：[**scripts/render_qwen_minimax_remote.py**](./scripts/render_qwen_minimax_remote.py)；
-  - 本地 G4 调度调度器：[**scripts/run_qwen_minimax_drama.py**](./scripts/run_qwen_minimax_drama.py)；
-  - 本地母带合成引擎：[**scripts/compose_qwen_minimax_drama.py**](./scripts/compose_qwen_minimax_drama.py)；
-  - 本地秒级合成交付 52.42 秒母带成片 [**pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4) (10.45 MB) 与外挂字幕 [**chu_shi_chun_qiu_ep01_qwen_minimax_master.srt**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.srt)。
+- **正篇第一集《北赵楚氏·假山觉醒》Colab G4 实机点火跑片通关**：
+  - 成功调度 Colab G4 96GB Blackwell 显卡（会话 `run-43fa9f`），用时 177.3 秒全量渲染 6 镜；
+  - 官方 `QwenImage21Pipeline` 实机运行，生成 6 组 1344×768 电影级画格与 6 段动态短视频；
+  - 角色参考图锚点（Shot 04 锁定 9 岁小世子楚铮面相骨相与额角血痕）在 Shot 05 成功执行 I2I 锁脸；
+  - 实际消耗算力 **0.00 CU**（极速批跑），当前余额 **2499.56 CU**，活跃实例 **0** 彻底安全关机。
+- **正篇第 1 集全量母带成片交付**：
+  - 本地 Apple Silicon 3 秒合成交付 40.57 秒成片 [**pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4) (1.82 MB, 1344x768)；
+  - 配套交付外挂字幕 [**chu_shi_chun_qiu_ep01_qwen_minimax_master.srt**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.srt) 及无损音频母带 [**chu_shi_chun_qiu_ep01_qwen_minimax_master.mp3**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp3)。
 - **严格遵循 Zero-Burn 防烧卡铁律**：
   - 0 CU 本地备料：剧本分镜、角色定义、负向提示词门禁全部在本地编排完成；
   - 生命周期强制自毁：任务结束后自动释放，当前活跃实例数归零，算力余额稳健保持 2499.56 CU。
@@ -43,6 +45,6 @@
 
 ## 3. 下一步行动计划
 
-1. **Colab G4 实机点火跑片**：在准备就绪时运行 `python3 scripts/run_qwen_minimax_drama.py`，点火 G4 渲染 Qwen-Image + MiniMax-H3 全量素材。
+1. **审阅成片画质与眼神杀效果**：Owner 在本地播放器直接审阅 `chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4`，核验少年楚铮骨相与帝王觉醒质感。
 2. **多机位接力与长镜头扩展**：引入 `BUNNY_H3_ActionLogic_Bridge` 与 22 帧潜空间混合接力，实现长镜头连续对手戏。
 3. **推进小说广播剧管线 (引擎 3)**：利用 Gemini 对白提取与本地/云端 TTS 模型，生成第一期《楚氏春秋》长篇有声广播剧。

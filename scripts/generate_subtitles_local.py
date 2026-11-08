@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Local Subtitle Generator for 《楚氏春秋·正传第一卷：杯底波澜》
+Local Subtitle Generator for 《楚氏春秋·第一集：北赵楚氏·假山觉醒》
 Generates high-resolution PNG subtitle cards and .srt subtitle track.
 """
 
@@ -10,22 +10,17 @@ import json
 import subprocess
 from PIL import Image, ImageDraw, ImageFont
 
-SPEC_FILE = "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/chu_shi_chun_qiu_zhengzhuan_ep01.json"
+SPEC_FILE = "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/chu_shi_chun_qiu_ep01_beizhao_chushi.json"
 ASSETS_DIR = "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/assets"
 SUB_DIR = os.path.join(ASSETS_DIR, "subtitles")
 AUDIO_DIR = os.path.join(ASSETS_DIR, "audio")
 os.makedirs(SUB_DIR, exist_ok=True)
 
-with open(SPEC_FILE, "r", encoding="utf-8") as f:
-    spec = json.load(f)
-
-# Colors for character badges
 BADGE_COLORS = {
-    "旁白 / 空镜": (220, 220, 235, 255),       # Ivory / Frost White
-    "楚铮": (255, 205, 85, 255),               # Noble Dark Gold
-    "楚轩": (65, 215, 165, 255),               # Imperial Jade Cyan
-    "贾道": (235, 115, 75, 255),               # Battle-hardened Crimson Bronze
-    "张岐": (160, 180, 240, 255),              # Covert Scout Azure
+    "旁白": (225, 225, 235, 255),               # Frost White
+    "楚 铮 (少年)": (255, 205, 80, 255),         # Imperial Dark Gold
+    "赵 应 (小王爷)": (220, 100, 220, 255),       # Royal Purple
+    "楚 轩 (少年长兄)": (65, 215, 165, 255),      # Jade Cyan
 }
 
 # Find suitable system Chinese font on macOS
@@ -35,90 +30,63 @@ FONT_CANDIDATES = [
     "/System/Library/Fonts/STHeiti Medium.ttc",
     "/Library/Fonts/Arial Unicode.ttf"
 ]
-font_path = None
-for p in FONT_CANDIDATES:
-    if os.path.exists(p):
-        font_path = p
-        break
+font_path = next((p for p in FONT_CANDIDATES if os.path.exists(p)), None)
 
-if not font_path:
-    print("Warning: Defaulting to basic font.")
-    font_badge = ImageFont.load_default()
-    font_text = ImageFont.load_default()
-else:
+if font_path:
     font_badge = ImageFont.truetype(font_path, 28)
     font_text = ImageFont.truetype(font_path, 34)
+else:
+    font_badge = ImageFont.load_default()
+    font_text = ImageFont.load_default()
 
-srt_entries = []
-current_time = 0.0
+shot_dialogues = [
+    (1, "旁白", "北赵平原郡，第一世家楚氏手握十万精兵，威震天下。"),
+    (2, "赵 应 (小王爷)", "两位好威风啊！不过是我赵家养的一条鹰犬，也配在皇家行宫摆谱？"),
+    (3, "旁白", "假山高处青石松脱，幼弟楚铮失足跌落，伴随惊呼坠下！"),
+    (4, "旁白", "假山喋血，鲜血顺着额角蜿蜒滑落。双睫颤动，双眸骤然睁开！"),
+    (5, "楚 铮 (少年)", "前世尔等将朕逼上绝路，这一世……朕要这天下尽归楚氏！"),
+    (6, "旁白", "九天龙吟惊落月，安阳杀神，于此刻觉醒！"),
+]
 
-for shot in spec["shots"]:
-    sid = shot["shot_id"]
-    speaker = shot["speaker"]
-    dialogue = shot["dialogue"]
-    audio_file = os.path.join(AUDIO_DIR, f"shot{sid:02d}_voice.mp3")
-    
-    # Get audio duration
-    probe = subprocess.check_output([
-        "ffprobe", "-v", "error", "-show_entries", "format=duration",
-        "-of", "default=noprint_wrappers=1:nokey=1", audio_file
-    ], text=True).strip()
-    dur = float(probe)
-    
-    # Parse badge and clean text
-    if "】" in dialogue:
-        badge_text, text = dialogue.split("】", 1)
-        badge_text = badge_text + "】"
-    else:
-        badge_text = f"【{speaker}】"
-        text = dialogue
-    
-    # Render 1344x768 transparent subtitle image
-    W, H = 1344, 768
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+for sid, speaker, text in shot_dialogues:
+    # 1344 x 768 transparent canvas
+    img = Image.new("RGBA", (1344, 768), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
-    
-    # Draw dark translucent backdrop
-    box_w = W - 120
-    box_h = 130
-    box_x = 60
-    box_y = H - box_h - 40
-    
-    # Rounded dark slate background
-    draw.rounded_rectangle(
-        [box_x, box_y, box_x + box_w, box_y + box_h],
-        radius=16,
-        fill=(12, 14, 20, 205),
-        outline=(255, 255, 255, 30),
-        width=1
-    )
-    
-    # Draw speaker badge
-    badge_color = BADGE_COLORS.get(speaker, (255, 255, 255, 255))
-    draw.text((box_x + 35, box_y + 18), badge_text, font=font_badge, fill=badge_color)
-    
-    # Draw dialogue text
-    draw.text((box_x + 35, box_y + 65), text.strip(), font=font_text, fill=(255, 255, 255, 245))
-    
-    sub_png = os.path.join(SUB_DIR, f"shot{sid:02d}_sub.png")
-    img.save(sub_png, "PNG")
-    print(f"✅ Generated subtitle card: {sub_png}")
-    
-    # Add SRT entry
-    start_s = current_time
-    end_s = current_time + dur
-    def fmt_time(s):
-        hrs = int(s // 3600)
-        mins = int((s % 3600) // 60)
-        secs = int(s % 60)
-        ms = int((s - int(s)) * 1000)
-        return f"{hrs:02d}:{mins:02d}:{secs:02d},{ms:03d}"
-    
-    srt_entries.append(f"{sid}\n{fmt_time(start_s)} --> {fmt_time(end_s)}\n{badge_text} {text.strip()}\n")
-    current_time = end_s
 
-srt_path = "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/chu_shi_chun_qiu_zhengzhuan_ep01.srt"
-with open(srt_path, "w", encoding="utf-8") as f:
-    f.write("\n".join(srt_entries))
+    badge_str = f"【{speaker}】"
+    full_str = f"{badge_str} {text}"
 
-print(f"🎉 Generated master SRT subtitle: {srt_path} (Total runtime: {current_time:.2f}s)")
+    # Calculate text bounding boxes
+    bbox_badge = draw.textbbox((0, 0), badge_str, font=font_badge)
+    badge_w = bbox_badge[2] - bbox_badge[0]
+
+    bbox_text = draw.textbbox((0, 0), text, font=font_text)
+    text_w = bbox_text[2] - bbox_text[0]
+    total_w = badge_w + 12 + text_w
+
+    start_x = max(40, (1344 - total_w) // 2)
+    start_y = 660
+
+    # Draw rounded pill box background
+    pad_x = 24
+    pad_y = 12
+    card_box = [
+        start_x - pad_x,
+        start_y - pad_y,
+        start_x + total_w + pad_x,
+        start_y + 40 + pad_y
+    ]
+    draw.rounded_rectangle(card_box, radius=16, fill=(15, 15, 20, 205), outline=(60, 60, 75, 180), width=2)
+
+    # Draw Badge
+    badge_color = BADGE_COLORS.get(speaker, (220, 220, 220, 255))
+    draw.text((start_x, start_y + 4), badge_str, font=font_badge, fill=badge_color)
+
+    # Draw Text
+    draw.text((start_x + badge_w + 12, start_y), text, font=font_text, fill=(255, 255, 255, 255))
+
+    out_png = os.path.join(SUB_DIR, f"shot{sid:02d}_sub.png")
+    img.save(out_png, "PNG")
+    print(f"  🎨 [Subtitle Card] Generated: {out_png}")
+
+print("\n🎉 全部 6 张高精度中文字幕卡已生成完毕！")
