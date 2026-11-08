@@ -1,0 +1,184 @@
+{
+  "project": "楚氏春秋·正传第一卷：杯底波澜 (Chu Shi Chun Qiu - Canon Ep01)",
+  "version": "2.0.0-qwen-minimax-h3",
+  "source_chapter": "楚氏春秋-正传-卷一-第001章-杯底波澜.md",
+  "engine_specs": {
+    "keyframe_generator": "Qwen/Qwen-Image-2.1 (7B Single-Stream DiT + Qwen3-VL conditioning)",
+    "video_generator": "MiniMax-H3 Singularity v1.3 (33B Native AV-DiT + NVFP4)",
+    "resolution": "1344x768",
+    "aspect_ratio": "16:9",
+    "base_fps": 24,
+    "target_runtime": "30.0s",
+    "zero_burn_enforced": true
+  },
+  "global_guardrails": {
+    "negative_prompt": "不要出现任何字幕、水印或英文乱码，Japanese, samurai, kimono, katana, modern clothes, deformed face, creepy eyes, feminine, mustache, elderly, cartoon, text, watermark, subtitles, English letters, blurry, deformed limbs",
+    "zero_waste_sop": "0 CU local prep, 0 CU CPU warmup, mandatory colab run timeout autokill, 0 orphan instances"
+  },
+  "characters": {
+    "chu_zheng": {
+      "id": "chu_zheng",
+      "name_zh": "楚 铮",
+      "name_en": "CHU ZHENG · 24岁",
+      "title_line1": "楚氏五公子 · 北疆杀神",
+      "title_line2": "安阳夺权破局核心操盘手",
+      "h3_subject_tag": "<Subject 1>",
+      "h3_audio_tag": "<Audio 1>",
+      "qwen_image_prompt": "A handsome 24-year-old Chinese noble warrior general Chu Zheng with sharp aristocratic features, cold piercing dark eyes harboring intense ruthless intellect, slight sardonic smirk, tall athletic build. Dressed in authentic Han-dynasty black silk tailored martial robes (Xuan-Yi) with subtle dark gold trim, dark hair tied in a high noble knot with a dark jade hairpin. Dramatic cinematic warm candlelight casting sharp shadows, ultra-photorealistic, 8k resolution, Chinese historical drama aesthetics.",
+      "h3_definition": "<Subject 1> (S1) is a handsome 24-year-old Chinese noble warrior general Chu Zheng with sharp features and a sardonic cold smirk, dressed in authentic Han black silk tailored martial robes (Xuan-Yi).",
+      "voice_timbre_spec": "<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Deep, resonant, cold noble warrior voice speaking Mandarin with precise diction.",
+      "voice_seed_wav": "native_chu_zheng_seed_stereo.wav",
+      "ref_image": "ref_chu_zheng_1344x768.png"
+    },
+    "chu_xuan": {
+      "id": "chu_xuan",
+      "name_zh": "楚 轩",
+      "name_en": "CHU XUAN · 28岁",
+      "title_line1": "楚氏大公子 · 平原郡主政长官",
+      "title_line2": "深谙权衡制衡之术的幕后弈者",
+      "h3_subject_tag": "<Subject 2>",
+      "h3_audio_tag": "<Audio 2>",
+      "qwen_image_prompt": "A 28-year-old elegant Chinese aristocratic scholar-official Chu Xuan with gentle refined face, calm inscrutable eyes like a deep pond, subtle composed smile concealing intense calculating ambition. Dressed in authentic Han-dynasty wide-sleeved jade-green silk scholar robes (Shenyi) with white silk collar, hair neatly styled with a white jade Guan crown. Soft warm banquet candlelight, dignified imperial poise, 35mm film still, ultra-detailed.",
+      "h3_definition": "<Subject 2> (S2) is an elegant 28-year-old Chinese aristocratic statesman Chu Xuan in authentic Han jade-green wide-sleeved silk robes with serene, calculating poise.",
+      "voice_timbre_spec": "<Audio 2> is the voice-timbre reference for <Subject 2> (S2). Gentle, composed, dignified scholar-official voice speaking Mandarin with subtle authority.",
+      "voice_seed_wav": "native_chu_xuan_seed_stereo.wav",
+      "ref_image": "ref_chu_xuan_1344x768.png"
+    },
+    "jia_dao": {
+      "id": "jia_dao",
+      "name_zh": "贾 道",
+      "name_en": "JIA DAO · 42岁",
+      "title_line1": "安阳大营统领 · 行伍战将",
+      "title_line2": "身系边军兵符归属的关键宿将",
+      "h3_subject_tag": "<Subject 3>",
+      "h3_audio_tag": "<Audio 3>",
+      "qwen_image_prompt": "A 42-year-old burly battle-hardened Chinese commander Jia Dao with full black beard, rugged weathered face drenched in nervous oily sweat, wide fearful eyes, kneeling on banquet floor. Wearing authentic Han-dynasty iron lamellar scale armor over brown tunic with bronze tiger pauldron. Highly tense lighting, cinematic realism, 8k.",
+      "h3_definition": "<Subject 3> (S3) is a 42-year-old burly battle-hardened Chinese commander Jia Dao in authentic Han iron lamellar scale armor, kneeling nervously.",
+      "voice_timbre_spec": "<Audio 3> is the voice-timbre reference for <Subject 3> (S3). Gruff, panicked, trembling with military respect, speaking Mandarin.",
+      "voice_seed_wav": "native_jia_dao_seed_stereo.wav",
+      "ref_image": "ref_jia_dao_1344x768.png"
+    }
+  },
+  "shots": [
+    {
+      "shot_id": 1,
+      "scene_title": "来兮楼夜宴·玉杯清碰",
+      "speaker": null,
+      "dialogue_line": null,
+      "length_frames": 73,
+      "duration_sec": 3.04,
+      "shot_type": "Extreme Macro Close-up",
+      "camera_motion": "Slow smooth push-in with shallow depth of field",
+      "qwen_image_prompt": "Extreme macro close-up of two exquisite Chinese mutton-fat white jade wine cups clinking together, splashing a single drop of clear amber wine in mid-air. Blurred background of a grand ancient Han-dynasty banquet hall with glowing warm crimson silk lanterns and autumn night candlelight reflections. 35mm film still, master cinematic lighting, 8k resolution, authentic Chinese historical aesthetic.",
+      "h3_structured_prompt": {
+        "subject_definitions": "Two exquisite ancient Chinese mutton-fat white jade wine cups held by noble hands in Han dynasty silk sleeves.",
+        "summary": "Extreme macro close-up of two white jade cups gently clinking together in a luxurious Han banquet hall.",
+        "retention_analysis": "Retain clear amber wine droplets suspended in mid-air and warm candlelight bokeh in background.",
+        "detailed_description": "The camera slowly pushes forward with extreme shallow depth of field. The rims of two white jade wine cups touch, causing the amber wine inside to ripple and splash a tiny droplet into the air against the soft glowing lanterns.",
+        "overall_soundscape": "A crisp, crystalline chime of high-grade jade cups clinking at 00:00.350, followed by the subtle liquid sloshing of amber wine and distant muffled banquet murmurs.",
+        "non_diegetic_music": "Leave for post-production"
+      },
+      "seed": 2026110801
+    },
+    {
+      "shot_id": 2,
+      "scene_title": "来兮楼主案·五公子发难",
+      "speaker": "chu_zheng",
+      "dialogue_line": "贾将军，熊耳山的贼匪本将限期平定。将军若嫌此令苛苛，不妨现在当着我长兄的面说出来？",
+      "length_frames": 141,
+      "duration_sec": 5.88,
+      "shot_type": "Medium Close-up",
+      "camera_motion": "Subtle slow drift rightward with steady focus on facial expressions",
+      "qwen_image_prompt": "A handsome 24-year-old Chinese noble general Chu Zheng with sharp aristocrat features, slight sardonic smirk, intense dark eyes harboring ruthless intellect, leaning casually back against dark carved banquet desk, tapping empty jade cup rim with long finger. Dressed in authentic Han black silk tailored robe (Xuan-Yi) with subtle dark gold trim. Warm candlelight casting dramatic shadows, ultra-photorealistic, 8k.",
+      "h3_structured_prompt": {
+        "subject_definitions": "<Subject 1> (S1) is a handsome 24-year-old Chinese noble warrior general Chu Zheng in authentic Han black silk tailored robe (Xuan-Yi) with sharp cold features and slight sardonic smirk.\n<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Deep, resonant, cold noble warrior voice speaking Mandarin.",
+        "summary": "[reference generation + audio reference] Medium close-up of young general Chu Zheng delivering a cutting inquiry at the banquet table.",
+        "retention_analysis": "Preserve Chu Zheng's cold piercing gaze, black silk robe with gold trim, and jade cup tapping gesture.",
+        "detailed_description": "The camera drifts slowly to the right. Chu Zheng sits upright, his intense eyes locking onto the kneeling commander off-screen. He taps his long finger on the jade cup, sneering coldly as he speaks: <Subject 1> (S1) whispers, <d>[Mandarin] 贾将军，熊耳山的贼匪本将限期平定。将军若嫌此令苛苛，不妨现在当着我长兄的面说出来？ </d> He closes his mouth after speaking.",
+        "overall_soundscape": "Rhythmic, crisp fingertip tapping against the hollow jade wine cup rim at 00:00.200 and 00:00.650, sudden tense silence falling across the grand banquet hall.",
+        "non_diegetic_music": "Leave for post-production"
+      },
+      "seed": 2026110802
+    },
+    {
+      "shot_id": 3,
+      "scene_title": "宴席跪拜·战将请罪",
+      "speaker": "jia_dao",
+      "dialogue_line": "卑职在！五公子息怒！卑职明日便亲率精骑入山，不荡平贼巢，绝不收兵！",
+      "length_frames": 124,
+      "duration_sec": 5.17,
+      "shot_type": "Low-angle Medium Shot",
+      "camera_motion": "Low-angle static shot looking slightly down at the kneeling commander",
+      "qwen_image_prompt": "A 42-year-old burly battle-hardened Chinese commander Jia Dao with full black beard, rugged weathered face drenched in nervous oily sweat, kneeling on banquet crimson carpet, hands trembling as he bows before imperial desk. Wearing authentic Han-dynasty iron lamellar scale armor over brown tunic with bronze tiger pauldron. Highly tense lighting, cinematic realism, 8k.",
+      "h3_structured_prompt": {
+        "subject_definitions": "<Subject 3> (S3) is a 42-year-old burly battle-hardened Chinese commander Jia Dao in authentic Han iron lamellar scale armor, kneeling nervously.\n<Audio 3> is the voice-timbre reference for <Subject 3> (S3). Gruff, panicked, trembling with military respect, speaking Mandarin.",
+        "summary": "[reference generation + audio reference] Low-angle shot of commander Jia Dao trembling in panic and pleading for military mercy.",
+        "retention_analysis": "Retain heavy iron lamellar armor, beaded cold sweat on forehead, and fearful trembling posture.",
+        "detailed_description": "A low angle camera captures commander Jia Dao bowing deeply, his hands clutched together in front of his chest. His chest heaves with nervous breath, oil sweat shining on his temples under candlelight. He looks up slightly with panicked eyes: <Subject 3> (S3) shouts nervously, <d>[Mandarin] 卑职在！五公子息怒！卑职明日便亲率精骑入山，不荡平贼巢，绝不收兵！ </d> He closes his mouth after speaking.",
+        "overall_soundscape": "Heavy friction of iron lamellar scale armor rattling at 00:00.200, labored panting breath, nervous gulps amidst quiet candlelight flutter.",
+        "non_diegetic_music": "Leave for post-production"
+      },
+      "seed": 2026110803
+    },
+    {
+      "shot_id": 4,
+      "scene_title": "宴席上座·长公子调和",
+      "speaker": "chu_xuan",
+      "dialogue_line": "小五何必吓唬边军宿将。贾将军效忠的是我楚家，自当竭力用命，断不至于辜负北疆威名。",
+      "length_frames": 141,
+      "duration_sec": 5.88,
+      "shot_type": "Medium Shot",
+      "camera_motion": "Gentle slow push-in focusing on Chu Xuan pouring wine",
+      "qwen_image_prompt": "An elegant 28-year-old Chinese aristocratic statesman Chu Xuan with gentle refined face, calm inscrutable eyes like deep fathomless water, subtle composed smile concealing intense ambition, holding a slender white jade wine pitcher, pouring wine into a cup. Wearing authentic Han jade-green wide-sleeved silk robe (Shenyi) with white jade crown. Soft warm banquet candlelight, dignified imperial poise, 8k.",
+      "h3_structured_prompt": {
+        "subject_definitions": "<Subject 2> (S2) is an elegant 28-year-old Chinese aristocratic statesman Chu Xuan in authentic Han jade-green wide-sleeved silk robes with serene, calculating poise.\n<Audio 2> is the voice-timbre reference for <Subject 2> (S2). Gentle, composed, dignified scholar-official voice speaking Mandarin with subtle authority.",
+        "summary": "[reference generation + audio reference] Medium shot of elder brother Chu Xuan gracefully pouring wine while moderating the dispute.",
+        "retention_analysis": "Keep jade-green scholar robe, white jade crown, steady hands pouring wine, and calm inscrutable smile.",
+        "detailed_description": "The camera pushes in gently. Chu Xuan tilts a slender white jade wine pitcher with practiced calm, a smooth stream of clear wine filling his jade cup. He raises his tranquil, fathomless eyes, addressing his younger brother with an effortless smile: <Subject 2> (S2) speaks gently, <d>[Mandarin] 小五何必吓唬边军宿将。贾将军效忠的是我楚家，自当竭力用命，断不至于辜负北疆威名。 </d> He closes his mouth after speaking.",
+        "overall_soundscape": "A continuous, gentle trickling sound of wine filling the jade cup at 00:00.150–00:01.800, soft rustle of high-grade silk sleeve fabric.",
+        "non_diegetic_music": "Leave for post-production"
+      },
+      "seed": 2026110804
+    },
+    {
+      "shot_id": 5,
+      "scene_title": "深夜黑漆马车·兄弟机锋",
+      "speaker": "chu_zheng",
+      "dialogue_line": "这世上越是底细不清的人，用起来才越顺手。因为他的命脉攥在主人手里，一旦有了异心，连个收尸的宗族都没有！",
+      "length_frames": 192,
+      "duration_sec": 8.00,
+      "shot_type": "Close-up OTS Profile",
+      "camera_motion": "Subtle handheld rhythmic carriage vibration and slow tilt",
+      "qwen_image_prompt": "Inside an ancient heavy black-lacquered horse carriage at night, dimly illuminated by glowing red charcoal embers in a small bronze brazier. Chu Zheng leaning near window curtain, his sharp cold profile highlighted in deep red charcoal glow, staring with mocking fierce eyes at his brother across the low desk. Heavy tension, cinematic masterpiece, 8k.",
+      "h3_structured_prompt": {
+        "subject_definitions": "<Subject 1> (S1) is a 24-year-old Chinese warrior Chu Zheng in black silk robes, bathed in deep crimson charcoal glow inside a carriage.\n<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Deep, cold noble warrior voice speaking Mandarin.",
+        "summary": "[reference generation + audio reference] Dramatic carriage interior shot of Chu Zheng laying bare his ruthless political philosophy.",
+        "retention_analysis": "Maintain the red charcoal glow on Chu Zheng's sharp cheekbones and the dark wood lattice background of the moving carriage.",
+        "detailed_description": "The camera rocks gently with the carriage motion. Glowing red embers in the small bronze brazier cast dancing shadows across Chu Zheng's sculpted cheekbones. He leans forward slightly, staring across the low lacquer table, speaking with quiet, lethal precision: <Subject 1> (S1) whispers ruthlessly, <d>[Mandarin] 这世上越是底细不清的人，用起来才越顺手。因为他的命脉攥在主人手里，一旦有了异心，连个收尸的宗族都没有！ </d> He closes his mouth after speaking.",
+        "overall_soundscape": "Low rhythmic rumbling of heavy wooden wheels grinding over wet stone pavement, crackling red charcoal spark pop at 00:01.200, distant rhythmic horse hooves outside.",
+        "non_diegetic_music": "Leave for post-production"
+      },
+      "seed": 2026110805
+    },
+    {
+      "shot_id": 6,
+      "scene_title": "幽暗驿馆·长剑出鞘",
+      "speaker": "chu_zheng",
+      "dialogue_line": "今夜过后，安阳城里，再无退路。",
+      "length_frames": 90,
+      "duration_sec": 3.75,
+      "shot_type": "Medium Action Shot",
+      "camera_motion": "Dynamic snap-zoom tracking the cold sword blade",
+      "qwen_image_prompt": "Inside a dim ancient courtyard room lit only by cold silver moonlight through carved lattice window. Young general Chu Zheng standing tall in black cape, gripping a meteorite black-iron Han straight sword, drawing it half an inch from its ornate scabbard, the cold steel blade reflecting a sharp beam of light across his eyes. Dark cinematic atmosphere, dynamic, 8k.",
+      "h3_structured_prompt": {
+        "subject_definitions": "<Subject 1> (S1) is Chu Zheng standing in silver moonlight, wearing black cape and drawing a Han straight sword.\n<Audio 1> is the voice-timbre reference for <Subject 1> (S1). Cold, determined warrior voice speaking Mandarin.",
+        "summary": "[reference generation + audio reference] Dramatic moonlit action shot of Chu Zheng drawing his blade half an inch.",
+        "retention_analysis": "Retain silver moonlight reflections on black steel blade and intense resolved expression in Chu Zheng's eyes.",
+        "detailed_description": "Cold silver moonlight pours through the lattice window. Chu Zheng stands upright, his right thumb flicking the hilt. The straight steel blade slides out half an inch from its dark scabbard, catching a razor-sharp moonbeam that flashes across his eyes. He speaks softly with resolute finality: <Subject 1> (S1) whispers, <d>[Mandarin] 今夜过后，安阳城里，再无退路。 </d> He closes his mouth after speaking.",
+        "overall_soundscape": "A sharp, ringing metallic scrape of high-carbon tempered steel drawing from wood and bronze scabbard at 00:00.400, followed by a sudden gust of autumn wind rattling paper lattice windows.",
+        "non_diegetic_music": "Leave for post-production"
+      },
+      "seed": 2026110806
+    }
+  ]
+}
