@@ -1,7 +1,7 @@
 # Google AI Ultra Lab — Current State & Ledger
 
 **最后更新**：2026-11-08 SGT (MacBook Pro)  
-**项目状态**：`QWEN_IMAGE_MINIMAX_H3_REFACTOR_LANDED / ZERO_BURN_VERIFIED / MASTER_COMPOSED`  
+**项目状态**：`CHU_SHI_CHUN_QIU_EP01_FULL_FAMILY_MASTER_DELIVERED / ZERO_BURN_VERIFIED`  
 **负责席位**：Antigravity Desktop (MacBook)  
 
 ---
@@ -13,7 +13,7 @@
 | **会员级别** | Google AI Ultra 30 TB |  **已确认** | Google One 首页已显示 "Google AI Ultra, 30 TB" (Melvin Guo) |
 | **订阅成本** | ₺2,949.99 / 月 |  **已确认** | Apple 订阅页面截图证实，12 月 7 日自动续费 |
 | **YouTube Premium** | 个人与品牌频道会员 |  **已确认** | 个人身份与 yoursolar 品牌频道均显示 Premium 标识 |
-| **Colab 算力** | 约 2,000 ~ 2,500 CU/月 |  **已确认 (2,499.56 CU)** | `colab usage` 回读当前余额：2,499.56 CU，活跃实例 0 |
+| **Colab 算力** | 约 2,000 ~ 2,500 CU/月 |  **已确认 (2,497.64 CU)** | `colab usage` 回读当前余额：2,497.64 CU，活跃实例 0 |
 | **G4 96GB GPU** | NVIDIA RTX PRO 6000 Ada/Blackwell |  **实测开机验证成功** | `colab run --gpu G4` 秒级分配：NVIDIA RTX PRO 6000 Blackwell Server Edition (97,887 MiB ~96GB 显存，176GB 内存，236GB 磁盘，CUDA 13.0)；执行完毕后已自动安全终止 |
 | **Cloud Credits** | 约 $100 / 月 | ⏳ 待激活 | 待注册 Google Cloud Developer Program 绑定账单 |
 | **Google Flow** | 约 25,000 点 / 月 | ⏳ 待使用 | 网页后台已确认包含，待短剧音画生成时调用 |
@@ -22,22 +22,20 @@
 
 ---
 
-## 2. 工程重构与最新交付成果 (Qwen-Image + MiniMax-H3)
+## 2. 工程重构与最新交付成果 (《楚氏春秋》第一集全剧真容交付)
 
-- **彻底重构 AI 短剧渲染引擎**：
-  - 彻底淘汰旧版 `SDXL 1.0 Base` (画质塑料/假人蜡像) 与 `SVD-XT` (无声橡皮泥拉伸)；
-  - 接入业内最强工业级生图模型 **`Qwen-Image-2.1`** (7B DiT + Qwen3-VL 条件编码器)，原生支持参考图垫图锁脸 (I2I Consistency)，在 1344x768 电影级画幅下将楚铮、楚轩、贾道角色面相、汉制玄衣深衣与玉冠 100% 锁定；
-  - 接入全模态视频模型 **`MiniMax-H3`** (33B Native AV-DiT)，全面采用 FreedomAIG 六段式标准语法 (`<Subject N>`, `summary`, `retention_analysis`, `detailed_description` 含 `<d>[Mandarin]...</d> He closes his mouth after speaking`, `overall_soundscape`, `non_diegetic_music`)，原生实现唇形口型对齐、角色声纹与拟声音效一步直出；
-  - 整合 `yuanyang749/colab-ultra-workstation` 工业级调度资产 (`launch_g4_fast.py` 与 `minimax_h3_dialogue_v9.json`)。
-- **正篇第一集《北赵楚氏·假山觉醒》Colab G4 实机点火跑片通关**：
-  - 成功调度 Colab G4 96GB Blackwell 显卡（会话 `run-43fa9f`），用时 177.3 秒全量渲染 6 镜；
-  - 官方 `QwenImage21Pipeline` 实机运行，生成 6 组 1344×768 电影级画格与 6 段动态短视频；
-  - 角色参考图锚点（Shot 04 锁定 9 岁小世子楚铮面相骨相与额角血痕）在 Shot 05 成功执行 I2I 锁脸；
-  - 实际消耗算力 **0.00 CU**（极速批跑），当前余额 **2499.56 CU**，活跃实例 **0** 彻底安全关机。
-- **正篇第 1 集全量母带成片交付**：
-  - 本地 Apple Silicon 3 秒合成交付 40.57 秒成片 [**pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4) (1.82 MB, 1344x768)；
-  - 配套交付外挂字幕 [**chu_shi_chun_qiu_ep01_qwen_minimax_master.srt**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.srt) 及无损音频母带 [**chu_shi_chun_qiu_ep01_qwen_minimax_master.mp3**](./pipelines/short_drama/chu_shi_chun_qiu_ep01_qwen_minimax_master.mp3)。
-- **严格遵循 Zero-Burn 防烧卡铁律**：
+- **《楚氏春秋·第一集：空难惊魂·异界重生》全 6 镜院线级母带正式交付**：
+  - **成片地址**：`pipelines/short_drama/chu_shi_chun_qiu_ep01_full_master.mp4` (42.24 秒, 1344x768 宽银幕电影画幅, 30 fps, 双声道高保真 AAC 192k)；
+  - **完整叙事链条**：现代客机剧烈空难 ➡️ 绝命短信坠海 ➡️ 太守府雕花古榻 ➡️ 楚夫人泣血求神 ➡️ 9岁楚铮惊醒看手 ➡️ 9岁小世子推窗俯瞰十万铁骑！
+  - **角色真实还原与闭环**：
+    - **幼年楚铮（9岁小世子）**：以用户 9 岁儿子真实骨相与**左脸颊标志性小痣**深度定制融合，头戴道髻发簪与带血伤布，身着金边丝绸寝衣/宝蓝缎面王孙常服；
+    - **彻底终结成年人变异**：Shot 06 严格锁定 9 岁孩童体量身形与身高比例，双手扶窗极目远眺，彻底肃清突变为 25 岁成年男子的穿帮故障；
+    - **楚夫人**：身着汉制高腰刺绣长袍跪于古榻之侧，神情悲怆落泪求神，情感张力拉满。
+- **全方位院线级视听动态系统（杜绝幻灯片 PPT 感）**：
+  - **镜头物理运动**：Shot 01 强烈失重颠簸与红光报警频闪、Shot 02 手机推轨与坠海剧震、Shot 03 古榻青烟平移横移、Shot 04 缓缓下压仰角跪拜、Shot 05 惊醒坐起冲击变焦、Shot 06 大景深平移出窗；
+  - **六重分层拟声音效 (SFX) 与院线配乐 (BGM)**：客机引擎撕裂与失速警报、海底沉闷心跳与坠海巨浪爆破音、古铜香炉风动空灵磬音、楚夫人泣血哀戚古筝弦乐、苏醒双跳低音心跳、平原城十万大军震天战鼓 (100 BPM) 与铜管乐交织。
+- **Colab G4 零浪费 (Zero-Burn) 守则严格达成**：
+  - 本轮所有云端 GPU 任务均采用自毁式生命周期调度，执行完毕瞬间释放，当前云端活跃实例 **0**，算力余额充足 (**2497.64 CU**)。
   - 0 CU 本地备料：剧本分镜、角色定义、负向提示词门禁全部在本地编排完成；
   - 生命周期强制自毁：任务结束后自动释放，当前活跃实例数归零，算力余额稳健保持 2499.56 CU。
 
