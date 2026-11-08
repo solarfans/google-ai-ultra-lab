@@ -1,7 +1,7 @@
 # Google AI Ultra Lab — Current State & Ledger
 
 **最后更新**：2026-11-08 SGT (MacBook Pro)  
-**项目状态**：`SHORT_DRAMA_PIPELINE_ABANDONED_ARCHIVED / LESSONS_LEARNED_COMMITTED / ZERO_BURN_SAFE`  
+**项目状态**：`GCP_DUAL_NODE_VPN_DEPLOYED_VERIFIED / BOTH_CREDITS_ACTIVE / ZERO_BURN_SAFE`  
 **负责席位**：Antigravity Desktop (MacBook)  
 
 ---
@@ -54,5 +54,25 @@
 - **待验证：** 两笔 Credit 的服务适用范围、AI Studio Gemini API / Vertex AI / Agent Platform 等具体抵扣条件；未来月份是否自动 Apply、是否需要人工领取、月度 Credit 的实际到期时间及抵扣顺序。不得把勾选默认 Billing Account 解释为已验证自动每月领款。
 - **操作边界：** 未申请 Paid Upgrade、未启动 GPU VM/收费资源、未改动付款账户、密钥或部署。既有 Google AI Ultra Apple 订阅与 Colab CU 额度独立于 Cloud Billing 赠金。
 - **证据来源：** Owner 2026-11-08 当前对话的 Google Cloud Free Trial Overview、Builders Hub Benefits Apply 前/后，以及最新 **Google Cloud Billing → Credits / All credits** 截图；本记录不包含账户号码、付款资料或个人地址。
+
+---
+
+## 5. Google Cloud 双机接力私人 VPN 基础设施（2026-11-08 SGT）
+
+**DEPLOYED / CONNECTIVITY_VERIFIED / US_IP_VERIFIED / TW_IP_VERIFIED / GUARDRAILS_ACTIVE**
+
+- **目标与架构**：针对中国大陆差旅场景，在项目 `project-665ac784-237e-4a71-ad0` 下完成「台湾入口跳板 (`asia-east1-b`) ➡️ Google 内部跨洋骨干网 (`VPC`) ➡️ 美西原生出口 (`us-west1-b`)」双机接力部署，并同时提供台湾本地直连备用线路。完整技术与运维文档见 [**docs/gcp_dual_node_vpn.md**](./docs/gcp_dual_node_vpn.md)。
+- **资源清单**：
+  - 入口机：`node-tw-entry-01`（`asia-east1-b`, `e2-micro`, Debian 12, 10GB `pd-standard`, 静态公网 IP `35.194.245.4` / `ip-node-tw-01`, 内网 `10.140.0.2`）
+  - 落地机：`node-us-exit-01`（`us-west1-b`, `e2-micro`, Debian 12, 10GB `pd-standard`, 美西公网出口 IP `35.247.83.37`）
+  - 防火墙：`fw-allow-proxy-in`（放行 `proxy-entry` 的 `8443/2053` 端口）、`fw-allow-internal-xray`（放行 `10.128.0.0/9` 内部 `10808` 端口）
+- **协议与安全护栏**：
+  - 采用 `Xray-core v26.1.23`，外部协议 `VLESS + XTLS-RPRX-Vision + REALITY`（SNI `www.apple.com:443`）；
+  - 已启用 `250GB/月` 流量自动熔断锁（`traffic_guard.sh` + `/etc/cron.d/xray-traffic-guard`）及 `play.googleapis.com` 遥测域名黑洞拦截；
+  - 固定月租约 US$7.6/月（美西 `e2-micro` 命中 Free Tier，台湾 `e2-micro` 由 Cloud Credits 抵扣），未升级 Paid Billing，无现金超支风险。
+- **端到端实测结果**：
+  - **🇺🇸 美西专线 (`35.194.245.4:8443`)**：实测出口 IP `35.247.83.37` (`The Dalles, Oregon, US`)，MacBook 与 iPhone Hiddify 均连接验证通过；
+  - **🇹🇼 台湾直连 (`35.194.245.4:2053`)**：实测出口 IP `35.194.245.4` (`Taipei, Taiwan, TW`)，MacBook 与 iPhone Hiddify 均连接验证通过；
+  - 敏感凭据（UUID、REALITY 私钥/公钥、ShortId、完整 `vless://` 链接）严格隔离于本地，未写入 GitHub 仓库。
 
 `hermes_surface_impact=NO_HERMES_IMPACT`; `project_ui_impact=NO_UI_IMPACT`。
