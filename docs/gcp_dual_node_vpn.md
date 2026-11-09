@@ -102,3 +102,21 @@ gcloud compute instances stop node-us-exit-01 --zone=us-west1-b
 gcloud compute instances start node-us-exit-01 --zone=us-west1-b
 gcloud compute instances start node-tw-entry-01 --zone=asia-east1-b
 ```
+
+---
+
+## 6. 扩展节点：Google AI Pro 美西独立节点（`node-us-pro-01`）
+
+**部署日期**：2026-11-09 SGT  
+**验收状态**：`DEPLOYED / CONNECTIVITY_VERIFIED / 35GB_TRAFFIC_LOCK_ACTIVE`
+
+- **所属账号与额度**：Google AI Pro 订阅账户（`maxli1985939495-org` / `My Billing Account 2`），享有每月 **US$10.00** `Google Developer Program premium benefit - CREDIT_TYPE_MONTHLY` 赠金。
+- **节点配置**：
+  - 实例名：`node-us-pro-01`（`us-west1-b` 美国俄勒冈，命中 GCP 免费层区域，机器本身与 30GB 内普通硬盘月租 `$0`）
+  - 规格：`e2-micro`（Debian 12, 10GB `pd-standard`）
+  - 公网入口/出口 IP：`136.86.239.13:8443`（防火墙规则：`fw-allow-pro-xray` 放行 `proxy-pro` 标签 `8443` 端口）
+  - 协议：`Xray-core v26.1.23` (`VLESS + XTLS-RPRX-Vision + REALITY`, SNI `www.apple.com:443`) + TCP BBR
+- **为什么设置 35GB/月 流量熔断锁**：
+  - GCP 出站流量（Network Egress）按目的地计费：发往普通互联网约 **US$0.12 / GB**，发往中国大陆方向（China Premium Tier）约 **US$0.23 / GB**。
+  - 每月 US$10 赠金在不超支的前提下，可覆盖约 `43 GB`（纯中国方向）至 `80 GB`（非中国方向）流量。
+  - 因此将 `/usr/local/bin/traffic_guard.sh` 阈值设定为 **35 GB / 月**（预留约 15%~20% 安全缓冲），达到 35GB 自动暂停 `xray` 并于次月 1 日 00:05 自动恢复，确保 `$10` 月度赠金 100% 覆盖、绝不触发信用卡扣款。

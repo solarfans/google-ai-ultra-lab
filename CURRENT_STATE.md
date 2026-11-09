@@ -1,7 +1,7 @@
 # Google AI Ultra Lab — Current State & Ledger
 
-**最后更新**：2026-11-08 SGT (MacBook Pro)  
-**项目状态**：`GCP_DUAL_NODE_VPN_DEPLOYED_VERIFIED / BOTH_CREDITS_ACTIVE / ZERO_BURN_SAFE`  
+**最后更新**：2026-11-09 SGT (MacBook Pro)  
+**项目状态**：`GCP_ULTRA_AND_PRO_VPN_MATRIX_VERIFIED / BOTH_CREDITS_ACTIVE / ZERO_BURN_SAFE`  
 **负责席位**：Antigravity Desktop (MacBook)  
 
 ---
@@ -74,5 +74,21 @@
   - **🇺🇸 美西专线 (`35.194.245.4:8443`)**：实测出口 IP `35.247.83.37` (`The Dalles, Oregon, US`)，MacBook 与 iPhone Hiddify 均连接验证通过；
   - **🇹🇼 台湾直连 (`35.194.245.4:2053`)**：实测出口 IP `35.194.245.4` (`Taipei, Taiwan, TW`)，MacBook 与 iPhone Hiddify 均连接验证通过；
   - 敏感凭据（UUID、REALITY 私钥/公钥、ShortId、完整 `vless://` 链接）严格隔离于本地，未写入 GitHub 仓库。
+
+---
+
+## 6. Google AI Pro 独立美西备用 VPN 节点与全球 4 线矩阵（2026-11-09 SGT）
+
+**DEPLOYED / PRO_US_NODE_VERIFIED / 35GB_TRAFFIC_LOCK_ACTIVE / GLOBAL_4_LINE_MATRIX_READY**
+
+- **Google AI Pro 开发者月度赠金与独立节点部署**：
+  - 账户与计费池：`maxli1985939495-org` / `My Billing Account 2`，拥有 `Google Developer Program premium benefit - CREDIT_TYPE_MONTHLY` **US$10.00 / 月**（Available 100%）。
+  - 节点规格与地址：`node-us-pro-01`（`us-west1-b` 美国俄勒冈，命中 GCP 免费层区域，机器固定月租 `$0`；`e2-micro`, Debian 12, 10GB `pd-standard`，公网 IP `136.86.239.13:8443`）。
+  - 协议与流量熔断锁：`Xray-core v26.1.23` (`VLESS + XTLS-RPRX-Vision + REALITY`, SNI `www.apple.com:443`) + TCP BBR + **35GB/月 自动流量熔断锁**（因 GCP 出站往中国方向流量单价约 `$0.23/GB`、其他互联网约 `$0.12/GB`，设定 35GB 阈值确保月度流量费恒定控制在 `$4~$8` 以内，100% 由每月 `$10` 赠金覆盖，零扣卡风险）。
+- **全球 4 线高可用 VPN 矩阵汇总**：
+  1. **🇺🇸 `GCP-美西专线` (Google AI Ultra)**：`35.194.245.4:8443`（台湾跳板 ➡️ 谷歌跨洋内网 ➡️ 美西原生出口 `35.247.83.37`，250GB/月锁）
+  2. **🇹🇼 `GCP-台湾直连` (Google AI Ultra)**：`35.194.245.4:2053`（台湾台北直连出口 `35.194.245.4`，共享 250GB/月锁）
+  3. **🇺🇸 `GCP-Pro-美西独享` (Google AI Pro)**：`136.86.239.13:8443`（独立账号/独立美西原生出口 `136.86.239.13`，35GB/月锁）
+  4. **🇸🇬 `VPN_ZZ` 新加坡专线 (Tencent Cloud Lighthouse)**：`43.134.74.51:443`（`sing-box 1.14.0` VLESS+REALITY，5 个独立客户端身份，1TB/月流量包）
 
 `hermes_surface_impact=NO_HERMES_IMPACT`; `project_ui_impact=NO_UI_IMPACT`。
