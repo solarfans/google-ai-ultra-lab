@@ -175,6 +175,8 @@ def subtitle_single_shot(
             "-map", "[vout]",
             "-map", "0:a",
             "-c:v", "libx264", "-crf", "18", "-preset", "fast",
+            "-pix_fmt", "yuv420p",
+            "-movflags", "+faststart",
             "-c:a", "copy",
             str(out_mp4),
             "-loglevel", "error",
@@ -190,13 +192,15 @@ def main() -> None:
 
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     include_badge = args.mode == "audit"
+    ep_tag = "Ep02" if "ep02" in args.manifest.name.lower() else "Ep01"
+    ep_slug = "ZhuanshiChongsheng" if ep_tag == "Ep02" else "BeizhaoChushi"
 
     sub_shots = []
     for idx, shot in enumerate(manifest["shots"]):
         shot_id = shot["shot_id"]
         in_name = shot.get("output_mp4") or f"{shot['output_prefix']}.mp4"
         in_mp4 = ASSETS_DIR / in_name
-        out_mp4 = ASSETS_DIR / f"ChuShiChunQiu_Ep01_{shot_id}_Subtitled.mp4"
+        out_mp4 = ASSETS_DIR / f"ChuShiChunQiu_{ep_tag}_{shot_id}_Subtitled.mp4"
         subtitle_single_shot(
             shot=shot,
             in_mp4=in_mp4,
@@ -207,11 +211,11 @@ def main() -> None:
         sub_shots.append(out_mp4)
         print(f"✅ Burned clean dialogue subtitles (HUD={include_badge}) onto {out_mp4.name}")
 
-    concat_list = Path("/tmp/ep01_subtitled_concat.txt")
+    concat_list = Path(f"/tmp/{ep_tag.lower()}_subtitled_concat.txt")
     concat_list.write_text("".join(f"file '{p}'\n" for p in sub_shots), encoding="utf-8")
-    master_sub = SHORT_DRAMA_DIR / "ChuShiChunQiu_Ep01_BeizhaoChushi_Subtitled_Audit.mp4"
+    master_sub = SHORT_DRAMA_DIR / f"ChuShiChunQiu_{ep_tag}_{ep_slug}_Subtitled_Audit.mp4"
     subprocess.run(
-        ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat_list), "-c", "copy", str(master_sub), "-loglevel", "error"],
+        ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat_list), "-c", "copy", "-movflags", "+faststart", str(master_sub), "-loglevel", "error"],
         check=True,
     )
     print(f"🎬 Master Subtitled Video ready: {master_sub} ({master_sub.stat().st_size / (1024**2):.2f} MB)")

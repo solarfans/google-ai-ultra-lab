@@ -47,6 +47,33 @@
       "voice_seed": "manju_licheng_urgent_steward_seed.wav",
       "visual_desc": "Li Cheng (李诚, 35-year-old Chu family retainer/steward), rendered in UE5 3D Chinese animation CG style wearing a grey-brown servant cloth cap and grey-brown tunic",
       "vocal_desc": "urgent, breathless, anxious adult male steward Mandarin vocal identity"
+    },
+    "modern_protagonist": {
+      "canonical_name": "前世楚铮",
+      "aliases": ["现代男主", "年轻公务员"],
+      "role": "楚铮前世（现代随团赴美考察的年轻公务员，返程航班失事坠海后魂穿六岁楚铮）",
+      "sheet_image": "manju_char_modern_man_sheet_1344x768.png",
+      "voice_seed": "manju_modern_man_tenor_seed.wav",
+      "visual_desc": "28-year-old modern Chinese man (past-life soul of Chu Zheng), rendered in UE5 3D Chinese animation CG style with short neat black hair, sharp brows, expressive dark eyes, wearing a dark navy casual blazer over a white crew-neck shirt",
+      "vocal_desc": "emotional, urgent, clear 28-year-old modern young man Mandarin tenor vocal identity"
+    },
+    "stewardess_broadcast": {
+      "canonical_name": "空乘乘务员",
+      "aliases": ["空姐", "机舱乘务员"],
+      "role": "现代跨洋客机乘务员，在空难迫降前播报紧急指令",
+      "sheet_image": "manju_char_stewardess_sheet_1344x768.png",
+      "voice_seed": "manju_stewardess_urgent_alto_seed.wav",
+      "visual_desc": "25-year-old Chinese flight attendant, rendered in UE5 3D Chinese animation CG style with neat bun hair, wearing a navy-blue airline tailored vest, white collar shirt, and red silk neckerchief",
+      "vocal_desc": "tense, professional, urgent young female flight attendant Mandarin vocal identity"
+    },
+    "wu_anran": {
+      "canonical_name": "吴安然",
+      "aliases": ["魔秀士", "吴先生"],
+      "role": "南齐魔门血影宗宗主，江湖人称“魔秀士”，逃亡平原城化名郎中入楚府，以十成大搜魂手发现楚铮天生任督二脉相通并收其为徒",
+      "sheet_image": "manju_char_wuanran_sheet_1344x768.png",
+      "voice_seed": "manju_wuanran_charismatic_baritone_seed.wav",
+      "visual_desc": "Wu Anran (魔秀士吴安然, 36-year-old Blood Shadow Sect Master disguised as a classical scholar), rendered in UE5 3D Chinese animation CG style with sharp phoenix eyes, short neat goatee beard, scholar topknot with wooden hairpin, wearing a slate-gray and dark-teal layered classical scholar robe",
+      "vocal_desc": "deep, magnetic, charismatic 36-year-old martial arts master Mandarin baritone vocal identity"
     }
   }
 }
