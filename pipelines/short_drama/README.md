@@ -1,6 +1,7 @@
 # 主线 A：Colab G4 96GB 3D 国漫影视 CG 风 AI 漫剧生产流水线 (v2.0)
 
 > **规范主文档**：[`docs/AI_MANJU_AND_ULTRA_SOP.md`](../../docs/AI_MANJU_AND_ULTRA_SOP.md)
+> **原著设定与人物圣经**：[`CHUSHI_CHUNQIU_CANON_BIBLE.md`](./CHUSHI_CHUNQIU_CANON_BIBLE.md)（严格对齐 `solarfans/novel-continuation-lab`《楚氏春秋》268 章原文）
 > **事故复盘与红线**：[`LESSONS_LEARNED.md`](../../LESSONS_LEARNED.md)
 
 ## 核心设计理念 (v2.0 3D 国漫 CG 漫剧)

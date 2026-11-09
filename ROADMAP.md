@@ -78,4 +78,4 @@
 
 ### 阶段四：红果爆款逆向与规模化 IP 连载
 - [ ] 利用 `HGhub` 与 `omni-content-pipeline` + AGY Gemini 视频逆向能力，一键拆解红果百亿级爆款漫剧（如《持械入宋》《万妖图录传》）的运镜与分镜模板。
-- [ ] 建立《楚氏春秋》或原创男频爽剧的 고정角色资产库（Character Vault），实现低 CU 成本按集连载。
+- [ ] 建立《楚氏春秋》（严格对齐 `solarfans/novel-continuation-lab` 原著设定与 [`CHUSHI_CHUNQIU_CANON_BIBLE.md`](./pipelines/short_drama/CHUSHI_CHUNQIU_CANON_BIBLE.md)）的固定角色资产库（Character Vault），实现低 CU 成本按集连载。
