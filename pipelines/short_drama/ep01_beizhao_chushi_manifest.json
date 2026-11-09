@@ -30,7 +30,8 @@
     },
     {
       "shot_id": "Shot02",
-      "status": "pending",
+      "status": "completed",
+      "output_mp4": "ChuShiChunQiu_Ep01_Shot02.mp4",
       "output_prefix": "ChuShiChunQiu_Ep01_Shot02",
       "first_frame": "manju_shot02_first_frame_1344x768.png",
       "subject_1": "chu_yuan",
@@ -53,26 +54,27 @@
       "shot_id": "Shot03",
       "status": "pending",
       "output_prefix": "ChuShiChunQiu_Ep01_Shot03",
-      "first_frame": "manju_shot03_first_frame_1344x768.png",
+      "first_frame": "manju_shot03_fallen_first_frame_1344x768.png",
       "subject_1": "chu_zheng_6yo",
       "subject_2": "chu_yuan",
-      "scene_summary": "At the steep Taihu-stone rockery (太湖石假山) in Changchun Garden under bright sunlight, 6-year-old <Subject 1> (Chu Zheng) perched high on the upper-left rock ledge reaches out for the small green bird, loses his footing in panic, and cries out for help, while 13-year-old <Subject 2> (Chu Yuan) at the lower-right base of the rockery looks up in utter horror, raises his hand, and shouts a frantic warning and call for a physician.",
-      "camera_motion": "dramatic medium-wide shot framing the steep garden rockery with tense handheld urgency",
-      "soundscape": "Sudden flutter of bird wings, loose pebbles skittering down the rockery, and urgent outdoor garden ambience accompany the panicked foreground Mandarin speech.",
+      "scene_summary": "At the stone pavement base of the steep gray Taihu-stone rockery (太湖石假山脚下青石阶) in sunlit Changchun Garden right after falling from the rockery, 6-year-old <Subject 1> (Chu Zheng) on the left sits slumped against the bottom rock step with a visible red bleeding scrape on his forehead, pressing his small hand to his injured forehead and crying out in pain, while 13-year-old 3rd Brother <Subject 2> (Chu Yuan) kneeling beside him on the right holds his shoulders in utter panic and shouts frantically for their eldest brother to carry him home for a physician.",
+      "camera_motion": "dramatic medium two-shot at the foot of the garden rockery with a tense slow push-in",
+      "soundscape": "Urgent outdoor garden ambience, rustling silk robes, and panicked breathing accompany the clear foreground Mandarin dialogue.",
       "dialogue_1": {
-        "window": "00:00.600–00:04.300",
-        "action": "reaches his small hand toward the green bird on the upper-left rock ledge as the bird flutters away, his footing wobbling precariously as he cries out in a startled, frightened 6-year-old boy voice",
-        "line": "小鸟别跑，小五儿马上就抓到你啦……啊！手滑了，哥哥快救我！"
+        "window": "00:00.600–00:04.200",
+        "action": "sitting slumped at the base of the rockery with a bleeding scrape on his forehead, presses his small right hand to his injured brow, winces in pain, and cries out in a weak, tearful, hurting 6-year-old boy voice",
+        "line": "啊……额头好痛啊……三哥，假山石头太滑，小五儿抓小鸟摔下来了……"
       },
       "dialogue_2": {
-        "window": "00:04.700–00:09.100",
-        "action": "at the lower-right base of the rockery lunges forward with wide, horrified eyes and outstretched arm, shouting at the top of his lungs in a frantic, terrified teenage voice",
-        "line": "小五，小心啊！天哪，额头流了这么多血，大哥快抱小五回太守府请郎中！"
+        "window": "00:04.600–00:09.100",
+        "action": "kneeling on the right beside injured <Subject 1>, holds his younger brother's shoulders with trembling hands, stares at his bleeding forehead in horror, and shouts at the top of his lungs in a frantic, terrified teenage voice",
+        "line": "小五，你别吓三哥啊！天哪，额头流了这么多血，大哥快抱小五回太守府请郎中！"
       }
     },
     {
       "shot_id": "Shot04",
-      "status": "pending",
+      "status": "completed",
+      "output_mp4": "ChuShiChunQiu_Ep01_Shot04.mp4",
       "output_prefix": "ChuShiChunQiu_Ep01_Shot04",
       "first_frame": "manju_shot04_first_frame_1344x768.png",
       "subject_1": "li_cheng",
@@ -93,7 +95,8 @@
     },
     {
       "shot_id": "Shot05",
-      "status": "pending",
+      "status": "completed",
+      "output_mp4": "ChuShiChunQiu_Ep01_Shot05.mp4",
       "output_prefix": "ChuShiChunQiu_Ep01_Shot05",
       "first_frame": "manju_shot05_first_frame_1344x768.png",
       "subject_1": "wang_xiuhe",

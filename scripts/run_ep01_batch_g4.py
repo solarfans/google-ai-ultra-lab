@@ -54,10 +54,7 @@ HF_MODELS = [
 ]
 
 SHOT_JOBS = [
-    ("Shot02", "compiled_ep01_beizhao_chushi_shot02.json", "ChuShiChunQiu_Ep01_Shot02"),
     ("Shot03", "compiled_ep01_beizhao_chushi_shot03.json", "ChuShiChunQiu_Ep01_Shot03"),
-    ("Shot04", "compiled_ep01_beizhao_chushi_shot04.json", "ChuShiChunQiu_Ep01_Shot04"),
-    ("Shot05", "compiled_ep01_beizhao_chushi_shot05.json", "ChuShiChunQiu_Ep01_Shot05"),
 ]
 
 
