@@ -4,6 +4,10 @@
 
 ---
 
+## 独立研究与改进建议
+
+- [Google AI Ultra × Gemini 4 Argon：价值实现、AGY 自主导演与收入实验（2026-11-10）](./docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md)：包含官方权益核验、公开经验研究、截至 `ddbed67` 的仓库查缺、制作与经营闭环，以及 AGY 下一轮执行 brief。研究建议与生产验收分别记录。
+
 ## 一、 核心操作法典与惨败复盘（必读门禁）
 
 在启动任何视频生成或 Colab GPU 任务前，AGY 必须先阅读并严格执行以下两份顶层文档：
