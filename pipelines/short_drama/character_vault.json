@@ -68,12 +68,21 @@
     },
     "wu_anran": {
       "canonical_name": "吴安然",
-      "aliases": ["魔秀士", "吴先生"],
-      "role": "南齐魔门血影宗宗主，江湖人称“魔秀士”，逃亡平原城化名郎中入楚府，以十成大搜魂手发现楚铮天生任督二脉相通并收其为徒",
+      "aliases": ["魔秀士", "吴先生", "血影宗主"],
+      "role": "南齐魔门血影宗宗主，江湖人称“魔秀士”，遭正道围剿重伤逃亡平原城，在回味豆花店按铜钱入木桌向楚府门房张得利毛遂自荐混入楚府，以十成大搜魂手发现楚铮天生任督二脉相通并收其为徒",
       "sheet_image": "manju_char_wuanran_sheet_1344x768.png",
       "voice_seed": "manju_wuanran_charismatic_baritone_seed.wav",
       "visual_desc": "Wu Anran (魔秀士吴安然, 36-year-old Blood Shadow Sect Master disguised as a classical scholar), rendered in UE5 3D Chinese animation CG style with sharp phoenix eyes, short neat goatee beard, scholar topknot with wooden hairpin, wearing a slate-gray and dark-teal layered classical scholar robe",
       "vocal_desc": "deep, magnetic, charismatic 36-year-old martial arts master Mandarin baritone vocal identity"
+    },
+    "zhang_deli": {
+      "canonical_name": "张得利",
+      "aliases": ["张管事", "楚府门房"],
+      "role": "平原郡太守府（楚府）门房老家人，在回味豆花店与店主闲聊五少爷摔伤后不说话、楚太守重金悬赏名医，被吴安然一手按铜钱入木桌的绝技震慑并引荐入府",
+      "sheet_image": "manju_shot04_first_frame_1344x768.png",
+      "voice_seed": "manju_zhangdeli_gatekeeper_seed.wav",
+      "visual_desc": "Zhang Deli (张得利, 45-year-old Chu Mansion gatekeeper retainer), rendered in UE5 3D Chinese animation CG style with weathered honest features, neat cloth servant cap, wearing a dark-brown and grey Chu Mansion retainer tunic",
+      "vocal_desc": "earnest, talkative, respectful 45-year-old northern Mandarin male gatekeeper vocal identity"
     }
   }
 }

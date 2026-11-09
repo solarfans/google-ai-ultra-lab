@@ -1,116 +1,203 @@
 {
-  "episode_id": "ep02_zhuanshi_chongsheng",
-  "episode_title": "《楚氏春秋》第2集：空难魂穿·转世重生",
-  "canon_chapter": "chapter_003_第二章_转世重生.md + chapter_004_第三章_颠倒乾坤.md",
+  "episode_id": "ep02",
+  "episode_title": "第二集：转世重生（原著第二章高还原精修版）",
+  "novel_chapter_ref": "chapter_003_第二章_转世重生.md (+ chapter_004 现代客机失事闪回序幕)",
   "resolution": [1344, 768],
-  "fps": 24.0,
+  "fps": 24,
   "default_frames": 243,
   "default_steps": 6,
   "shots": [
     {
       "shot_id": "Shot01",
       "status": "pending",
-      "output_prefix": "ChuShiChunQiu_Ep02_Shot01",
+      "shot_mode": "offscreen_pa_and_os",
+      "output_prefix": "manju_ep02_v2_shot01_aircrash",
+      "output_mp4": "manju_ep02_v2_shot01_aircrash_00001.mp4",
+      "subject_1": "modern_protagonist",
+      "subject_2": "stewardess_broadcast",
       "first_frame": "manju_ep02_shot01_first_frame_1344x768.png",
-      "subject_1": "stewardess_broadcast",
-      "subject_2": "modern_protagonist",
-      "scene_summary": "Inside a violently shaking modern passenger airliner cabin at night with red emergency lights glowing and yellow oxygen masks hanging down, flight attendant <Subject 1> on the left grips a seat back and urgently broadcasts an emergency water ditching warning into the intercom handset, while 28-year-old modern man <Subject 2> belted in his window seat on the right stares desperately at his glowing smartphone and sends a final farewell text message to his wife before the crash.",
-      "camera_motion": "tense cinematic medium two-shot inside the shaking airliner cabin with a dramatic push-in",
-      "soundscape": "Low rumbling aircraft engine vibration, cabin warning chimes, and stormy wind outside the cabin window accompany the urgent foreground Mandarin dialogue.",
+      "canonical_anchor": {
+        "chapter_file": "chapter_004_第三章_颠倒乾坤.md",
+        "line_range": "L71-L75",
+        "source_quote": "将最后一条短信‘我爱你，永别了’发送出去后",
+        "must_preserve_detail": "现代男主独自在剧烈颠簸的客机座位上掏出手机按出『我爱你，永别了』，广播声来自机舱头顶喇叭而非空姐拿电话站在座位旁。"
+      },
+      "visual_must_show": "单人近景：仅有现代男主一人系着安全带坐在剧烈摇晃的靠窗客机座椅上，头顶黄色氧气面罩垂落、窗外暴雨闪电，他紧咬牙关闭着嘴在手机上按下诀别短信，画面中绝无空姐拿电话站立。",
+      "scene_summary": "A 10-second 3D Chinese animation CG prologue inside a violently shaking modern commercial airliner during a catastrophic storm at night. Only <Subject 1> (28-year-old modern man) sits strapped in his window seat with oxygen masks dangling overhead, typing his final farewell on his smartphone while the overhead cabin PA speaker broadcasts an emergency warning.",
+      "camera_motion": "intense handheld-style camera shake with red emergency cabin lighting and lightning flashes through the window",
       "dialogue_1": {
-        "window": "00:00.600–00:04.400",
-        "action": "on the left grips the seat back tightly under flashing red cabin lights and speaks urgently into the cabin intercom handset",
-        "line": "机舱遭遇强烈气流正在紧急迫降，请全体乘客系紧安全带，穿好救生衣！"
+        "window": "00:00.300–00:04.500",
+        "voice_mode": "offscreen_pa",
+        "action": "grips the shaking armrest and his glowing smartphone with his lips tightly closed as the cabin lurches violently",
+        "line": "飞机遭遇强气流！请立即系好安全带！"
       },
       "dialogue_2": {
-        "window": "00:04.800–00:09.100",
-        "action": "on the right grips his glowing smartphone with trembling hands, his eyes filled with tears and desperation as he speaks in a choked, heartbroken young man voice",
-        "line": "老婆，电话怎么打不通……最后这条短信，我爱你，永别了！"
-      }
+        "window": "00:04.800–00:09.500",
+        "voice_mode": "inner_monologue_os",
+        "action": "presses send on his phone screen with trembling thumbs and closes his eyes as the plane plunges into the dark ocean",
+        "line": "躲不过去了吗……爸、妈，永别了！"
+      },
+      "soundscape": "Violent aircraft cabin turbulence rumble, overhead PA speaker static chime, thunderclap, and rushing ocean wind."
     },
     {
       "shot_id": "Shot02",
       "status": "pending",
-      "output_prefix": "ChuShiChunQiu_Ep02_Shot02",
-      "first_frame": "manju_ep02_shot02_first_frame_1344x768.png",
+      "shot_mode": "single_inner_monologue_os",
+      "output_prefix": "manju_ep02_v2_shot02_awakening_os",
+      "output_mp4": "manju_ep02_v2_shot02_awakening_os_00001.mp4",
       "subject_1": "chu_zheng_6yo",
-      "subject_2": "wang_xiuhe",
-      "scene_summary": "Inside the sunlit classical carved wooden bedroom of the Chu Mansion in the Great Zhao Dynasty, 6-year-old <Subject 1> (Chu Zheng, with a white bandage around his forehead) sits upright on the silk bed on the left, staring at his tiny 6-year-old hands in utter shock after his modern soul awakens in this child's body, while Mother <Subject 2> (Wang Xiuhe) on the right leans forward beside the bed with tears of relief and reaches out lovingly toward him.",
-      "camera_motion": "smooth dramatic medium two-shot by the carved wooden canopy bed with a gentle slow push-in",
-      "soundscape": "Quiet classical bedroom ambience and rustling silk bedding accompany the clear foreground Mandarin dialogue.",
+      "subject_2": "modern_protagonist",
+      "first_frame": "manju_ep02_shot02_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_003_第二章_转世重生.md",
+        "line_range": "L5-L18",
+        "source_quote": "而这次楚铮醒来后谁也不理，总是一个人发呆",
+        "must_preserve_detail": "男主醒来后连续数日沉默不语，怔怔抬起六岁稚嫩小手，内心以成年人思维震惊剖析处境，并抗拒向陌生女人喊娘。"
+      },
+      "visual_must_show": "单人特写：6岁楚铮额头缠着白纱布坐在古风雕花木床上，全程嘴巴紧闭一言不发，缓缓抬起稚嫩小手凝视，眼神呈现成年人的深沉震惊与迷茫。",
+      "scene_summary": "A 10-second 3D Chinese animation CG close-medium shot inside the Chu Mansion bedchamber. 6-year-old Chu Zheng (<Subject 1>) sits on the carved bed with a white forehead bandage, keeping his mouth completely closed in silence as he stares at his tiny hands, while his 28-year-old adult soul inner monologue (<Audio 1>) echoes.",
+      "camera_motion": "slow, contemplative push-in toward <Subject 1>'s tiny hands and shocked, mature eyes",
       "dialogue_1": {
-        "window": "00:00.600–00:04.500",
-        "action": "sitting upright on the bed on the left stares down at his own tiny hands with wide, bewildered eyes and speaks in a startled, disbelieving 6-year-old boy voice",
-        "line": "这……这是哪里？飞机不是坠海了吗？我的手怎么变成六岁小孩子了？！"
+        "window": "00:00.300–00:04.600",
+        "voice_mode": "inner_monologue_os",
+        "action": "stares blankly at his tiny 6-year-old palms and fingers with his mouth strictly closed and brows furrowed in adult shock",
+        "line": "我不是坠海死了吗？怎么变成六岁孩童了？"
       },
       "dialogue_2": {
-        "window": "00:04.900–00:09.100",
-        "action": "on the right leans forward beside the bed with tearful relief and gentle maternal warmth, reaching out her hands as she speaks in a loving, anxious mother's voice",
-        "line": "小五儿，你终于醒了！我是娘亲啊，你怎么连娘都不认得了？"
-      }
+        "window": "00:05.000–00:09.600",
+        "voice_mode": "inner_monologue_os",
+        "action": "lowers his tiny hands slowly with his lips still tightly closed, looking guardedly around the ancient bedchamber",
+        "line": "北赵楚家……让我管陌生女人叫娘，我叫不出口。"
+      },
+      "soundscape": "Quiet ancient bedchamber ambience, subtle rustle of silk bedding, and ethereal inner-thought resonance."
     },
     {
       "shot_id": "Shot03",
       "status": "pending",
-      "output_prefix": "ChuShiChunQiu_Ep02_Shot03",
-      "first_frame": "manju_ep02_shot03_first_frame_1344x768.png",
+      "shot_mode": "os_plus_short_spoken",
+      "output_prefix": "manju_ep02_v2_shot03_blood_mother",
+      "output_mp4": "manju_ep02_v2_shot03_blood_mother_00001.mp4",
       "subject_1": "wang_xiuhe",
       "subject_2": "chu_zheng_6yo",
-      "scene_summary": "Inside the candlelit Chu Mansion bedroom at night, Mother <Subject 1> (Wang Xiuhe, with a red bruised scrape on her forehead after kowtowing to pray for her son) on the left holds 6-year-old <Subject 2> (Chu Zheng) tightly in her arms with tears streaming down her face and vows to care for him forever even if he becomes foolish, while <Subject 2> on the right gently touches his mother's cheek with tears in his eyes as his two souls merge in deep filial gratitude.",
-      "camera_motion": "emotional close-medium two-shot in warm candlelight with a slow, intimate dolly-in",
-      "soundscape": "Soft night candle crackle and gentle silk sleeve movement accompany the deeply emotional foreground Mandarin dialogue.",
+      "first_frame": "manju_ep02_shot03_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_003_第二章_转世重生.md",
+        "line_range": "L45-L64",
+        "source_quote": "小五是我儿子，就算他以后变成疯子、傻子，他也始终是我儿子",
+        "must_preserve_detail": "王秀荷为救儿子在地上磕头至额头鲜血淋漓，哭诉就算小五变成疯子傻子也照料他一辈子，额头鲜血滴在楚铮脸上，楚铮流泪在心中认下娘亲。"
+      },
+      "visual_must_show": "母子近景：王秀荷额头有磕破的鲜血伤痕，含泪紧抱楚铮哭诉；楚铮眼角滑落热泪，前段闭嘴倾听内心破防，最后轻轻张嘴唤娘。",
+      "scene_summary": "A deeply emotional 10-second 3D Chinese animation CG close two-shot in the candlelit bedchamber. Mother Wang Xiuhe (<Subject 1>), with a bleeding bruise on her forehead from kowtowing, hugs 6-year-old Chu Zheng (<Subject 2>) tightly while weeping; moved by her maternal sacrifice, Chu Zheng sheds warm tears and finally accepts her as his mother.",
+      "camera_motion": "intimate emotional close-up with warm flickering candlelight",
       "dialogue_1": {
-        "window": "00:00.600–00:04.800",
-        "action": "on the left with a bruised forehead embraces her young son tightly with tears glistening on her cheeks, speaking in a trembling, unconditionally loving maternal voice",
-        "line": "别怕孩子，有娘在！就算你以后变成疯子傻子，娘也照料你一辈子！"
+        "window": "00:00.300–00:04.600",
+        "voice_mode": "onscreen_spoken",
+        "action": "hugs <Subject 2> tightly with fresh blood on her forehead and tears streaming down her cheeks",
+        "line": "小五儿别怕，就算你傻了，娘也养你一辈子！"
       },
       "dialogue_2": {
-        "window": "00:05.200–00:09.200",
-        "action": "in his mother's warm embrace on the right raises his small hand to touch her cheek, his dark eyes brimming with moved tears as he speaks softly and resolutely",
-        "line": "娘……别哭了，从今往后我就是你的小五儿，我再也不让娘伤心了！"
-      }
+        "window": "00:05.000–00:09.600",
+        "voice_mode": "os_then_spoken",
+        "action": "closes his eyes as warm tears roll down his cheeks, then gently touches his mother's face and softly calls out",
+        "line": "得母如此，夫复何求……娘，小五儿在这儿。"
+      },
+      "soundscape": "Soft weeping, crackling candle flame, and warm emotional xiao flute."
     },
     {
       "shot_id": "Shot04",
       "status": "pending",
-      "output_prefix": "ChuShiChunQiu_Ep02_Shot04",
+      "shot_mode": "natural_dialogue",
+      "output_prefix": "manju_ep02_v2_shot04_tofu_shop",
+      "output_mp4": "manju_ep02_v2_shot04_tofu_shop_00001.mp4",
+      "subject_1": "zhang_deli",
+      "subject_2": "wu_anran",
       "first_frame": "manju_ep02_shot04_first_frame_1344x768.png",
-      "subject_1": "wu_anran",
-      "subject_2": "chu_mingtang",
-      "scene_summary": "Inside the classical side hall of the Chu Mansion, beside 6-year-old Chu Zheng who sits peacefully asleep on the left couch, Blood Shadow Sect Master <Subject 1> (Wu Anran, disguised as a scholar in a slate-gray robe) in the center-left withdraws his glowing palm from atop Chu Zheng's head in utter astonishment at discovering the boy's naturally connected Ren and Du meridians, while Prefect <Subject 2> (Chu Mingtang) on the right steps forward anxiously to ask about his son's condition.",
-      "camera_motion": "dramatic medium two-shot in the classical side hall with a slow push-in",
-      "soundscape": "Subtle low resonant qi hum fading into quiet hall ambience accompanies the clear foreground Mandarin dialogue.",
+      "canonical_anchor": {
+        "chapter_file": "chapter_003_第二章_转世重生.md",
+        "line_range": "L82-L122",
+        "source_quote": "从怀中取出仅有的两枚铜钱，用食指抵住竖在桌上，微一运气，铜钱便无声无息地没入桌面",
+        "must_preserve_detail": "魔门血影宗主吴安然重伤逃亡至平原郡回味豆花店，身无分文之际听闻楚府门房张得利谈及五少爷醒后不语，遂用手指将两枚铜板按入木桌毛遂自荐。"
+      },
+      "visual_must_show": "回味豆花店双人中景：吴安然坐在粗木桌旁，右手食指中指将两枚铜钱硬生生按入木桌表面，楚府门房张得利站在一旁震惊低头看嵌入木桌的铜钱。",
+      "scene_summary": "A 10-second 3D Chinese animation CG medium two-shot inside Huiwei Tofu Shop in Pingyuan City. Chu Mansion gatekeeper Zhang Deli (<Subject 1>) talks anxiously about the mute 5th young master, while fugitive Blood Shadow Sect Master Wu Anran (<Subject 2>) effortlessly presses two copper coins deep into the solid wooden tabletop with two fingers to volunteer himself.",
+      "camera_motion": "dynamic medium tracking shot tilting slightly from the embedded copper coins in the table up to Wu Anran's enigmatic smirk",
       "dialogue_1": {
-        "window": "00:00.600–00:05.000",
-        "action": "on the left gazes at the sleeping child in utter disbelief as he withdraws his palm, speaking in a shocked, magnetic baritone voice",
-        "line": "十成大搜魂手真气入体，竟毫无阻滞？！原来世上真有天生任督二脉相通的奇才！"
+        "window": "00:00.300–00:04.500",
+        "voice_mode": "onscreen_spoken",
+        "action": "sighs anxiously beside the wooden table while gesturing toward the street",
+        "line": "我家五少爷醒后不说话，老爷正重金求医呢！"
       },
       "dialogue_2": {
-        "window": "00:05.400–00:09.100",
-        "action": "on the right in his purple dragon-brocade official robe steps forward with clasped hands and asks in an anxious, dignified paternal baritone voice",
-        "line": "吴先生，小儿的脉象究竟如何，这病可还有医治的眉目？"
-      }
+        "window": "00:04.800–00:09.500",
+        "voice_mode": "onscreen_spoken",
+        "action": "presses two bronze coins flush into the solid wood tabletop with two fingers and smirks coldly",
+        "line": "善杀人者，必善医。带路吧，这诊金我接了！"
+      },
+      "soundscape": "Bustling ancient street eatery ambience, crisp wood-cracking sound as copper coins sink into the table."
     },
     {
       "shot_id": "Shot05",
       "status": "pending",
-      "output_prefix": "ChuShiChunQiu_Ep02_Shot05",
-      "first_frame": "manju_ep02_shot05_first_frame_1344x768.png",
+      "shot_mode": "natural_dialogue",
+      "output_prefix": "manju_ep02_v2_shot05_souhun_hand",
+      "output_mp4": "manju_ep02_v2_shot05_souhun_hand_00001.mp4",
       "subject_1": "wu_anran",
-      "subject_2": "chu_zheng_6yo",
-      "scene_summary": "In the sunlit courtyard of the Chu Mansion beside a stone table with a porcelain teapot, martial arts master <Subject 1> (Wu Anran) on the left raises his hand with a charismatic smile as a glowing emerald-green stream of tea water coils in mid-air like a small translucent water dragon and invites 6-year-old <Subject 2> (Chu Zheng) to learn martial arts, while <Subject 2> on the right watches with sparkling, excited eyes and eagerly agrees.",
-      "camera_motion": "cinematic medium two-shot in the sunlit courtyard with a smooth slow dolly-in",
-      "soundscape": "Crisp flowing water swirl sound and gentle courtyard breeze accompany the lively foreground Mandarin dialogue.",
+      "subject_2": "modern_protagonist",
+      "first_frame": "manju_ep02_shot05_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_003_第二章_转世重生.md",
+        "line_range": "L195-L206",
+        "source_quote": "小子，算你命不好，遇上我了",
+        "must_preserve_detail": "吴安然根本不是大夫，他在楚府偏厅屏退众人关紧房门，点住楚铮穴道后狞笑『小子，算你命不好，遇上我了』，以十成魔门大搜魂手拍向楚铮头顶。"
+      },
+      "visual_must_show": "楚府偏厅双人近景（房门紧闭无旁人）：吴安然露出魔门宗主狞笑，右掌泛起黑红色魔门真气狠狠按在楚铮头顶百会穴；楚铮被点穴动弹不得，闭嘴瞪大眼睛惊骇。",
+      "scene_summary": "A tense 10-second 3D Chinese animation CG medium shot inside the closed Chu Mansion side hall with no bystanders. Having dismissed everyone and sealed the boy's acupoints, Blood Shadow Sect Master Wu Anran (<Subject 1>) drops his disguise with a sinister sneer and presses his dark-crimson Great Soul-Searching Hand onto 6-year-old Chu Zheng's crown, while Chu Zheng's adult soul (<Audio 2>) gasps internally.",
+      "camera_motion": "dramatic low-angle push-in as dark-crimson qi surges from <Subject 1>'s palm into the boy's crown",
       "dialogue_1": {
-        "window": "00:00.600–00:04.700",
-        "action": "on the left gestures gracefully with his fingers guiding the floating green tea-water dragon in mid-air, smiling charismatically as he speaks in a warm, enticing baritone voice",
-        "line": "五公子你看好了，把这门功夫练成，天下就没人敢欺负你，要不要跟伯伯学？"
+        "window": "00:00.300–00:04.600",
+        "voice_mode": "onscreen_spoken",
+        "action": "sneers ruthlessly and presses his right palm glowing with dark-crimson demonic qi onto the boy's head",
+        "line": "小子，算你命不好！受我十成大搜魂手！"
       },
       "dialogue_2": {
-        "window": "00:05.100–00:09.100",
-        "action": "on the right gazes at the floating green water stream with wide, sparkling eyes and nods eagerly, speaking in an excited, determined 6-year-old boy voice",
-        "line": "要学！只要能保护娘亲和咱们楚家，再苦的功夫小五儿都愿意学！"
-      }
+        "window": "00:05.000–00:09.500",
+        "voice_mode": "inner_monologue_os",
+        "action": "sits immobilized with his lips closed and eyes wide with alarm as a torrent of scorching qi pours into his head",
+        "line": "不好！这恶贼根本不是郎中，他要害我！"
+      },
+      "soundscape": "Ominous low demonic qi hum, sharp acupoint-sealing wind sound, and tense heartbeat."
+    },
+    {
+      "shot_id": "Shot06",
+      "status": "pending",
+      "shot_mode": "natural_dialogue",
+      "output_prefix": "manju_ep02_v2_shot06_rendu_twist",
+      "output_mp4": "manju_ep02_v2_shot06_rendu_twist_00001.mp4",
+      "subject_1": "wu_anran",
+      "subject_2": "modern_protagonist",
+      "first_frame": "manju_ep02_shot06_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_003_第二章_转世重生.md",
+        "line_range": "L200-L215",
+        "source_quote": "原来世上真有天生任督二脉相通之人",
+        "must_preserve_detail": "十成大搜魂手真气入体竟毫无阻滞，楚铮毫发无损，吴安然满头冷汗骇然发现这六岁孩童竟是天生任督二脉相通的旷世奇才，动了收徒之念。"
+      },
+      "visual_must_show": "反转中景：6岁楚铮端坐椅上毫发无损、周身泛起淡淡金青色经脉流光；吴安然震退半步满头冷汗，抬手看着楚铮满脸狂喜与震惊。",
+      "scene_summary": "A climactic 10-second 3D Chinese animation CG medium two-shot in the Chu Mansion side hall. Instead of harming the boy, the 100% Great Soul-Searching Hand qi circulates effortlessly through 6-year-old Chu Zheng's body in a golden-cyan meridian glow; Wu Anran (<Subject 1>) recoils in cold sweat and ecstatic shock upon discovering the boy's naturally connected Ren and Du meridians.",
+      "camera_motion": "dynamic reveal shot pulling back slightly as golden-cyan meridian light fades and <Subject 1> stumbles back in awe",
+      "dialogue_1": {
+        "window": "00:00.300–00:04.800",
+        "voice_mode": "onscreen_spoken",
+        "action": "recoils half a step with cold sweat on his brow, staring at his own palm and the unharmed boy in utter disbelief",
+        "line": "十成真气竟毫无阻滞？！天生任督二脉相通！"
+      },
+      "dialogue_2": {
+        "window": "00:05.200–00:09.600",
+        "voice_mode": "inner_monologue_os",
+        "action": "blinks his bright dark eyes with his lips closed, feeling a warm refreshing current circulating smoothly through his chest",
+        "line": "咦？那股霸道真气入体，我竟一点事都没有？"
+      },
+      "soundscape": "Resonant meridian chime, deep martial energy whoosh, and triumphant orchestral swell."
     }
   ]
 }

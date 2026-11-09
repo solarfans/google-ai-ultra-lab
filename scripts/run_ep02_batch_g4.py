@@ -53,11 +53,12 @@ HF_MODELS = [
 ]
 
 SHOT_JOBS = [
-    ("Ep02_Shot01", "compiled_ep02_zhuanshi_chongsheng_shot01.json", "ChuShiChunQiu_Ep02_Shot01"),
-    ("Ep02_Shot02", "compiled_ep02_zhuanshi_chongsheng_shot02.json", "ChuShiChunQiu_Ep02_Shot02"),
-    ("Ep02_Shot03", "compiled_ep02_zhuanshi_chongsheng_shot03.json", "ChuShiChunQiu_Ep02_Shot03"),
-    ("Ep02_Shot04", "compiled_ep02_zhuanshi_chongsheng_shot04.json", "ChuShiChunQiu_Ep02_Shot04"),
-    ("Ep02_Shot05", "compiled_ep02_zhuanshi_chongsheng_shot05.json", "ChuShiChunQiu_Ep02_Shot05"),
+    ("Ep02_Shot01", "compiled_ep02_shot01.json", "manju_ep02_v2_shot01_aircrash"),
+    ("Ep02_Shot02", "compiled_ep02_shot02.json", "manju_ep02_v2_shot02_awakening_os"),
+    ("Ep02_Shot03", "compiled_ep02_shot03.json", "manju_ep02_v2_shot03_blood_mother"),
+    ("Ep02_Shot04", "compiled_ep02_shot04.json", "manju_ep02_v2_shot04_tofu_shop"),
+    ("Ep02_Shot05", "compiled_ep02_shot05.json", "manju_ep02_v2_shot05_souhun_hand"),
+    ("Ep02_Shot06", "compiled_ep02_shot06.json", "manju_ep02_v2_shot06_rendu_twist"),
 ]
 
 

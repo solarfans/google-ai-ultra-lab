@@ -1,0 +1,105 @@
+{
+  "version": "3.0",
+  "engine": "edge-tts",
+  "seeds": {
+    "manju_mother_warm_alto_seed.wav": {
+      "filename": "manju_mother_warm_alto_seed.wav",
+      "character_id": "wang_xiuhe",
+      "engine": "edge-tts",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-5%",
+      "pitch": "-2Hz",
+      "sample_text": "小五儿……别怕，有娘在，就算你以后变成傻子，娘也照料你一辈子。",
+      "duration_sec": 6.72,
+      "asetrate_used": false
+    },
+    "manju_son_clear_boy_seed.wav": {
+      "filename": "manju_son_clear_boy_seed.wav",
+      "character_id": "chu_zheng_6yo",
+      "engine": "edge-tts",
+      "voice": "zh-CN-YunxiaNeural",
+      "rate": "+0%",
+      "pitch": "+4Hz",
+      "sample_text": "娘……您别哭了，小五儿再也不调皮爬高了，小五儿听娘的话。",
+      "duration_sec": 6.384,
+      "asetrate_used": false
+    },
+    "manju_modern_man_tenor_seed.wav": {
+      "filename": "manju_modern_man_tenor_seed.wav",
+      "character_id": "modern_protagonist",
+      "engine": "edge-tts",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-4%",
+      "pitch": "-3Hz",
+      "sample_text": "我不是坠海死了吗？这具六岁孩童的身体……难道我重生到了另一个世界？",
+      "duration_sec": 7.224,
+      "asetrate_used": false
+    },
+    "manju_stewardess_urgent_alto_seed.wav": {
+      "filename": "manju_stewardess_urgent_alto_seed.wav",
+      "character_id": "stewardess_broadcast",
+      "engine": "edge-tts",
+      "voice": "zh-CN-XiaoyiNeural",
+      "rate": "+6%",
+      "pitch": "+0Hz",
+      "sample_text": "女士们先生们，飞机遭遇强气流！请立即系好安全带，拉下氧气面罩！",
+      "duration_sec": 6.504,
+      "asetrate_used": false
+    },
+    "manju_wuanran_charismatic_baritone_seed.wav": {
+      "filename": "manju_wuanran_charismatic_baritone_seed.wav",
+      "character_id": "wu_anran",
+      "engine": "edge-tts",
+      "voice": "zh-CN-YunjianNeural",
+      "rate": "-6%",
+      "pitch": "-4Hz",
+      "sample_text": "善杀人者，必善医。小子，算你命不好，遇上我血影宗主了！",
+      "duration_sec": 7.344,
+      "asetrate_used": false
+    },
+    "manju_zhangdeli_gatekeeper_seed.wav": {
+      "filename": "manju_zhangdeli_gatekeeper_seed.wav",
+      "character_id": "zhang_deli",
+      "engine": "edge-tts",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "+2%",
+      "pitch": "-2Hz",
+      "sample_text": "我家五少爷摔伤后一言不发，太守老爷正重金悬赏名医呢！",
+      "duration_sec": 5.472,
+      "asetrate_used": false
+    },
+    "manju_father_authoritative_baritone_seed.wav": {
+      "filename": "manju_father_authoritative_baritone_seed.wav",
+      "character_id": "chu_mingtang",
+      "engine": "edge-tts",
+      "voice": "zh-CN-YunjianNeural",
+      "rate": "-2%",
+      "pitch": "-6Hz",
+      "sample_text": "备什么轿，备马！小五儿若有三长两短，我决不轻饶！",
+      "duration_sec": 6.336,
+      "asetrate_used": false
+    },
+    "manju_chuyuan_spirited_teen_seed.wav": {
+      "filename": "manju_chuyuan_spirited_teen_seed.wav",
+      "character_id": "chu_yuan",
+      "engine": "edge-tts",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "+6%",
+      "pitch": "+6Hz",
+      "sample_text": "小五儿小心！来人啊，小五从假山上摔下来了，快叫大夫！",
+      "duration_sec": 5.952,
+      "asetrate_used": false
+    },
+    "manju_licheng_urgent_steward_seed.wav": {
+      "filename": "manju_licheng_urgent_steward_seed.wav",
+      "character_id": "li_cheng",
+      "engine": "edge-tts",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "+8%",
+      "pitch": "+2Hz",
+      "sample_text": "老爷不好了！五少爷在畅春园摔下假山，满脸是血，老夫人命小的速来禀报！",
+      "duration_sec": 6.744,
+      "asetrate_used": false
+    }
+  }
+}
