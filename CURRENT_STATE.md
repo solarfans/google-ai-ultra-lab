@@ -1,8 +1,9 @@
 # Google AI Ultra Lab — Current State & Ledger
 
-**最后更新**：2026-11-09 SGT (MacBook Pro)  
-**项目状态**：`GCP_ULTRA_AND_PRO_VPN_MATRIX_VERIFIED / BOTH_CREDITS_ACTIVE / ZERO_BURN_SAFE`  
+**最后更新**：2026-11-09 15:35 SGT (MacBook Pro)  
+**项目状态**：`AI_MANJU_SOP_V2_SOLIDIFIED / GCP_ULTRA_AND_PRO_VPN_MATRIX_VERIFIED / ZERO_BURN_SAFE`  
 **负责席位**：Antigravity Desktop (MacBook)  
+**核心操作总纲**：[**docs/AI_MANJU_AND_ULTRA_SOP.md**](./docs/AI_MANJU_AND_ULTRA_SOP.md)  
 
 ---
 
@@ -22,25 +23,23 @@
 
 ---
 
-## 2. 赛道关停与惨败复盘归档 (Short Drama Post-Mortem)
+## 2. 赛道重构：放弃真人定制短剧，全面转向【3D 国漫 CG 级 AI 漫剧】 (2026-11-09 SGT)
 
-- **AI 短剧商业化与真人定制赛道正式关停封存**：
-  - 因多次迭代中技术路径错误（2D几何贴图代替深度学习换脸、静态图摇晃冒充视频、旧模型倒退、中间残次品直交用户），导致成片质量极其低下并引发用户强烈不满；
-  - 经用户明确指令，全面终止该赛道的所有生成与测试任务，封存全部历史资产；
-  - 深度复盘报告已固化至 [**LESSONS_LEARNED.md**](./LESSONS_LEARNED.md)，详尽剖析五大核心失误与未来工业级 SOTA 标准流水线。
+- **11-08 真人短剧惨败复盘与封存**：
+  - 11-08 尝试使用家庭真人照片制作古装短剧，因触犯“真人恐怖谷效应”及工程偷工减料（OpenCV 2D 贴图换脸、`ffmpeg` 晃动静态死图冒充视频、模型退回 SDXL/SVD-XT、将半成品抛给用户）导致彻底失败，复盘已永久归档至 [**LESSONS_LEARNED.md**](./LESSONS_LEARNED.md)。
+- **11-09 战略降维与《AI 漫剧工业化生产总纲 v2.0》固化**：
+  - 经深度精读 Owner 过去 7 日 X 点赞（50+ 篇推文 / 11 篇万字长文，含 `@Delroy715`、`@aggs8p`、`@TuyetloanP81840`、`@EianLu`、`@leaf_sanren`、`@yangleiocx3`）及红果免费短剧 2025–2026 行业大盘数据，正式将主航道切换为 **【AI 漫剧（非真人出镜，默认锁定 3D 国漫 / UE5 影视 CG 风）】**；
+  - 完整操作 SOP、Colab G4 75s NVMe 预热架构、MiniMax-H3 六大深坑攻克参数（`Self-Anchor Voice` 原生声纹锁死、`JoinMatch` 手动除雾、`--only-seg` 单镜 3 分钟热插拔、关闭真人毛孔 LoRA）、三类母本资产规范已归档至 [**docs/AI_MANJU_AND_ULTRA_SOP.md**](./docs/AI_MANJU_AND_ULTRA_SOP.md) 与 [**references/external_tools_audit.md**](./references/external_tools_audit.md)。
 - **算力台账与资产安全**：
-  - 云端 Colab G4 实例全量安全注销，活跃实例 **0**，当前算力可用余额 **2,497.44 CU**；
-  - 待命状态，等待 Owner 下达下一阶段核心战略目标。
-  - 0 CU 本地备料：剧本分镜、角色定义、负向提示词门禁全部在本地编排完成；
-  - 生命周期强制自毁：任务结束后自动释放，当前活跃实例数归零，算力余额稳健保持 2499.56 CU。
+  - 云端 Colab G4 实例全量安全注销，活跃实例 **0**，当前算力可用余额 **2,497.44 CU**（`0.00 CU/h`）。
 
 ---
 
-## 3. 下一步行动计划
+## 3. 下一步行动计划（Phase 2A：10 秒单镜头漫剧 MVP 闭环验收）
 
-1. **审阅成片画质与眼神杀效果**：Owner 在本地播放器直接审阅 `chu_shi_chun_qiu_ep01_qwen_minimax_master.mp4`，核验少年楚铮骨相与帝王觉醒质感。
-2. **多机位接力与长镜头扩展**：引入 `BUNNY_H3_ActionLogic_Bridge` 与 22 帧潜空间混合接力，实现长镜头连续对手戏。
-3. **推进小说广播剧管线 (引擎 3)**：利用 Gemini 对白提取与本地/云端 TTS 模型，生成第一期《楚氏春秋》长篇有声广播剧。
+1. **Gate 1（0 CU 漫剧资产准备与颜值确认）**：生成主角【16:9 3D 国漫四联角色身份板（含全身、鞋靴、三视图与表情特写）】+【无人物纯净空镜场景图】+【第 1 镜高清首帧】，经 AGY 放大自检后交由 Owner 确认画风。
+2. **Gate 2（Colab G4 + 真 ComfyUI H3 单镜渲染）**：在 G4 (96GB) 上极速挂载 ComfyUI + `MiniMax-H3 (Singularity v1.3)`（关闭真人毛孔 LoRA），生成 5~8 秒角色真开口说话、真动态、带物理拟音的漫剧单镜头，跑完立即关机查账。
+3. **Gate 3（本地抽帧质检与字幕压制）**：AGY 本地抽帧核验无烧录乱码字、无变形后，用 `auto_subtitle.py` 声学包络自动对齐字幕交付验收。
 
 ---
 
