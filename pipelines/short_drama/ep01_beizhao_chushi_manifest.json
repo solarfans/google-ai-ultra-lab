@@ -1,0 +1,116 @@
+{
+  "episode_id": "ep01_beizhao_chushi",
+  "episode_title": "《楚氏春秋》第1集：北赵楚氏·畅春园惊变",
+  "canon_chapter": "chapter_002_第一章_北赵楚氏.md",
+  "resolution": [1344, 768],
+  "fps": 24.0,
+  "default_frames": 243,
+  "default_steps": 6,
+  "shots": [
+    {
+      "shot_id": "Shot01",
+      "status": "completed",
+      "output_mp4": "ChuShiChunQiu_Ep01_Shot01_MVP_10s.mp4",
+      "first_frame": "manju_shot01_first_frame_1344x768.png",
+      "subject_1": "wang_xiuhe",
+      "subject_2": "chu_zheng_6yo",
+      "scene_summary": "Inside the sunlit room of the Pingyuan Prefect's Residence (大赵平原郡太守府) on an early spring morning, Mother Wang Xiuhe on the left gently straightens 6-year-old Chu Zheng's collar and warns him not to climb high places in Changchun Garden, and Chu Zheng on the right smiles and replies playfully about eating candied hawthorns.",
+      "camera_motion": "smooth, steady medium two-shot with a subtle slow dolly-in",
+      "soundscape": "Soft early spring morning breeze outside the carved wooden window and gentle silk sleeve movement accompany the clear foreground Mandarin dialogue.",
+      "dialogue_1": {
+        "window": "00:00.800–00:04.800",
+        "action": "gently smooths the front lapel of <Subject 2>'s sky-blue Hanfu robe while speaking in a warm, affectionate maternal voice",
+        "line": "小五儿，今日初春放晴，跟着你大哥三哥去畅春园玩耍，可不许调皮爬高，知道吗？"
+      },
+      "dialogue_2": {
+        "window": "00:05.300–00:08.800",
+        "action": "looks up at his mother with bright, innocent dark eyes and replies in a crisp, cheerful 6-year-old boy voice",
+        "line": "娘放心吧！小五儿最乖了，让三哥给我买串冰糖葫芦，吃完了就回府陪娘！"
+      }
+    },
+    {
+      "shot_id": "Shot02",
+      "status": "pending",
+      "output_prefix": "ChuShiChunQiu_Ep01_Shot02",
+      "first_frame": "manju_shot02_first_frame_1344x768.png",
+      "subject_1": "chu_yuan",
+      "subject_2": "chu_zheng_6yo",
+      "scene_summary": "In the sunlit royal Changchun Garden (皇家行宫畅春园) with willow trees, a classical pavilion, and a tall Taihu-stone rockery in the background, 13-year-old 3rd Brother <Subject 1> (Chu Yuan) on the left proudly hands a bright red skewer of candied hawthorns (冰糖葫芦) to 6-year-old <Subject 2> (Chu Zheng) on the right and boasts of their father Prefect Chu Mingtang's prestige, while <Subject 2> happily holds his candied hawthorn and points excitedly toward the garden rockery.",
+      "camera_motion": "smooth cinematic medium two-shot in sunlit Changchun Garden with a gentle slow push-in",
+      "soundscape": "Cheerful spring birds chirping softly in the royal garden and gentle breeze rustling willow leaves accompany the clear foreground Mandarin dialogue.",
+      "dialogue_1": {
+        "window": "00:00.700–00:04.900",
+        "action": "hands the bright red candied hawthorn skewer to <Subject 2> on the right and speaks in a proud, protective, spirited teenage brother voice",
+        "line": "小五儿别怕，快吃这串冰糖葫芦！在平原郡地面，有咱爹楚太守在，谁敢招惹咱们楚家！"
+      },
+      "dialogue_2": {
+        "window": "00:05.300–00:09.000",
+        "action": "holds the red candied hawthorn skewer happily, his bright eyes lighting up with excitement as he speaks in a lively, cheerful 6-year-old boy voice",
+        "line": "三哥最好啦！咦，哥哥快看，那假山顶上停着一只翠绿的小鸟，小五儿要去抓它！"
+      }
+    },
+    {
+      "shot_id": "Shot03",
+      "status": "pending",
+      "output_prefix": "ChuShiChunQiu_Ep01_Shot03",
+      "first_frame": "manju_shot03_first_frame_1344x768.png",
+      "subject_1": "chu_zheng_6yo",
+      "subject_2": "chu_yuan",
+      "scene_summary": "At the steep Taihu-stone rockery (太湖石假山) in Changchun Garden under bright sunlight, 6-year-old <Subject 1> (Chu Zheng) perched high on the upper-left rock ledge reaches out for the small green bird, loses his footing in panic, and cries out for help, while 13-year-old <Subject 2> (Chu Yuan) at the lower-right base of the rockery looks up in utter horror, raises his hand, and shouts a frantic warning and call for a physician.",
+      "camera_motion": "dramatic medium-wide shot framing the steep garden rockery with tense handheld urgency",
+      "soundscape": "Sudden flutter of bird wings, loose pebbles skittering down the rockery, and urgent outdoor garden ambience accompany the panicked foreground Mandarin speech.",
+      "dialogue_1": {
+        "window": "00:00.600–00:04.300",
+        "action": "reaches his small hand toward the green bird on the upper-left rock ledge as the bird flutters away, his footing wobbling precariously as he cries out in a startled, frightened 6-year-old boy voice",
+        "line": "小鸟别跑，小五儿马上就抓到你啦……啊！手滑了，哥哥快救我！"
+      },
+      "dialogue_2": {
+        "window": "00:04.700–00:09.100",
+        "action": "at the lower-right base of the rockery lunges forward with wide, horrified eyes and outstretched arm, shouting at the top of his lungs in a frantic, terrified teenage voice",
+        "line": "小五，小心啊！天哪，额头流了这么多血，大哥快抱小五回太守府请郎中！"
+      }
+    },
+    {
+      "shot_id": "Shot04",
+      "status": "pending",
+      "output_prefix": "ChuShiChunQiu_Ep01_Shot04",
+      "first_frame": "manju_shot04_first_frame_1344x768.png",
+      "subject_1": "li_cheng",
+      "subject_2": "chu_mingtang",
+      "scene_summary": "Inside the solemn Pingyuan Prefectural Government Hall (平原郡太守府衙), sweating retainer <Subject 1> (Li Cheng) kneeling on the left urgently reports that young fifth master Chu Zheng fell from a high rockery and is between life and death, while Prefect <Subject 2> (Chu Mingtang) seated behind the rosewood official desk on the right slams down his calligraphy brush in thunderous fury and commands a horse immediately.",
+      "camera_motion": "tense cinematic medium two-shot across the rosewood official desk with a sharp push-in toward Prefect Chu Mingtang",
+      "soundscape": "Quiet official hall room tone, a sharp snap of the calligraphy brush hitting the wooden desk at 00:04.600, and rustling official robes accompany the urgent foreground Mandarin dialogue.",
+      "dialogue_1": {
+        "window": "00:00.600–00:04.500",
+        "action": "kneeling on the left with clasped hands and pale, sweating face speaks in a breathless, trembling, urgent steward voice",
+        "line": "老爷不好了！老夫人命小人火速传话，五哥儿在畅春园从假山摔下，如今生死不知！"
+      },
+      "dialogue_2": {
+        "window": "00:04.900–00:09.200",
+        "action": "on the right slams his calligraphy brush down onto the memorial scroll with an iron-grim face and roars in a thunderous, commanding, furious baritone voice",
+        "line": "什么？！小五儿若有半点闪失，我定不轻饶！备什么轿，立刻给本官备马回府！"
+      }
+    },
+    {
+      "shot_id": "Shot05",
+      "status": "pending",
+      "output_prefix": "ChuShiChunQiu_Ep01_Shot05",
+      "first_frame": "manju_shot05_first_frame_1344x768.png",
+      "subject_1": "wang_xiuhe",
+      "subject_2": "chu_mingtang",
+      "scene_summary": "Inside the warm candlelit bedroom of the Chu Mansion at night, beside 6-year-old Chu Zheng who lies unconscious under a silk quilt with a clean white bandage around his forehead, Mother <Subject 1> (Wang Xiuhe) seated at the left bedside holds her son's small hand and weeps softly in maternal heartbreak, while Father <Subject 2> (Chu Mingtang) standing beside her comforts her in a deep, resolute voice that former Imperial Physician Cai Jue will save their son.",
+      "camera_motion": "emotional slow dolly-in medium shot by the candlelit carved canopy bed",
+      "soundscape": "Quiet night bedroom ambience with soft candle flame flicker and gentle silk rustle accompany the emotional foreground Mandarin dialogue.",
+      "dialogue_1": {
+        "window": "00:00.600–00:04.700",
+        "action": "seated at the bedside holding injured young Chu Zheng's small hand with both of hers, her eyes glistening with tears, speaks in a choked, sorrowful, loving maternal voice",
+        "line": "我的小五儿啊……额头摔得这么重，你可千万要快些醒过来，别吓娘亲啊……"
+      },
+      "dialogue_2": {
+        "window": "00:05.100–00:09.200",
+        "action": "standing beside Wang Xiuhe gazes down at his unconscious son on the bed and speaks in a deep, steady, reassuring paternal baritone voice",
+        "line": "夫人莫急，蔡珏先生曾是宫中大内御医，我已留他在府中施针，铮儿定能转危为安！"
+      }
+    }
+  ]
+}

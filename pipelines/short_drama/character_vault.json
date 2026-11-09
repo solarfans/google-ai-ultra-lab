@@ -1,0 +1,52 @@
+{
+  "novel_title": "楚氏春秋",
+  "canon_repo": "solarfans/novel-continuation-lab",
+  "visual_style": "3D Chinese animation style, Unreal Engine 5 cinematic render, Donghua CG masterpiece, subsurface scattering translucent CG skin, intricate 3D silk embroidery, 8k octane render, clean stylized 3D character modeling, no photorealistic pores",
+  "characters": {
+    "wang_xiuhe": {
+      "canonical_name": "王秀荷",
+      "aliases": ["楚夫人", "楚王氏", "大小姐"],
+      "role": "楚铮之母，大赵平原郡太守楚名棠正妻，兵部尚书靖北侯王烈长女",
+      "sheet_image": "manju_char_mother_sheet_1344x768.png",
+      "voice_seed": "manju_mother_warm_alto_seed.wav",
+      "visual_desc": "Wang Xiuhe (王秀荷, 楚夫人), 28-year-old noble mother in the Great Zhao Dynasty, rendered in UE5 3D Chinese animation CG style with smooth translucent porcelain-jade CG skin, warm expressive almond eyes, classical updo hair with a white jade hairpin and emerald earrings, wearing an emerald-green and cream-white gold-embroidered Hanfu robe",
+      "vocal_desc": "gentle, dignified, warm Mandarin maternal female alto vocal identity"
+    },
+    "chu_zheng_6yo": {
+      "canonical_name": "楚铮",
+      "aliases": ["小五", "小五儿", "五哥儿", "楚五公子"],
+      "role": "本作男主角，平原郡太守楚名棠五子，开篇年方六岁，天生任督二脉相通",
+      "sheet_image": "manju_char_son_sheet_1344x768.png",
+      "voice_seed": "manju_son_clear_boy_seed.wav",
+      "visual_desc": "6-year-old Chu Zheng (楚铮, 小五儿, fifth young master of the Chu family), rendered in UE5 3D Chinese animation CG style with cute rounded 3D child facial proportions, bright spirited dark eyes, neat black hair in a topknot tied with a sky-blue silk ribbon, wearing a sky-blue and ivory embroidered Hanfu robe with a dark navy waist sash",
+      "vocal_desc": "clear, spirited, lively 6-year-old boy Mandarin vocal identity"
+    },
+    "chu_mingtang": {
+      "canonical_name": "楚名棠",
+      "aliases": ["楚太守", "楚大人", "老爷"],
+      "role": "楚铮之父，大赵平原郡太守，当朝琳贵妃亲兄，靖北侯王烈女婿",
+      "sheet_image": "manju_char_father_sheet_1344x768.png",
+      "voice_seed": "manju_father_authoritative_baritone_seed.wav",
+      "visual_desc": "Chu Mingtang (楚名棠, 40-year-old Prefect of Pingyuan County in the Great Zhao Dynasty), rendered in UE5 3D Chinese animation CG style with sword-like brows, piercing dark eyes, neatly trimmed short dark beard, gold-and-jade official crown, wearing a deep imperial-purple and dark-gold dragon-cloud embroidered silk official robe",
+      "vocal_desc": "authoritative, resonant, commanding 40-year-old Mandarin male baritone vocal identity"
+    },
+    "chu_yuan": {
+      "canonical_name": "楚原",
+      "aliases": ["三公子", "三哥"],
+      "role": "楚铮三兄，平原郡太守楚名棠三子，性格张扬护短",
+      "sheet_image": "manju_char_chuyuan_sheet_1344x768.png",
+      "voice_seed": "manju_chuyuan_spirited_teen_seed.wav",
+      "visual_desc": "Chu Yuan (楚原, 13-year-old third young master of the Chu family), rendered in UE5 3D Chinese animation CG style with spirited arched brows, high black ponytail held by a silver-and-crimson crown, wearing a dark teal-black and crimson-gold embroidered silk young nobleman robe",
+      "vocal_desc": "spirited, proud, energetic 13-year-old teenage boy Mandarin vocal identity"
+    },
+    "li_cheng": {
+      "canonical_name": "李诚",
+      "aliases": ["李管事"],
+      "role": "楚府管事家人，奉楚老夫人之命赴太守府衙向楚名棠急报小五摔伤",
+      "sheet_image": "manju_shot04_first_frame_1344x768.png",
+      "voice_seed": "manju_licheng_urgent_steward_seed.wav",
+      "visual_desc": "Li Cheng (李诚, 35-year-old Chu family retainer/steward), rendered in UE5 3D Chinese animation CG style wearing a grey-brown servant cloth cap and grey-brown tunic",
+      "vocal_desc": "urgent, breathless, anxious adult male steward Mandarin vocal identity"
+    }
+  }
+}
