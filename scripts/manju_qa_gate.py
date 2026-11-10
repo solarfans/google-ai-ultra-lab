@@ -142,7 +142,17 @@ def audit_rendered_mp4_shot(mp4_path: Path, shot: dict) -> list[str]:
     if dur < 9.5 or dur > 11.0:
         errs.append(f"[Gate 6 Post-Render] {shot['shot_id']}: Abnormal duration {dur:.2f}s in {mp4_path.name}")
 
-    # Extract 16kHz mono PCM WAV and verify speech RMS energy inside d1 and d2 windows
+    # Check for unintended black frames (> 0.25s continuous black) via FFmpeg blackdetect
+    b_res = subprocess.run(
+        ["ffmpeg", "-v", "info", "-i", str(mp4_path), "-vf", "blackdetect=d=0.25:pix_th=0.05", "-an", "-f", "null", "-"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if "black_start:" in b_res.stderr:
+        errs.append(f"[Gate 6 Post-Render] {shot['shot_id']}: Black frame glitch detected in {mp4_path.name}!")
+
+    # Extract 16kHz mono PCM WAV and verify speech RMS energy + anti-clipping inside d1 and d2 windows
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=True) as tmp_wav:
         subprocess.run(
             ["ffmpeg", "-y", "-i", str(mp4_path), "-ac", "1", "-ar", "16000", tmp_wav.name],
@@ -153,6 +163,10 @@ def audit_rendered_mp4_shot(mp4_path: Path, shot: dict) -> list[str]:
             sr = wf.getframerate()
             n_frames = wf.getnframes()
             samples = struct.unpack(f"<{n_frames}h", wf.readframes(n_frames))
+
+        peak_all = max((abs(x) for x in samples), default=0)
+        if peak_all >= 32765:
+            errs.append(f"[Gate 6 Post-Render] {shot['shot_id']}: Hard audio clipping detected (peak={peak_all})!")
 
         for d_key in ("dialogue_1", "dialogue_2"):
             s_sec, e_sec = parse_window_bounds(shot[d_key]["window"])

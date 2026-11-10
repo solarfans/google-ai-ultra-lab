@@ -129,6 +129,10 @@ def setup_comfy_and_assets() -> None:
     print(f"✅ [Thread-B] ComfyUI environment + assets ready in {time.time() - t0:.1f}s!", flush=True)
 
 
+MAX_SHOT_WAIT_SEC = 420.0  # Hard timeout per shot (7 min max) to prevent runaway CU burn
+MAX_BOOT_WAIT_SEC = 120    # Hard readiness timeout for ComfyUI server startup
+
+
 def run_single_shot(shot_id: str, wf_fname: str, out_prefix: str) -> None:
     t_shot = time.time()
     wf_path = REPO_DIR / "pipelines/short_drama/workflows" / wf_fname
@@ -146,6 +150,11 @@ def run_single_shot(shot_id: str, wf_fname: str, out_prefix: str) -> None:
 
     last_log_len = Path("/tmp/comfyui.log").stat().st_size if Path("/tmp/comfyui.log").exists() else 0
     while True:
+        elapsed = time.time() - t_shot
+        if elapsed > MAX_SHOT_WAIT_SEC:
+            raise TimeoutError(
+                f"[{shot_id}] Hard timeout exceeded ({elapsed:.1f}s > {MAX_SHOT_WAIT_SEC}s)! Aborting to protect CU."
+            )
         time.sleep(2.5)
         if Path("/tmp/comfyui.log").exists():
             cur_log = Path("/tmp/comfyui.log").read_text(errors="ignore")
@@ -209,20 +218,43 @@ def main() -> None:
         stderr=subprocess.STDOUT,
     )
 
-    for _ in range(90):
-        time.sleep(1.0)
-        try:
-            urllib.request.urlopen("http://127.0.0.1:8188/system_stats", timeout=2)
-            break
-        except Exception:
-            pass
+    try:
+        readiness_ok = False
+        for _ in range(MAX_BOOT_WAIT_SEC):
+            if proc.poll() is not None:
+                log_tail = Path("/tmp/comfyui.log").read_text(errors="ignore")[-2000:]
+                raise RuntimeError(f"ComfyUI exited prematurely during boot (rc={proc.returncode}):\n{log_tail}")
+            time.sleep(1.0)
+            try:
+                urllib.request.urlopen("http://127.0.0.1:8188/system_stats", timeout=2)
+                readiness_ok = True
+                break
+            except Exception:
+                pass
 
-    print(f"✅ ComfyUI online at T+{time.time() - t_start:.1f}s! Executing 5-shot Ep02 batch queue...", flush=True)
-    for shot_id, wf_fname, out_prefix in SHOT_JOBS:
-        run_single_shot(shot_id, wf_fname, out_prefix)
+        if not readiness_ok:
+            log_tail = Path("/tmp/comfyui.log").read_text(errors="ignore")[-2000:]
+            raise TimeoutError(f"ComfyUI failed readiness check after {MAX_BOOT_WAIT_SEC}s:\n{log_tail}")
 
-    proc.terminate()
-    print(f"\n🏁 All 5 shots of Episode 2 rendered in {time.time() - t_start:.1f}s total! Releasing G4 VM.", flush=True)
+        print(
+            f"✅ ComfyUI online at T+{time.time() - t_start:.1f}s! Executing {len(SHOT_JOBS)}-shot Ep02 batch queue...",
+            flush=True,
+        )
+        for shot_id, wf_fname, out_prefix in SHOT_JOBS:
+            run_single_shot(shot_id, wf_fname, out_prefix)
+
+        print(
+            f"\n🏁 All {len(SHOT_JOBS)} shots of Episode 2 rendered in {time.time() - t_start:.1f}s total! Releasing G4 VM.",
+            flush=True,
+        )
+    finally:
+        if proc.poll() is None:
+            proc.terminate()
+            try:
+                proc.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                proc.kill()
+        comfy_log.close()
 
 
 if __name__ == "__main__":
