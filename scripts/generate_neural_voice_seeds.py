@@ -95,6 +95,14 @@ VOICE_SEED_SPECS = {
         "sample_text": "老爷不好了！五少爷在畅春园摔下假山，满脸是血，老夫人命小的速来禀报！",
         "desc": "Urgent Chu Mansion steward Li Cheng voice (zh-CN-YunyangNeural)",
     },
+    "manju_gaoshiying_veteran_bass_seed.wav": {
+        "character_id": "gao_shiying",
+        "voice": "zh-CN-YunyangNeural",
+        "rate": "-6%",
+        "pitch": "-8Hz",
+        "sample_text": "回大小姐的话，若不出老奴所料，这吴先生正是魔门血影宗主魔秀士。",
+        "desc": "Steady, deep veteran martial arts chief steward Gao Shiying voice (zh-CN-YunyangNeural)",
+    },
 }
 
 

@@ -83,6 +83,15 @@
       "voice_seed": "manju_zhangdeli_gatekeeper_seed.wav",
       "visual_desc": "Zhang Deli (张得利, 45-year-old Chu Mansion gatekeeper retainer), rendered in UE5 3D Chinese animation CG style with weathered honest features, neat cloth servant cap, wearing a dark-brown and grey Chu Mansion retainer tunic",
       "vocal_desc": "earnest, talkative, respectful 45-year-old northern Mandarin male gatekeeper vocal identity"
+    },
+    "gao_shiying": {
+      "canonical_name": "高士英",
+      "aliases": ["高总管", "高老总管"],
+      "role": "靖北侯王烈派驻楚府保护长女王秀荷的绝顶高手总管，暗中查明吴安然乃是南齐魔门血影宗当代宗主“魔秀士”并向王秀荷密报",
+      "sheet_image": "manju_char_gaoshiying_sheet_1344x768.png",
+      "voice_seed": "manju_gaoshiying_veteran_bass_seed.wav",
+      "visual_desc": "Gao Shiying (高士英, 高总管, 52-year-old veteran martial arts grandmaster and Chief Steward of the Chu Mansion), rendered in UE5 3D Chinese animation CG style with stern hawk-like eyes, greying temples and neatly trimmed salt-and-pepper beard, topknot with dark bronze clasp, wearing a dark navy-charcoal and silver-trimmed martial steward robe with leather bracers",
+      "vocal_desc": "deep, steady, vigilant 52-year-old veteran martial arts steward Mandarin bass-baritone vocal identity"
     }
   }
 }

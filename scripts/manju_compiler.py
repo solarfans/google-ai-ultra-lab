@@ -180,8 +180,8 @@ def build_prompt_text(vault: dict, shot: dict) -> str:
 def compile_shot_workflow(vault: dict, manifest: dict, shot: dict, seed: int) -> dict:
     chars = vault["characters"]
     c1 = chars[shot["subject_1"]]
-    # If d2 is inner_monologue_os in a two-shot with Wu Anran, the visual ref_image_1 should be chu_zheng_6yo!
-    visual_s2_key = "chu_zheng_6yo" if (shot["subject_1"] == "wu_anran" and shot["subject_2"] == "modern_protagonist") else shot["subject_2"]
+    # If d2 is inner_monologue_os in a two-shot, the visual ref_image_1 on screen is 6yo Chu Zheng (chu_zheng_6yo)!
+    visual_s2_key = "chu_zheng_6yo" if shot["subject_2"] == "modern_protagonist" else shot["subject_2"]
     c2_vis = chars[visual_s2_key]
     c2_aud = chars[shot["subject_2"]]
 

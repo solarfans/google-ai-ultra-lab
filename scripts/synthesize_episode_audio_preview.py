@@ -37,6 +37,7 @@ CHAR_VOICE_CONFIG = {
     "chu_mingtang": {"voice": "zh-CN-YunjianNeural", "rate": "+2%", "pitch": "-6Hz"},
     "chu_yuan": {"voice": "zh-CN-YunxiNeural", "rate": "+8%", "pitch": "+6Hz"},
     "li_cheng": {"voice": "zh-CN-YunyangNeural", "rate": "+10%", "pitch": "+2Hz"},
+    "gao_shiying": {"voice": "zh-CN-YunyangNeural", "rate": "-4%", "pitch": "-8Hz"},
 }
 
 

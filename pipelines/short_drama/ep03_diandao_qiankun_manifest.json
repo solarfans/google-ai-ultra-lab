@@ -1,0 +1,218 @@
+{
+  "episode_id": "ep03",
+  "episode_title": "第三集：颠倒乾坤（原著第三章高还原版）",
+  "novel_chapter_ref": "chapter_004_第三章_颠倒乾坤.md",
+  "resolution": [
+    1344,
+    768
+  ],
+  "fps": 24,
+  "default_frames": 243,
+  "default_steps": 6,
+  "shots": [
+    {
+      "shot_id": "Shot01",
+      "status": "pending",
+      "shot_mode": "natural_dialogue",
+      "model_backend": "h3_comfyui",
+      "output_prefix": "manju_ep03_shot01_tea_dragon",
+      "output_mp4": "manju_ep03_shot01_tea_dragon_00001.mp4",
+      "subject_1": "wu_anran",
+      "subject_2": "chu_zheng_6yo",
+      "first_frame": "manju_ep03_shot01_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_004_第三章_颠倒乾坤.md",
+        "line_range": "L25-L38",
+        "source_quote": "形成道水流，如一条绿龙，随着他的手指在空中舞动",
+        "must_preserve_detail": "吴安然为引诱天生任督二脉相通的楚铮拜师，运真气将大赵云山绿茶凝成水球，再并指一点化作碧绿水龙在空中盘旋飞舞，至楚铮鼻尖前化作水雾消散，楚铮兴奋答应学武。"
+      },
+      "visual_must_show": "楚府厅堂双人中景：吴安然并指御气，桌上青瓷茶壶飞出一道碧绿清透的云山绿茶水流，在空中化作一条栩栩如生的碧绿水龙盘旋飞舞；六岁楚铮仰头看着半空中的碧绿水龙满眼惊奇与兴奋。",
+      "scene_summary": "A spectacular 10-second 3D Chinese animation CG medium two-shot inside the Chu Mansion hall. Martial arts master Wu Anran (<Subject 1>) channels internal qi with two raised fingers to draw emerald-green Yunshan tea from a celadon teapot into a glowing translucent emerald water dragon spiraling in mid-air before dispersing into mist in front of 6-year-old Chu Zheng (<Subject 2>), who watches in amazed excitement.",
+      "camera_motion": "dynamic medium tracking shot following the spiraling emerald-green tea water dragon between <Subject 1> and <Subject 2>",
+      "dialogue_1": {
+        "window": "00:00.300–00:04.600",
+        "voice_mode": "onscreen_spoken",
+        "action": "raises two fingers with a charismatic smile as the emerald-green tea water dragon coils through the air and bursts into fine mist",
+        "line": "看好了！这云山绿茶化龙之术，你要不要学？"
+      },
+      "dialogue_2": {
+        "window": "00:05.000–00:09.400",
+        "voice_mode": "onscreen_spoken",
+        "action": "opens his bright dark eyes wide in amazement and claps his small hands excitedly",
+        "line": "愿意！伯伯好厉害，小五儿要跟伯伯学功夫！"
+      },
+      "soundscape": "Flowing water stream whoosh, resonant martial arts qi hum, crisp mist burst sound, and mystical guzheng notes.",
+      "input_fingerprint": "c4602b83abbf5c8f"
+    },
+    {
+      "shot_id": "Shot02",
+      "status": "pending",
+      "shot_mode": "single_inner_monologue_os",
+      "model_backend": "h3_comfyui",
+      "output_prefix": "manju_ep03_shot02_xueyu_pact",
+      "output_mp4": "manju_ep03_shot02_xueyu_pact_00001.mp4",
+      "subject_1": "chu_zheng_6yo",
+      "subject_2": "modern_protagonist",
+      "first_frame": "manju_ep03_shot02_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_004_第三章_颠倒乾坤.md",
+        "line_range": "L91-L96",
+        "source_quote": "以前我已经不复存在，以后这世上只有小楚铮",
+        "must_preserve_detail": "楚铮在后院草坪晒太阳抚摸白猫雪玉，低头对胸口与体内残留的小楚铮灵魂共鸣对话，立下『以前我已经不复存在，以后这世上只有小楚铮，不会再让你父母担心』的融合誓言。"
+      },
+      "visual_must_show": "后院阳光草坪单人近景：六岁楚铮坐在绿茵草地上，一只手轻轻抚摸身旁雪白小猫『雪玉』，另一只手轻按自己胸口，全程紧闭双唇不张嘴，眼神温润深沉，展现两世灵魂共鸣。",
+      "scene_summary": "A serene, emotional 10-second 3D Chinese animation CG close-medium shot on the sunlit garden lawn of the Chu Mansion. 6-year-old Chu Zheng (<Subject 1>) sits on the grass stroking a pure snow-white cat named Xueyu while resting his other hand over his heart, keeping his lips completely closed as his 28-year-old adult soul inner monologue (<Audio 1>) makes a solemn vow to the boy's lingering spirit.",
+      "camera_motion": "gentle warm sunlit push-in toward <Subject 1> stroking the white cat Xueyu with his hand over his chest",
+      "dialogue_1": {
+        "window": "00:00.300–00:04.600",
+        "voice_mode": "inner_monologue_os",
+        "action": "gently strokes the snow-white cat Xueyu on the sunlit grass while keeping his lips strictly closed",
+        "line": "雪玉，这具身体里既有你的小主人，也有我。"
+      },
+      "dialogue_2": {
+        "window": "00:05.000–00:09.500",
+        "voice_mode": "inner_monologue_os",
+        "action": "places his small hand warmly over his chest with his mouth closed and eyes filled with gentle resolve",
+        "line": "从今往后，世上只有小楚铮，绝不再让娘亲担心！"
+      },
+      "soundscape": "Soft garden breeze, gentle cat purr, warm sunlight ambience, and ethereal soul-resonance chime.",
+      "input_fingerprint": "8e1113a83abbeb00"
+    },
+    {
+      "shot_id": "Shot03",
+      "status": "pending",
+      "shot_mode": "natural_dialogue",
+      "model_backend": "h3_comfyui",
+      "output_prefix": "manju_ep03_shot03_dropped_bowl",
+      "output_mp4": "manju_ep03_shot03_dropped_bowl_00001.mp4",
+      "subject_1": "chu_zheng_6yo",
+      "subject_2": "wang_xiuhe",
+      "first_frame": "manju_ep03_shot03_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_004_第三章_颠倒乾坤.md",
+        "line_range": "L99-L116",
+        "source_quote": "小五，你终于又说话了，你知道娘这些天多为你担心啊",
+        "must_preserve_detail": "楚夫人王秀荷端来苦药，楚铮皱眉苦脸开口撒娇说肚子饿不吃药，王秀荷震惊之下手中汤药碗啪地摔落在地，颤抖着将终于开口说话的小五紧搂在怀里泣不成声。"
+      },
+      "visual_must_show": "庭院母子双人近景：地面上摔碎一只青花瓷药碗、乌黑药汁溅洒；六岁楚铮皱着小鼻子向母亲撒娇，母亲王秀荷惊喜交加、眼含热泪俯身将楚铮紧紧搂入怀中。",
+      "scene_summary": "A touching 10-second 3D Chinese animation CG medium two-shot in the Chu Mansion courtyard. 6-year-old Chu Zheng (<Subject 1>) wrinkles his nose and speaks playfully to refuse the bitter medicine; shocked that her mute son is speaking again, Mother Wang Xiuhe (<Subject 2>) drops the porcelain medicine bowl shattering on the ground and embraces him in tears of overwhelming joy.",
+      "camera_motion": "emotional medium shot tilting slightly from the shattered medicine bowl up to <Subject 2> tightly embracing <Subject 1>",
+      "dialogue_1": {
+        "window": "00:00.300–00:04.500",
+        "voice_mode": "onscreen_spoken",
+        "action": "wrinkles his small nose playfully and tugs gently at his mother's sleeve",
+        "line": "娘，小五儿肚子饿了，那药好苦，我不吃药！"
+      },
+      "dialogue_2": {
+        "window": "00:04.900–00:09.500",
+        "voice_mode": "onscreen_spoken",
+        "action": "drops the porcelain bowl in stunned joy and pulls <Subject 1> tightly into her tearful embrace",
+        "line": "小五儿……你终于又说话了！可把娘担心死了！"
+      },
+      "soundscape": "Crisp porcelain bowl shattering on stone, emotional gasp, and warm maternal strings.",
+      "input_fingerprint": "e8a2795a7faf13a6"
+    },
+    {
+      "shot_id": "Shot04",
+      "status": "pending",
+      "shot_mode": "natural_dialogue",
+      "model_backend": "h3_comfyui",
+      "output_prefix": "manju_ep03_shot04_father_rejoice",
+      "output_mp4": "manju_ep03_shot04_father_rejoice_00001.mp4",
+      "subject_1": "chu_zheng_6yo",
+      "subject_2": "chu_mingtang",
+      "first_frame": "manju_ep03_shot04_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_004_第三章_颠倒乾坤.md",
+        "line_range": "L151-L180",
+        "source_quote": "楚名棠走了过来，猛的抱起楚铮，在书房内转着圈，放声大笑",
+        "must_preserve_detail": "楚铮随母亲来到书房大声向父亲楚名棠行礼问安，楚名棠一口茶喷出，猛地冲过来抱起楚铮在书房转圈放声大笑，感激吴安然并定下择日行拜师大礼。"
+      },
+      "visual_must_show": "楚府书房父子双人中景：六岁楚铮精神奕奕拱手行礼，一身深紫织金官袍的太守父亲楚名棠从书案后狂喜起身，眼角闪动泪光、放声大笑伸手抱起楚铮。",
+      "scene_summary": "A joyful 10-second 3D Chinese animation CG medium two-shot inside the grand Chu Mansion study. 6-year-old Chu Zheng (<Subject 1>) bows spiritedly and greets his father aloud; Prefect Chu Mingtang (<Subject 2>) springs up from his desk in ecstatic disbelief, scooping his son up with booming laughter and agreeing to hold the apprenticeship ceremony for Master Wu.",
+      "camera_motion": "lively celebratory medium tracking shot inside the study room as <Subject 2> steps forward to lift <Subject 1>",
+      "dialogue_1": {
+        "window": "00:00.300–00:04.400",
+        "voice_mode": "onscreen_spoken",
+        "action": "bows spiritedly with clasped small hands and a bright beaming smile",
+        "line": "小五儿见过父亲！孩儿的病已经全好啦！"
+      },
+      "dialogue_2": {
+        "window": "00:04.800–00:09.500",
+        "voice_mode": "onscreen_spoken",
+        "action": "laughs heartily with glistening eyes and reaches out to lift <Subject 1> in celebration",
+        "line": "好！好！多谢吴先生妙手回春，择日便行拜师大礼！"
+      },
+      "soundscape": "Teacup clink, booming joyful laughter in a wooden study, and bright celebratory flute.",
+      "input_fingerprint": "3d7e50efc6df4c3f"
+    },
+    {
+      "shot_id": "Shot05",
+      "status": "pending",
+      "shot_mode": "natural_dialogue",
+      "model_backend": "h3_comfyui",
+      "output_prefix": "manju_ep03_shot05_secret_sect",
+      "output_mp4": "manju_ep03_shot05_secret_sect_00001.mp4",
+      "subject_1": "gao_shiying",
+      "subject_2": "wang_xiuhe",
+      "first_frame": "manju_ep03_shot05_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_004_第三章_颠倒乾坤.md",
+        "line_range": "L183-L196",
+        "source_quote": "这吴先生应该就是魔门血影宗的当代宗主魔秀士",
+        "must_preserve_detail": "靖北侯派驻楚府的高总管向王秀荷（大小姐）密报吴安然正是南齐魔门血影宗当代宗主魔秀士，王秀荷非但不惧，反而露出一丝古怪神秘的笑意说『那可真是巧了』，并吩咐暂且瞒着老爷楚名棠。"
+      },
+      "visual_must_show": "楚府内院暮色回廊双人中景：老练威严的高总管躬身抱拳低声密报，王秀荷端庄伫立廊下，闻听『血影宗』三字非但不惊，唇角反而浮现一抹神秘莫测的微笑。",
+      "scene_summary": "A suspenseful 10-second 3D Chinese animation CG medium two-shot in a lantern-lit inner corridor of the Chu Mansion at dusk. Veteran Chief Steward Gao Shiying (<Subject 1>) bows with cupped hands to secretly report Wu Anran's true identity as the Blood Shadow Sect Master; instead of alarm, Wang Xiuhe (<Subject 2>) reveals an enigmatic, knowing smile and orders him to keep it from her husband.",
+      "camera_motion": "slow suspenseful push-in along the lantern-lit corridor toward <Subject 2>'s enigmatic smile",
+      "dialogue_1": {
+        "window": "00:00.300–00:04.600",
+        "voice_mode": "onscreen_spoken",
+        "action": "bows respectfully with cupped hands and speaks in a guarded, vigilant low voice",
+        "line": "回大小姐，那吴先生，竟是魔门血影宗主魔秀士！"
+      },
+      "dialogue_2": {
+        "window": "00:05.000–00:09.500",
+        "voice_mode": "onscreen_spoken",
+        "action": "pauses briefly as a subtle, mysterious smile curves her lips in the lantern light",
+        "line": "血影宗？那可真是巧了……此事暂且别告诉老爷。"
+      },
+      "soundscape": "Quiet evening courtyard wind, flickering lantern ambiance, and mysterious low pipa pluck.",
+      "input_fingerprint": "56712cc733f338a1"
+    },
+    {
+      "shot_id": "Shot06",
+      "status": "pending",
+      "shot_mode": "natural_dialogue",
+      "model_backend": "h3_comfyui",
+      "output_prefix": "manju_ep03_shot06_diandao_qiankun",
+      "output_mp4": "manju_ep03_shot06_diandao_qiankun_00001.mp4",
+      "subject_1": "wang_xiuhe",
+      "subject_2": "modern_protagonist",
+      "first_frame": "manju_ep03_shot06_first_frame_1344x768.png",
+      "canonical_anchor": {
+        "chapter_file": "chapter_004_第三章_颠倒乾坤.md",
+        "line_range": "L299-L319",
+        "source_quote": "后汉太宗刘禅雄才大略，其父蜀王刘备战死沙场",
+        "must_preserve_detail": "楚铮在书房意外发现繁体《论语》，遂喝下苦药请母亲读《史记》讲历史；听闻『后汉太宗刘禅雄才大略，五年一统天下，当朝太祖乃常山赵云后人』，楚铮彻底石化崩溃，感叹历史颠倒乾坤。"
+      },
+      "visual_must_show": "书房书架前母子近景：王秀荷手持线装古籍《史记》温柔讲述，六岁楚铮手里捧着繁体《论语》，全程紧闭双唇瞪圆双眼，露出见鬼般石化震惊的表情。",
+      "scene_summary": "A climactic 10-second 3D Chinese animation CG close-medium two-shot beside the bookshelves in the Chu Mansion study. Mother Wang Xiuhe (<Subject 1>) holds an open classical volume of Records of the Grand Historian (《史记》) and warmly recounts how Emperor Liu Shan unified the realm in five years, while 6-year-old Chu Zheng (<Subject 2>) clutches The Analects (《论语》) with his mouth strictly closed and eyes wide in petrified shock as his adult soul (<Audio 2>) roars internally at the upside-down history.",
+      "camera_motion": "dramatic push-in from <Subject 1> reading the ancient history book to <Subject 2>'s petrified, wide-eyed face",
+      "dialogue_1": {
+        "window": "00:00.300–00:05.100",
+        "voice_mode": "onscreen_spoken",
+        "action": "turns a page of the classical thread-bound history book and speaks with warm admiration",
+        "line": "后汉太宗刘禅雄才大略，五年一统天下，太祖乃赵云后人。"
+      },
+      "dialogue_2": {
+        "window": "00:05.500–00:09.600",
+        "voice_mode": "inner_monologue_os",
+        "action": "clutches the classical book with his lips tightly closed and eyes wide open in utter petrified disbelief",
+        "line": "扶不起的阿斗竟一统天下？！这历史简直颠倒乾坤！"
+      },
+      "soundscape": "Rustle of ancient book pages, dramatic thunderous percussion hit, and mind-bending orchestral crescendo.",
+      "input_fingerprint": "10b898e414f850a5"
+    }
+  ]
+}

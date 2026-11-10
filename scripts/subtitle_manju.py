@@ -192,8 +192,13 @@ def main() -> None:
 
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     include_badge = args.mode == "audit"
-    ep_tag = "Ep02" if "ep02" in args.manifest.name.lower() else "Ep01"
-    ep_slug = "ZhuanshiChongsheng" if ep_tag == "Ep02" else "BeizhaoChushi"
+    manifest_name_low = args.manifest.name.lower()
+    if "ep03" in manifest_name_low:
+        ep_tag, ep_slug = "Ep03", "DiandaoQiankun"
+    elif "ep02" in manifest_name_low:
+        ep_tag, ep_slug = "Ep02", "ZhuanshiChongsheng"
+    else:
+        ep_tag, ep_slug = "Ep01", "BeizhaoChushi"
 
     sub_shots = []
     for idx, shot in enumerate(manifest["shots"]):
