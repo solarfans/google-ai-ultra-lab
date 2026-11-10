@@ -16,7 +16,9 @@ import json
 import math
 import re
 import struct
+import subprocess
 import sys
+import tempfile
 import wave
 from pathlib import Path
 
@@ -98,8 +100,80 @@ def inspect_wav_acoustics(wav_path: Path) -> dict:
     }
 
 
-def run_qa_gate(manifest_path: Path) -> int:
-    print(f"🔍 Running Autonomous 5-Gate QA Audit on: {manifest_path.name}")
+def parse_window_bounds(window_str: str) -> tuple[float, float]:
+    """Parse '00:00.800–00:04.800' into (start_sec, end_sec)."""
+    parts = re.split(r"[–-]", window_str)
+    if len(parts) != 2:
+        raise ValueError(f"Invalid window format: {window_str}")
+
+    def to_sec(ts: str) -> float:
+        mm, ss = ts.strip().split(":")
+        return int(mm) * 60.0 + float(ss)
+
+    return to_sec(parts[0]), to_sec(parts[1])
+
+
+def audit_rendered_mp4_shot(mp4_path: Path, shot: dict) -> list[str]:
+    """Post-render inspection of an individual rendered MP4 shot (stream integrity + window RMS energy)."""
+    errs: list[str] = []
+    if not mp4_path.exists():
+        return [f"[Gate 6 Post-Render] {shot['shot_id']}: Missing rendered MP4: {mp4_path.name}"]
+
+    probe = subprocess.run(
+        [
+            "ffprobe",
+            "-v",
+            "error",
+            "-show_entries",
+            "format=duration:stream=codec_type,width,height",
+            "-of",
+            "json",
+            str(mp4_path),
+        ],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if probe.returncode != 0:
+        return [f"[Gate 6 Post-Render] {shot['shot_id']}: ffprobe failed on {mp4_path.name}"]
+
+    info = json.loads(probe.stdout)
+    dur = float(info.get("format", {}).get("duration", 0.0))
+    if dur < 9.5 or dur > 11.0:
+        errs.append(f"[Gate 6 Post-Render] {shot['shot_id']}: Abnormal duration {dur:.2f}s in {mp4_path.name}")
+
+    # Extract 16kHz mono PCM WAV and verify speech RMS energy inside d1 and d2 windows
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=True) as tmp_wav:
+        subprocess.run(
+            ["ffmpeg", "-y", "-i", str(mp4_path), "-ac", "1", "-ar", "16000", tmp_wav.name],
+            capture_output=True,
+            check=True,
+        )
+        with wave.open(tmp_wav.name, "rb") as wf:
+            sr = wf.getframerate()
+            n_frames = wf.getnframes()
+            samples = struct.unpack(f"<{n_frames}h", wf.readframes(n_frames))
+
+        for d_key in ("dialogue_1", "dialogue_2"):
+            s_sec, e_sec = parse_window_bounds(shot[d_key]["window"])
+            i0 = max(0, int(s_sec * sr))
+            i1 = min(len(samples), int(e_sec * sr))
+            seg = samples[i0:i1]
+            if not seg:
+                errs.append(f"[Gate 6 Post-Render] {shot['shot_id']}.{d_key}: Empty audio slice [{s_sec:.2f}s–{e_sec:.2f}s]")
+                continue
+            rms = math.sqrt(sum(float(x) * float(x) for x in seg) / len(seg))
+            dbfs = 20.0 * math.log10(max(rms, 1.0) / 32768.0)
+            if dbfs < -36.0:
+                errs.append(
+                    f"[Gate 6 Post-Render] {shot['shot_id']}.{d_key}: Dead/silent audio window [{s_sec:.2f}s–{e_sec:.2f}s] ({dbfs:.1f} dBFS)!"
+                )
+    return errs
+
+
+def run_qa_gate(manifest_path: Path, post_render: bool = False) -> int:
+    mode_label = "Pre-Flight + Post-Render 6-Gate" if post_render else "Pre-Flight 5-Gate"
+    print(f"🔍 Running Autonomous {mode_label} QA Audit on: {manifest_path.name}")
     vault = json.loads(VAULT_PATH.read_text(encoding="utf-8"))
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     seeds_manifest = json.loads(SEEDS_MANIFEST_PATH.read_text(encoding="utf-8")) if SEEDS_MANIFEST_PATH.exists() else {}
@@ -222,6 +296,19 @@ def run_qa_gate(manifest_path: Path) -> int:
                 f"gap={t['gap_sec']}s, d2=[{t['d2_start_sec']}s–{t['d2_end_sec']}s] (0 overlap, 0 cutoff)"
             )
 
+    # --- GATE 6 (Optional `--post-render`): Actual Rendered MP4 Stream & Window Acoustic Audit ---
+    if post_render:
+        print("  [Gate 6] Auditing Post-Render MP4 Shots (ffprobe stream integrity + speech window dBFS)...")
+        for shot in manifest.get("shots", []):
+            sid = shot["shot_id"]
+            mp4_name = shot.get("output_mp4", f"{shot['output_prefix']}_00001.mp4")
+            mp4_path = ASSETS_DIR / mp4_name
+            shot_errs = audit_rendered_mp4_shot(mp4_path, shot)
+            if shot_errs:
+                errors.extend(shot_errs)
+            else:
+                print(f"     ✓ {sid}: Rendered MP4 verified ({mp4_name}, speech energy present in d1 & d2 windows)")
+
     if warnings:
         for w in warnings:
             print(f"  ⚠️  {w}")
@@ -237,5 +324,7 @@ def run_qa_gate(manifest_path: Path) -> int:
 
 
 if __name__ == "__main__":
-    target = Path(sys.argv[1]) if len(sys.argv) > 1 else SHORT_DRAMA_DIR / "ep02_zhuanshi_chongsheng_manifest.json"
-    sys.exit(run_qa_gate(target))
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    post_render_flag = "--post-render" in sys.argv
+    target = Path(args[0]) if args else SHORT_DRAMA_DIR / "ep02_zhuanshi_chongsheng_manifest.json"
+    sys.exit(run_qa_gate(target, post_render=post_render_flag))

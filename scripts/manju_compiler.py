@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Deterministic AI Manju Episode Workflow Compiler (v3.1 — Strict Lip-Sync vs. Closed-Mouth OS Separation).
+"""Deterministic AI Manju Episode Workflow Compiler (v3.2 — Fingerprint-Verified Resume + Hybrid Model Routing).
 
-Core Engineering Rule in v3.1:
-- In `MiniMax-H3`, `<d>[Mandarin]...</d>` is a hard lip-movement trigger.
-- Therefore, `<d>[Mandarin]...</d>` MUST ONLY be emitted for `onscreen_spoken` segments
-  (or the spoken tail of `os_then_spoken`).
-- For `offscreen_pa` and `inner_monologue_os` segments, `<d>` tags are strictly OMITTED
-  from the video diffusion prompt so the character on screen keeps their lips 100% closed
-  and performs micro-expressions (eyes, brows, tears, body action), while the studio-grade
-  neural PA/OS audio stem is mastered in post-production!
+Core Engineering Rules in v3.2:
+1. Strict Lip-Sync vs. Closed-Mouth OS Separation:
+   - In `MiniMax-H3`, `<d>[Mandarin]...</d>` is a hard lip-movement trigger.
+   - `<d>[Mandarin]...</d>` MUST ONLY be emitted for `onscreen_spoken` segments (or the spoken tail of `os_then_spoken`).
+   - For `offscreen_pa` and `inner_monologue_os` segments, `<d>` tags are strictly OMITTED so the character keeps their lips 100% closed on screen while the studio-grade neural PA/OS stem is mastered in post-production.
+2. Fingerprint-Verified Checkpoint Resume:
+   - `status == "completed"` alone is NEVER trusted to skip compilation.
+   - A shot is skipped ONLY if: (a) `status == "completed"`, (b) `output_mp4` exists on disk and size > 100 KB, and (c) `shot.get("input_fingerprint")` matches the live SHA-256 of `(shot_mode, subject_1, subject_2, dialogue_1, dialogue_2, first_frame_sha256)`.
+3. Hybrid Backend Adapter Metadata (`model_backend`):
+   - Supports `"h3_comfyui"` (default for character dialogue/acting), `"flow_veo_3_1_lite"` (0-credit Ultra 20x lower-priority B-roll/transitions), and `"flow_omni_1_2"` (high-impact environment/establishing shots).
 """
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -301,27 +304,68 @@ def compile_shot_workflow(vault: dict, manifest: dict, shot: dict, seed: int) ->
     }
 
 
+def compute_shot_fingerprint(shot: dict) -> str:
+    """Compute deterministic SHA-256 fingerprint of shot inputs and first-frame asset."""
+    ff_path = ASSETS_DIR / shot["first_frame"]
+    ff_hash = hashlib.sha256(ff_path.read_bytes()).hexdigest()[:16] if ff_path.exists() else "missing"
+    payload = {
+        "shot_mode": shot.get("shot_mode", "natural_dialogue"),
+        "model_backend": shot.get("model_backend", "h3_comfyui"),
+        "subject_1": shot["subject_1"],
+        "subject_2": shot["subject_2"],
+        "first_frame": shot["first_frame"],
+        "first_frame_sha16": ff_hash,
+        "dialogue_1": shot["dialogue_1"],
+        "dialogue_2": shot["dialogue_2"],
+        "camera_motion": shot.get("camera_motion", ""),
+        "scene_summary": shot.get("scene_summary", ""),
+    }
+    raw = json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()[:16]
+
+
 def main() -> None:
     manifest_path = Path(sys.argv[1]) if len(sys.argv) > 1 else SHORT_DRAMA_DIR / "ep02_zhuanshi_chongsheng_manifest.json"
+    force_compile = "--force" in sys.argv
     vault = json.loads(VAULT_PATH.read_text(encoding="utf-8"))
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
     WORKFLOWS_DIR.mkdir(parents=True, exist_ok=True)
     compiled = []
+    manifest_dirty = False
+
     for idx, shot in enumerate(manifest["shots"], start=1):
-        if shot.get("status") == "completed":
-            print(f"⏭️  Skipping completed {shot['shot_id']} ({shot.get('output_mp4')})")
+        live_fp = compute_shot_fingerprint(shot)
+        stored_fp = shot.get("input_fingerprint")
+        out_mp4_name = shot.get("output_mp4", f"{shot['output_prefix']}_00001.mp4")
+        out_mp4_path = ASSETS_DIR / out_mp4_name
+        mp4_valid = out_mp4_path.exists() and out_mp4_path.stat().st_size > 100_000
+
+        if not force_compile and shot.get("status") == "completed" and mp4_valid and stored_fp == live_fp:
+            print(f"⏭️  Skipping verified completed {shot['shot_id']} ({out_mp4_name}, fp={live_fp})")
             continue
+
+        if shot.get("status") == "completed" and (not mp4_valid or stored_fp != live_fp):
+            print(
+                f"🔄 Re-compiling {shot['shot_id']}: status='completed' but "
+                f"mp4_valid={mp4_valid}, stored_fp={stored_fp} vs live_fp={live_fp}"
+            )
+
         wf = compile_shot_workflow(vault, manifest, shot, seed=2026111000 + idx)
         out_wf = WORKFLOWS_DIR / f"compiled_{manifest['episode_id']}_{shot['shot_id'].lower()}.json"
         out_wf.write_text(json.dumps(wf, ensure_ascii=False, indent=2), encoding="utf-8")
+        shot["input_fingerprint"] = live_fp
+        manifest_dirty = True
         compiled.append(out_wf)
         print(
-            f"✅ Compiled {shot['shot_id']} [{shot.get('shot_mode', 'natural_dialogue')}] -> {out_wf.name} "
-            f"(steps={shot.get('steps', manifest['default_steps'])})"
+            f"✅ Compiled {shot['shot_id']} [{shot.get('shot_mode', 'natural_dialogue')} | "
+            f"backend={shot.get('model_backend', 'h3_comfyui')}] -> {out_wf.name} (fp={live_fp})"
         )
 
-    print(f"🎯 Total compiled pending shots: {len(compiled)}")
+    if manifest_dirty:
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    print(f"🎯 Total compiled shots: {len(compiled)}")
 
 
 if __name__ == "__main__":

@@ -2,14 +2,17 @@
   "episode_id": "ep02",
   "episode_title": "第二集：转世重生（原著第二章高还原精修版）",
   "novel_chapter_ref": "chapter_003_第二章_转世重生.md (+ chapter_004 现代客机失事闪回序幕)",
-  "resolution": [1344, 768],
+  "resolution": [
+    1344,
+    768
+  ],
   "fps": 24,
   "default_frames": 243,
   "default_steps": 6,
   "shots": [
     {
       "shot_id": "Shot01",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "offscreen_pa_and_os",
       "output_prefix": "manju_ep02_v2_shot01_aircrash",
       "output_mp4": "manju_ep02_v2_shot01_aircrash_00001.mp4",
@@ -37,11 +40,12 @@
         "action": "presses send on his phone screen with trembling thumbs and closes his eyes as the plane plunges into the dark ocean",
         "line": "躲不过去了吗……爸、妈，永别了！"
       },
-      "soundscape": "Violent aircraft cabin turbulence rumble, overhead PA speaker static chime, thunderclap, and rushing ocean wind."
+      "soundscape": "Violent aircraft cabin turbulence rumble, overhead PA speaker static chime, thunderclap, and rushing ocean wind.",
+      "input_fingerprint": "04a903850b1c1d0c"
     },
     {
       "shot_id": "Shot02",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "single_inner_monologue_os",
       "output_prefix": "manju_ep02_v2_shot02_awakening_os",
       "output_mp4": "manju_ep02_v2_shot02_awakening_os_00001.mp4",
@@ -69,11 +73,12 @@
         "action": "lowers his tiny hands slowly with his lips still tightly closed, looking guardedly around the ancient bedchamber",
         "line": "北赵楚家……让我管陌生女人叫娘，我叫不出口。"
       },
-      "soundscape": "Quiet ancient bedchamber ambience, subtle rustle of silk bedding, and ethereal inner-thought resonance."
+      "soundscape": "Quiet ancient bedchamber ambience, subtle rustle of silk bedding, and ethereal inner-thought resonance.",
+      "input_fingerprint": "795328a765f316dc"
     },
     {
       "shot_id": "Shot03",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "os_plus_short_spoken",
       "output_prefix": "manju_ep02_v2_shot03_blood_mother",
       "output_mp4": "manju_ep02_v2_shot03_blood_mother_00001.mp4",
@@ -101,11 +106,12 @@
         "action": "closes his eyes as warm tears roll down his cheeks, then gently touches his mother's face and softly calls out",
         "line": "得母如此，夫复何求……娘，小五儿在这儿。"
       },
-      "soundscape": "Soft weeping, crackling candle flame, and warm emotional xiao flute."
+      "soundscape": "Soft weeping, crackling candle flame, and warm emotional xiao flute.",
+      "input_fingerprint": "33ea7d2a03ad9f6f"
     },
     {
       "shot_id": "Shot04",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "output_prefix": "manju_ep02_v2_shot04_tofu_shop",
       "output_mp4": "manju_ep02_v2_shot04_tofu_shop_00001.mp4",
@@ -133,11 +139,12 @@
         "action": "presses two bronze coins flush into the solid wood tabletop with two fingers and smirks coldly",
         "line": "善杀人者，必善医。带路吧，这诊金我接了！"
       },
-      "soundscape": "Bustling ancient street eatery ambience, crisp wood-cracking sound as copper coins sink into the table."
+      "soundscape": "Bustling ancient street eatery ambience, crisp wood-cracking sound as copper coins sink into the table.",
+      "input_fingerprint": "9c2636b373fe8b60"
     },
     {
       "shot_id": "Shot05",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "output_prefix": "manju_ep02_v2_shot05_souhun_hand",
       "output_mp4": "manju_ep02_v2_shot05_souhun_hand_00001.mp4",
@@ -165,11 +172,12 @@
         "action": "sits immobilized with his lips closed and eyes wide with alarm as a torrent of scorching qi pours into his head",
         "line": "不好！这恶贼根本不是郎中！"
       },
-      "soundscape": "Ominous low demonic qi hum, sharp acupoint-sealing wind sound, and tense heartbeat."
+      "soundscape": "Ominous low demonic qi hum, sharp acupoint-sealing wind sound, and tense heartbeat.",
+      "input_fingerprint": "3903d094dc39b78c"
     },
     {
       "shot_id": "Shot06",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "output_prefix": "manju_ep02_v2_shot06_rendu_twist",
       "output_mp4": "manju_ep02_v2_shot06_rendu_twist_00001.mp4",
@@ -197,7 +205,8 @@
         "action": "blinks his bright dark eyes with his lips closed, feeling a warm refreshing current circulating smoothly through his chest",
         "line": "咦？那股霸道真气入体，我竟一点事都没有？"
       },
-      "soundscape": "Resonant meridian chime, deep martial energy whoosh, and triumphant orchestral swell."
+      "soundscape": "Resonant meridian chime, deep martial energy whoosh, and triumphant orchestral swell.",
+      "input_fingerprint": "413ddac867e68d2f"
     }
   ]
 }

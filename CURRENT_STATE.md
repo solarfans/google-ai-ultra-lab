@@ -1,45 +1,44 @@
 # Google AI Ultra Lab — Current State & Ledger
 
-**最后更新**：2026-11-09 15:35 SGT (MacBook Pro)  
-**项目状态**：`AI_MANJU_SOP_V2_SOLIDIFIED / GCP_ULTRA_AND_PRO_VPN_MATRIX_VERIFIED / ZERO_BURN_SAFE`  
+**最后更新**：2026-11-10 21:55 SGT (MacBook Pro)  
+**项目状态**：`AI_MANJU_SOP_V4_5_HYBRID_PIPELINE_LIVE / EP01_AND_EP02_V2_DELIVERED / ZERO_BURN_SAFE`  
 **负责席位**：Antigravity Desktop (MacBook)  
-**核心操作总纲**：[**docs/AI_MANJU_AND_ULTRA_SOP.md**](./docs/AI_MANJU_AND_ULTRA_SOP.md)  
+**核心操作总纲**：[**skills/google-ai-ultra/SKILL.md**](./skills/google-ai-ultra/SKILL.md) | [**docs/AI_MANJU_AND_ULTRA_SOP.md**](./docs/AI_MANJU_AND_ULTRA_SOP.md) | [**docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md**](./docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md)
 
 ---
 
-## 1. 订阅与权益状态清单
+## 1. 订阅与五大独立成本池清单（2026-11-10 核实口径）
 
-| 权益项目 | 官方标称/社区数据 | 当前实测状态 | 验证方式/凭据 |
+| 权益项目 | 官方标称/2026-11-10 规则 | 当前实测状态 | 生产定位与验证凭据 |
 | :--- | :--- | :--- | :--- |
-| **会员级别** | Google AI Ultra 30 TB |  **已确认** | Google One 首页已显示 "Google AI Ultra, 30 TB" (Melvin Guo) |
-| **订阅成本** | ₺2,949.99 / 月 |  **已确认** | Apple 订阅页面截图证实，12 月 7 日自动续费 |
-| **YouTube Premium** | 个人与品牌频道会员 |  **已确认** | 个人身份与 yoursolar 品牌频道均显示 Premium 标识 |
-| **Colab 算力** | 约 2,000 ~ 2,500 CU/月 |  **已确认 (2,497.44 CU)** | `colab usage` 回读当前余额：2,497.44 CU，活跃实例 0 |
-| **G4 96GB GPU** | NVIDIA RTX PRO 6000 Ada/Blackwell |  **已验证，当前 0 活跃** | 实例已彻底关机自毁，无任何后台漏费风险 |
-| **Cloud Credits** | Ultra / Google Builders Hub 标示 US$100/月 | **2026-11 已入账 / BOTH_CREDITS_ACTIVE / BILLING_VERIFIED** | Google Cloud Billing → Credits 实际账单：`Google Developer Program premium benefit - CREDIT_TYPE_MONTHLY`，Available / 100%，SGD 128.28；后续月份自动发放、适用产品与抵扣顺序仍待验证 |
-| **Google Flow** | 约 25,000 点 / 月 | ⏳ 待使用 | 网页后台已确认包含 |
-| **Antigravity** | Gemini 4 Argon + Claude Opus |  **已就绪** | 顶级模型池在 AGY 中可用 |
-| **本地 M3 Pro 算力** | Apple Silicon M3 Pro 36GB |  **已部署运行 (43.9 tok/s)** | 本地私有无审查大模型 (9B Heretic Uncensored)，32K 上下文 |
+| **会员级别** | Google AI Ultra 20x (30 TB) | **已确认** | Google One 首页显示 "Google AI Ultra, 30 TB"；Apple 订阅 `₺2,949.99/月` |
+| **1. AGY / Gemini 4 Argon** | Ultra 20x 档位 | **已就绪（余量充裕）** | 常驻总导演、连续性编剧、多模态抽帧与音轨冷读 QA |
+| **2. Colab GPU 算力 (`CU`)** | 标准发放 2,000 CU/月（含历史结余） | **已确认 (`2,484.46 CU`)** | `ultra_meter.py usage` 实测余额 `2,484.46 CU`，**活跃实例 `0` (`0.00 CU/h`)**；主力跑 `MiniMax-H3` 角色表演与口型 |
+| **3. Flow Video (`Credits`)** | 25,000 credits/月（按月刷新不结转） | **已就绪** | `Veo 3.1 Lite`（Ultra 20x Lower Priority 为 **`0 credits`**）+ `Omni Flash 1.2`（前 10s 为 `3 credits/s`）；用于空镜、大场面转场与三镜同题 A/B |
+| **4. Flow Music (`Credits`)** | 30,000 credits/月（含商业授权） | **已就绪** | Member 明确包含商业使用权，独立于视频积分池，用于古风主题曲与情绪铺底 BGM |
+| **5. GDP Cloud & 30TB Drive** | US$100/月 Cloud Credits + 30TB Drive | **2026-11 已入账 (`SGD 128.28`)** | Cloud Billing 含 `Free Trial SGD 384.83` + `GDP Monthly SGD 128.28`；30TB Drive 归档无损母带与大模型权重 |
+| **本地 M3 Pro 算力** | Apple Silicon M3 Pro 36GB | **已部署运行** | 本地零成本执行 `edge-tts` Neural 音色合成、FFmpeg 双轨混音、6 道门禁质检与字幕压制 |
 
 ---
 
-## 2. 赛道重构：放弃真人定制短剧，全面转向【3D 国漫 CG 级 AI 漫剧】 (2026-11-09 SGT)
+## 2. 《楚氏春秋》3D 国漫生产进度与 v4.5 工业化管线（2026-11-10 SGT）
 
-- **11-08 真人短剧惨败复盘与封存**：
-  - 11-08 尝试使用家庭真人照片制作古装短剧，因触犯“真人恐怖谷效应”及工程偷工减料（OpenCV 2D 贴图换脸、`ffmpeg` 晃动静态死图冒充视频、模型退回 SDXL/SVD-XT、将半成品抛给用户）导致彻底失败，复盘已永久归档至 [**LESSONS_LEARNED.md**](./LESSONS_LEARNED.md)。
-- **11-09 战略降维与《AI 漫剧工业化生产总纲 v2.0》固化**：
-  - 经深度精读 Owner 过去 7 日 X 点赞（50+ 篇推文 / 11 篇万字长文，含 `@Delroy715`、`@aggs8p`、`@TuyetloanP81840`、`@EianLu`、`@leaf_sanren`、`@yangleiocx3`）及红果免费短剧 2025–2026 行业大盘数据，正式将主航道切换为 **【AI 漫剧（非真人出镜，默认锁定 3D 国漫 / UE5 影视 CG 风）】**；
-  - 完整操作 SOP、Colab G4 75s NVMe 预热架构、MiniMax-H3 六大深坑攻克参数（`Self-Anchor Voice` 原生声纹锁死、`JoinMatch` 手动除雾、`--only-seg` 单镜 3 分钟热插拔、关闭真人毛孔 LoRA）、三类母本资产规范已归档至 [**docs/AI_MANJU_AND_ULTRA_SOP.md**](./docs/AI_MANJU_AND_ULTRA_SOP.md) 与 [**references/external_tools_audit.md**](./references/external_tools_audit.md)。
-- **算力台账与资产安全**：
-  - 云端 Colab G4 实例全量安全注销，活跃实例 **0**，当前算力可用余额 **2,497.44 CU**（`0.00 CU/h`）。
+- **已交付成片基线**：
+  - **第 1 集《北赵楚氏》(`50.66s`)**：已完成 5 镜 3D 国漫动态渲染、Shot 03 单镜手术刀修复与去 `【角色名】` 纯台词字幕压制（[`ChuShiChunQiu_Ep01_BeizhaoChushi_Master_v2.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep01_BeizhaoChushi_Master_v2.mp4) / [`Subtitled_Audit.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep01_BeizhaoChushi_Subtitled_Audit.mp4)）。
+  - **第 2 集 v2《转世重生》(`60.75s`，6 镜全重制精修版)**：
+    - 彻底解决 v1 的 6 项缺陷：移除空姐站座位旁拿电话广播的常识错误、全面替换为 `edge-tts` Neural 音色种子（消除 `say`/`asetrate` 鬼叫失真）、落地 **“闭嘴演眼神 + 28 岁成年男声混响内心独白（OS）”** 与 **“画外航空带通滤波广播（PA）”**、100% 还原原著第二章核心名场面（王秀荷磕头滴血认母、吴安然逃亡平原郡回味豆花店两指按铜钱入木桌毛遂自荐、楚府偏厅暗施十成大搜魂手反助楚铮贯通任督二脉）；
+    - 单次 Colab G4 会话耗时 `25.46 min`、消耗 `4.08 CU` 完成 6 镜渲染；成片已交付至 [`ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Master_v2.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Master_v2.mp4) 与 [`ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Subtitled_Audit.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Subtitled_Audit.mp4)。
+- **v4.5 管线合并升级（吸收 2026-11-10 Ultra & Creator Strategy 研究成果）**：
+  1. **6 道 Pre-Flight + Post-Render 自动化门禁（[`scripts/manju_qa_gate.py`](./scripts/manju_qa_gate.py) v4.5）**：在渲染前 5 道门禁基础上，新增 **Gate 6 (`--post-render`)**，对每个实际渲染出的 MP4 执行 `ffprobe` 流完整性核验与对白时间窗 PCM 声学能量（`dBFS > -36 dBFS`）核查，杜绝空轨、截断与假通过。
+  2. **SHA-256 指纹校验断点续跑（[`scripts/manju_compiler.py`](./scripts/manju_compiler.py) v3.2）**：不再仅凭 `status == "completed"` 盲目跳过；必须同时满足 `output_mp4` 存在有效且 `input_fingerprint`（覆盖首帧图像哈希、台词、模式、角色）完全一致才跳过，并预留 `model_backend`（`h3_comfyui` / `flow_veo_3_1_lite` / `flow_omni_1_2`）混合路由字段。
+  3. **经验教训与防呆台账**：全量归档于 [`pipelines/short_drama/LESSONS_LEARNED.md`](./pipelines/short_drama/LESSONS_LEARNED.md)（`LL-001` 至 `LL-007`）。
 
 ---
 
-## 3. 下一步行动计划（Phase 2A：10 秒单镜头漫剧 MVP 闭环验收）
+## 3. 下一步行动计划（Phase 3：第 3 集推进 + H3/Flow 混合路由与发行实验）
 
-1. **Gate 1（0 CU 漫剧资产准备与颜值确认）**：生成主角【16:9 3D 国漫四联角色身份板（含全身、鞋靴、三视图与表情特写）】+【无人物纯净空镜场景图】+【第 1 镜高清首帧】，经 AGY 放大自检后交由 Owner 确认画风。
-2. **Gate 2（Colab G4 + 真 ComfyUI H3 单镜渲染）**：在 G4 (96GB) 上极速挂载 ComfyUI + `MiniMax-H3 (Singularity v1.3)`（关闭真人毛孔 LoRA），生成 5~8 秒角色真开口说话、真动态、带物理拟音的漫剧单镜头，跑完立即关机查账。
-3. **Gate 3（本地抽帧质检与字幕压制）**：AGY 本地抽帧核验无烧录乱码字、无变形后，用 `auto_subtitle.py` 声学包络自动对齐字幕交付验收。
+1. **第 2 集 v2 视听验收与第 3 集《拜师习武》筹备**：基于已跑通的 6-Gate 管线推进第 3 集，在大场面/空镜转场镜头测试接入 `Flow Veo 3.1 Lite (0-credit Lower Priority)` / `Flow Omni 1.2` 及 `Flow Music` 商业授权古风配乐。
+2. **双画幅与长短结合发行包装**：保留 `16:9 Clean Master` 与独立分轨，导出 `9:16` 竖屏安全区版；应对 YouTube `2027-02-01` YPP 新门槛（8,000 长视频观看小时或 2,000 万 Shorts/90 天），采用“单集短剧引流 + 多集合集长片沉淀长视频时长”策略。
 
 ---
 
