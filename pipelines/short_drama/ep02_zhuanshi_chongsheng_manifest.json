@@ -90,13 +90,13 @@
       "scene_summary": "A deeply emotional 10-second 3D Chinese animation CG close two-shot in the candlelit bedchamber. Mother Wang Xiuhe (<Subject 1>), with a bleeding bruise on her forehead from kowtowing, hugs 6-year-old Chu Zheng (<Subject 2>) tightly while weeping; moved by her maternal sacrifice, Chu Zheng sheds warm tears and finally accepts her as his mother.",
       "camera_motion": "intimate emotional close-up with warm flickering candlelight",
       "dialogue_1": {
-        "window": "00:00.300–00:04.600",
+        "window": "00:00.300–00:05.250",
         "voice_mode": "onscreen_spoken",
         "action": "hugs <Subject 2> tightly with fresh blood on her forehead and tears streaming down her cheeks",
         "line": "小五儿别怕，就算你傻了，娘也养你一辈子！"
       },
       "dialogue_2": {
-        "window": "00:05.000–00:09.600",
+        "window": "00:05.350–00:09.300",
         "voice_mode": "os_then_spoken",
         "action": "closes his eyes as warm tears roll down his cheeks, then gently touches his mother's face and softly calls out",
         "line": "得母如此，夫复何求……娘，小五儿在这儿。"
@@ -154,16 +154,16 @@
       "scene_summary": "A tense 10-second 3D Chinese animation CG medium shot inside the closed Chu Mansion side hall with no bystanders. Having dismissed everyone and sealed the boy's acupoints, Blood Shadow Sect Master Wu Anran (<Subject 1>) drops his disguise with a sinister sneer and presses his dark-crimson Great Soul-Searching Hand onto 6-year-old Chu Zheng's crown, while Chu Zheng's adult soul (<Audio 2>) gasps internally.",
       "camera_motion": "dramatic low-angle push-in as dark-crimson qi surges from <Subject 1>'s palm into the boy's crown",
       "dialogue_1": {
-        "window": "00:00.300–00:04.600",
+        "window": "00:01.800–00:07.750",
         "voice_mode": "onscreen_spoken",
         "action": "sneers ruthlessly and presses his right palm glowing with dark-crimson demonic qi onto the boy's head",
         "line": "小子，算你命不好！受我十成大搜魂手！"
       },
       "dialogue_2": {
-        "window": "00:05.000–00:09.500",
+        "window": "00:07.800–00:09.950",
         "voice_mode": "inner_monologue_os",
         "action": "sits immobilized with his lips closed and eyes wide with alarm as a torrent of scorching qi pours into his head",
-        "line": "不好！这恶贼根本不是郎中，他要害我！"
+        "line": "不好！这恶贼根本不是郎中！"
       },
       "soundscape": "Ominous low demonic qi hum, sharp acupoint-sealing wind sound, and tense heartbeat."
     },
@@ -186,13 +186,13 @@
       "scene_summary": "A climactic 10-second 3D Chinese animation CG medium two-shot in the Chu Mansion side hall. Instead of harming the boy, the 100% Great Soul-Searching Hand qi circulates effortlessly through 6-year-old Chu Zheng's body in a golden-cyan meridian glow; Wu Anran (<Subject 1>) recoils in cold sweat and ecstatic shock upon discovering the boy's naturally connected Ren and Du meridians.",
       "camera_motion": "dynamic reveal shot pulling back slightly as golden-cyan meridian light fades and <Subject 1> stumbles back in awe",
       "dialogue_1": {
-        "window": "00:00.300–00:04.800",
+        "window": "00:01.200–00:05.950",
         "voice_mode": "onscreen_spoken",
         "action": "recoils half a step with cold sweat on his brow, staring at his own palm and the unharmed boy in utter disbelief",
         "line": "十成真气竟毫无阻滞？！天生任督二脉相通！"
       },
       "dialogue_2": {
-        "window": "00:05.200–00:09.600",
+        "window": "00:06.100–00:09.850",
         "voice_mode": "inner_monologue_os",
         "action": "blinks his bright dark eyes with his lips closed, feeling a warm refreshing current circulating smoothly through his chest",
         "line": "咦？那股霸道真气入体，我竟一点事都没有？"
