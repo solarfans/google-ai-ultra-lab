@@ -125,7 +125,7 @@ async def main() -> None:
     mux_video_audio(s2_raw_v, s2_final_a, s2_out_v)
     print("✅ Mastered Ep03 SHOT02 (0% phantom vocal bleed, pure Adult Soul OS)")
 
-    # 6. Shot 06 (Diandao Qiankun Climax — Wang Xiuhe native spoken 0.3s–5.35s + Adult Soul Shock OS 5.50s–9.65s)
+    # 6. Shot 06 (Diandao Qiankun Climax — Wang Xiuhe native spoken 1.2s–5.42s + Adult Soul Shock OS 5.60s–9.65s)
     s6_raw_v = ASSETS_DIR / "_raw_g4_manju_ep03_shot06_diandao_qiankun_00001.mp4"
     s6_raw_a = PREVIEWS_DIR / "g4_ep03_shot06_raw_audio.wav"
     s6_os_stem = PREVIEWS_DIR / "_ep03_s6_adult_os.wav"
@@ -139,8 +139,8 @@ async def main() -> None:
             "-i", str(s6_raw_a),
             "-i", str(s6_os_stem),
             "-filter_complex",
-            "[0:a]volume=enable='gte(t,5.40)':volume=0.25[native];"
-            "[1:a]adelay=5500|5500,volume=1.32[os];"
+            "[0:a]volume=enable='between(t,5.42,7.20)':volume=0.0,volume=enable='gt(t,7.20)':volume=0.14[native];"
+            "[1:a]adelay=5600|5600,volume=1.35[os];"
             "[native][os]amix=inputs=2:duration=first:dropout_transition=0[out]",
             "-map", "[out]", "-ar", "44100", "-ac", "2", "-c:a", "pcm_s16le",
             str(s6_final_a), "-loglevel", "error",
@@ -149,7 +149,7 @@ async def main() -> None:
     )
     s6_os_stem.unlink(missing_ok=True)
     mux_video_audio(s6_raw_v, s6_final_a, s6_out_v)
-    print("✅ Mastered Ep03 SHOT06 (Wang Xiuhe native spoken -> Adult Soul Shock OS)")
+    print("✅ Mastered Ep03 SHOT06 (0% overlap: Wang Xiuhe 1.2s–5.42s -> Adult Soul Shock OS 5.60s–9.65s)")
 
 
 if __name__ == "__main__":

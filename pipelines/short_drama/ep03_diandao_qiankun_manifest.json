@@ -12,7 +12,7 @@
   "shots": [
     {
       "shot_id": "Shot01",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "model_backend": "h3_comfyui",
       "output_prefix": "manju_ep03_shot01_tea_dragon",
@@ -46,7 +46,7 @@
     },
     {
       "shot_id": "Shot02",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "single_inner_monologue_os",
       "model_backend": "h3_comfyui",
       "output_prefix": "manju_ep03_shot02_xueyu_pact",
@@ -80,7 +80,7 @@
     },
     {
       "shot_id": "Shot03",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "model_backend": "h3_comfyui",
       "output_prefix": "manju_ep03_shot03_dropped_bowl",
@@ -114,7 +114,7 @@
     },
     {
       "shot_id": "Shot04",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "model_backend": "h3_comfyui",
       "output_prefix": "manju_ep03_shot04_father_rejoice",
@@ -148,7 +148,7 @@
     },
     {
       "shot_id": "Shot05",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "model_backend": "h3_comfyui",
       "output_prefix": "manju_ep03_shot05_secret_sect",
@@ -182,7 +182,7 @@
     },
     {
       "shot_id": "Shot06",
-      "status": "pending",
+      "status": "completed",
       "shot_mode": "natural_dialogue",
       "model_backend": "h3_comfyui",
       "output_prefix": "manju_ep03_shot06_diandao_qiankun",
@@ -200,19 +200,19 @@
       "scene_summary": "A climactic 10-second 3D Chinese animation CG close-medium two-shot beside the bookshelves in the Chu Mansion study. Mother Wang Xiuhe (<Subject 1>) holds an open classical volume of Records of the Grand Historian (《史记》) and warmly recounts how Emperor Liu Shan unified the realm in five years, while 6-year-old Chu Zheng (<Subject 2>) clutches The Analects (《论语》) with his mouth strictly closed and eyes wide in petrified shock as his adult soul (<Audio 2>) roars internally at the upside-down history.",
       "camera_motion": "dramatic push-in from <Subject 1> reading the ancient history book to <Subject 2>'s petrified, wide-eyed face",
       "dialogue_1": {
-        "window": "00:00.300–00:05.100",
+        "window": "00:01.100–00:05.420",
         "voice_mode": "onscreen_spoken",
         "action": "turns a page of the classical thread-bound history book and speaks with warm admiration",
-        "line": "后汉太宗刘禅雄才大略，五年一统天下，太祖乃赵云后人。"
+        "line": "后汉太宗刘禅雄才大略，五年一统天下。"
       },
       "dialogue_2": {
-        "window": "00:05.500–00:09.600",
+        "window": "00:05.600–00:09.650",
         "voice_mode": "inner_monologue_os",
         "action": "clutches the classical book with his lips tightly closed and eyes wide open in utter petrified disbelief",
         "line": "扶不起的阿斗竟一统天下？！这历史简直颠倒乾坤！"
       },
       "soundscape": "Rustle of ancient book pages, dramatic thunderous percussion hit, and mind-bending orchestral crescendo.",
-      "input_fingerprint": "10b898e414f850a5"
+      "input_fingerprint": "00961e771cc1f138"
     }
   ]
 }

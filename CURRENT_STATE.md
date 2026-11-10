@@ -1,7 +1,7 @@
 # Google AI Ultra Lab — Current State & Ledger
 
-**最后更新**：2026-11-10 21:55 SGT (MacBook Pro)  
-**项目状态**：`AI_MANJU_SOP_V4_5_HYBRID_PIPELINE_LIVE / EP01_AND_EP02_V2_DELIVERED / ZERO_BURN_SAFE`  
+**最后更新**：2026-11-10 23:36 SGT (MacBook Pro)  
+**项目状态**：`AI_MANJU_SOP_V4_5_HYBRID_PIPELINE_LIVE / EP01_EP02_V2_AND_EP03_DELIVERED / ZERO_BURN_SAFE`  
 **负责席位**：Antigravity Desktop (MacBook)  
 **核心操作总纲**：[**skills/google-ai-ultra/SKILL.md**](./skills/google-ai-ultra/SKILL.md) | [**docs/AI_MANJU_AND_ULTRA_SOP.md**](./docs/AI_MANJU_AND_ULTRA_SOP.md) | [**docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md**](./docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md)
 
@@ -13,7 +13,7 @@
 | :--- | :--- | :--- | :--- |
 | **会员级别** | Google AI Ultra 20x (30 TB) | **已确认** | Google One 首页显示 "Google AI Ultra, 30 TB"；Apple 订阅 `₺2,949.99/月` |
 | **1. AGY / Gemini 4 Argon** | Ultra 20x 档位 | **已就绪（余量充裕）** | 常驻总导演、连续性编剧、多模态抽帧与音轨冷读 QA |
-| **2. Colab GPU 算力 (`CU`)** | 标准发放 2,000 CU/月（含历史结余） | **已确认 (`2,484.46 CU`)** | `ultra_meter.py usage` 实测余额 `2,484.46 CU`，**活跃实例 `0` (`0.00 CU/h`)**；主力跑 `MiniMax-H3` 角色表演与口型 |
+| **2. Colab GPU 算力 (`CU`)** | 标准发放 2,000 CU/月（含历史结余） | **已确认 (`2,480.89 CU`)** | `ultra_meter.py usage` 实测余额 `2,480.89 CU`，**活跃实例 `0` (`0.00 CU/h`)**；主力跑 `MiniMax-H3` 角色表演与口型 |
 | **3. Flow Video (`Credits`)** | 25,000 credits/月（按月刷新不结转） | **已就绪** | `Veo 3.1 Lite`（Ultra 20x Lower Priority 为 **`0 credits`**）+ `Omni Flash 1.2`（前 10s 为 `3 credits/s`）；用于空镜、大场面转场与三镜同题 A/B |
 | **4. Flow Music (`Credits`)** | 30,000 credits/月（含商业授权） | **已就绪** | Member 明确包含商业使用权，独立于视频积分池，用于古风主题曲与情绪铺底 BGM |
 | **5. GDP Cloud & 30TB Drive** | US$100/月 Cloud Credits + 30TB Drive | **2026-11 已入账 (`SGD 128.28`)** | Cloud Billing 含 `Free Trial SGD 384.83` + `GDP Monthly SGD 128.28`；30TB Drive 归档无损母带与大模型权重 |
@@ -28,6 +28,15 @@
   - **第 2 集 v2《转世重生》(`60.75s`，6 镜全重制精修版)**：
     - 彻底解决 v1 的 6 项缺陷：移除空姐站座位旁拿电话广播的常识错误、全面替换为 `edge-tts` Neural 音色种子（消除 `say`/`asetrate` 鬼叫失真）、落地 **“闭嘴演眼神 + 28 岁成年男声混响内心独白（OS）”** 与 **“画外航空带通滤波广播（PA）”**、100% 还原原著第二章核心名场面（王秀荷磕头滴血认母、吴安然逃亡平原郡回味豆花店两指按铜钱入木桌毛遂自荐、楚府偏厅暗施十成大搜魂手反助楚铮贯通任督二脉）；
     - 单次 Colab G4 会话耗时 `25.46 min`、消耗 `4.08 CU` 完成 6 镜渲染；成片已交付至 [`ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Master_v2.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Master_v2.mp4) 与 [`ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Subtitled_Audit.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep02_ZhuanshiChongsheng_Subtitled_Audit.mp4)。
+  - **第 3 集《颠倒乾坤》(`60.77s`，原著第三章 6 镜完整出片)**：
+    - 100% 还原原著第三章《颠倒乾坤》全部 6 幕核心剧情与草蛇灰线：
+      1. `Shot 01`：吴安然并指御气将大赵云山绿茶凝成碧绿水龙盘旋飞舞诱徒，楚铮惊喜答应拜师学武；
+      2. `Shot 02`：后院阳光草坪抚白猫“雪玉”，楚铮闭嘴按胸口与体内残留的小楚铮灵魂共鸣立誓（`single_inner_monologue_os`，28 岁成年男声混响 OS）；
+      3. `Shot 03`：楚铮苦脸撒娇拒喝苦药开口唤娘，母亲王秀荷手中青花药碗摔碎在地、喜极而泣紧抱小五儿；
+      4. `Shot 04`：书房内楚铮高声向父亲楚名棠请安，楚名棠狂喜抱儿转圈大笑并定下择日行拜师大礼；
+      5. `Shot 05`：暮色回廊下，靖北侯派驻楚府的高总管（新增设定卡 `manju_char_gaoshiying_sheet_1344x768.png` 与 `zh-CN-YunyangNeural` 低音种子）向王秀荷密报吴安然乃魔门血影宗主“魔秀士”，王秀荷神秘微笑道“那可真是巧了”并嘱咐瞒着楚名棠；
+      6. `Shot 06`：点题高潮《颠倒乾坤》——书房读繁体《论语》《史记》，王秀荷温柔讲述“后汉太宗刘禅雄才大略，五年一统天下”，楚铮闭嘴石化瞪圆双眼（成年灵魂抓狂 OS：“扶不起的阿斗竟一统天下？！这历史简直颠倒乾坤！”）。
+    - 单次 Colab G4 会话耗时 `25.60 min`、仅消耗 **`3.57 CU` (`0.595 CU/镜`)** 完成 6 镜渲染并自动销毁实例；6 道门禁（含 Gate 6 `--post-render` 成片声学门禁）全绿通过，交付 [`ChuShiChunQiu_Ep03_DiandaoQiankun_Master_v2.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep03_DiandaoQiankun_Master_v2.mp4) (`46.44 MB`) 与 [`ChuShiChunQiu_Ep03_DiandaoQiankun_Subtitled_Audit.mp4`](./pipelines/short_drama/ChuShiChunQiu_Ep03_DiandaoQiankun_Subtitled_Audit.mp4) (`42.38 MB`)。
 - **v4.5 管线合并升级（吸收 2026-11-10 Ultra & Creator Strategy 研究成果）**：
   1. **6 道 Pre-Flight + Post-Render 自动化门禁（[`scripts/manju_qa_gate.py`](./scripts/manju_qa_gate.py) v4.5）**：在渲染前 5 道门禁基础上，新增 **Gate 6 (`--post-render`)**，对每个实际渲染出的 MP4 执行 `ffprobe` 流完整性核验与对白时间窗 PCM 声学能量（`dBFS > -36 dBFS`）核查，杜绝空轨、截断与假通过。
   2. **SHA-256 指纹校验断点续跑（[`scripts/manju_compiler.py`](./scripts/manju_compiler.py) v3.2）**：不再仅凭 `status == "completed"` 盲目跳过；必须同时满足 `output_mp4` 存在有效且 `input_fingerprint`（覆盖首帧图像哈希、台词、模式、角色）完全一致才跳过，并预留 `model_backend`（`h3_comfyui` / `flow_veo_3_1_lite` / `flow_omni_1_2`）混合路由字段。
@@ -35,10 +44,10 @@
 
 ---
 
-## 3. 下一步行动计划（Phase 3：第 3 集推进 + H3/Flow 混合路由与发行实验）
+## 3. 下一步行动计划（Phase 4：第 4 集《上京风云》推进 + 1–3 集合集长片包装）
 
-1. **第 2 集 v2 视听验收与第 3 集《拜师习武》筹备**：基于已跑通的 6-Gate 管线推进第 3 集，在大场面/空镜转场镜头测试接入 `Flow Veo 3.1 Lite (0-credit Lower Priority)` / `Flow Omni 1.2` 及 `Flow Music` 商业授权古风配乐。
-2. **双画幅与长短结合发行包装**：保留 `16:9 Clean Master` 与独立分轨，导出 `9:16` 竖屏安全区版；应对 YouTube `2027-02-01` YPP 新门槛（8,000 长视频观看小时或 2,000 万 Shorts/90 天），采用“单集短剧引流 + 多集合集长片沉淀长视频时长”策略。
+1. **第 3 集《颠倒乾坤》视听验收与第 4 集《上京风云》筹备**：推进原著第四章《上京风云》（北赵国都上京皇宫御书房赵王与琳贵妃楚琳夜谈、楚铮正式拜师吴安然习练魔门筑基功法与《颠倒乾坤》）。
+2. **双画幅与长短结合发行包装**：保留 `16:9 Clean Master` 与独立分轨，导出 `9:16` 竖屏安全区版；应对 YouTube `2027-02-01` YPP 新门槛（8,000 长视频观看小时或 2,000 万 Shorts/90 天），将已完成的第 1–3 集（开篇平原本纪三部曲）合成为长视频合集。
 
 ---
 
