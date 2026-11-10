@@ -6,7 +6,9 @@
 
 ## 独立研究与改进建议
 
-- [Google AI Ultra × Gemini 4 Argon：价值实现、AGY 自主导演与收入实验（2026-11-10）](./docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md)：包含官方权益核验、公开经验研究、截至 `ddbed67` 的仓库查缺、制作与经营闭环，以及 AGY 下一轮执行 brief。研究建议与生产验收分别记录。
+- **[Google AI Ultra 全生态价值最大化综合研究（2026-11-10）](./docs/research/GOOGLE_AI_ULTRA_FULL_ECOSYSTEM_VALUE_STRATEGY_2026-11-10.md)**：**总战略主报告**。覆盖 Ultra 全权益、AGY Remote Agents、Argon、Cloud/GDP、Colab、VPN 已有资产、Notebook/科学研究、家庭应用、跨领域产品与收入实验，以及 AGY 综合执行清单。
+
+- [AI 漫剧制作与视频生产专项研究（2026-11-10）](./docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md)：聚焦漫剧制作、成片质量、视频模型、Flow/Colab 视频生产与收入试验；**仅作为总战略中的媒体专项参考**，不代表全套订阅的价值优先级。
 
 ## 一、 核心操作法典与惨败复盘（必读门禁）
 
