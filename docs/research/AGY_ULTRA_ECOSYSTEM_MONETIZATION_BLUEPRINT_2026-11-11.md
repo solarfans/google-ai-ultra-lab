@@ -1,6 +1,6 @@
 # Google AI Ultra 20x × AI OS 全生态效能最大化与被动收入实战蓝图（2026-11-11 多源交叉审计版）
 
-> **生成时间**：2026-11-11 11:25 SGT  
+| **生成时间**：2026-11-11 11:43 SGT（已修正新加坡本土合规主体定位）  
 > **数据底座**：ChatGPT 全局报告 ([`GOOGLE_AI_ULTRA_FULL_ECOSYSTEM_VALUE_STRATEGY_2026-11-10.md`](https://github.com/solarfans/google-ai-ultra-lab/blob/main/docs/research/GOOGLE_AI_ULTRA_FULL_ECOSYSTEM_VALUE_STRATEGY_2026-11-10.md)) + AGY 实时账户探针 (`swarm models` / `ultra_meter.py`) + X 定向搜索 (`x_intel.py`) + Owner 历史点赞库 ([`x_likes_curation.db`](file:///Users/kaykel/AI_PROJECTS/omni-content-pipeline/data/x_likes_curation.db)) + Obsidian 第二大脑 204 篇笔记 ([`Iris/98_Melvin_Notes`](file:///Users/kaykel/Library/Mobile%20Documents/iCloud~md~obsidian/Documents/Iris/98_Melvin_Notes/inbox)) + GitHub 10 大活跃工程实况 ([`AGY_ACTIVE_CONTEXT.md`](file:///Users/kaykel/AI_PROJECTS/AI%20OS%20Backup_Mac/AGY_ACTIVE_CONTEXT.md))。
 
 ---
@@ -40,10 +40,10 @@ ChatGPT 的报告（`5bb607d` / `06a5536`）相比其早期只盯着漫剧的狭
 
 ```mermaid
 flowchart LR
-    subgraph A["1. 你的 Google AI Ultra + AI OS 独有壁垒"]
+    subgraph A["1. 你的 Google AI Ultra + 新加坡本土合规壁垒"]
         A1["Gemini 4 Carbon/Argon (98%)<br/>+ Claude Opus 5.5 (100%) 双池"]
         A2["Colab G4 96GB (2,480 CU)<br/>+ Flow 视频 2.5万 / 音乐 3万"]
-        A3["GCP $110/月赠金 + 台湾→美西独享原生IP<br/>+ Cloudflare Tunnel 零成本公网穿透"]
+        A3["🇸🇬 新加坡本土合规直连 + Stripe SG 收款<br/>+ GCP $110/月赠金 & Cloudflare Tunnel"]
     end
 
     subgraph B["2. Obsidian / X Likes 验证的商业规律"]
@@ -70,11 +70,13 @@ flowchart LR
   - **Xquik / SoldComps**（在 Apify Store、RapidAPI、Smithery、GitHub 挂开源 Skill 引流，后台按量扣费）：单人团队月入 **`$6,260 ~ $23,526`**。
 - **与你现有资产的化学反应**：你刚刚建成的 [`solarfans/omni-content-pipeline`](file:///Users/kaykel/AI_PROJECTS/omni-content-pipeline) 已经拥有全网最硬核的 **无水印视频/图文提取 + X 长文展开 + 5 级 API Bank 反爬阶梯 + 去 AI 味结构化蒸馏**！把它封装成一个对外英文 MCP Server / Apify Actor，几乎是零边际开发成本。
 
-### 洞察 2：Anthropic 11-12 史上最严封号令下，你的「GCP 台湾接力美西原生 IP + AGY 双模型池」成了稀缺护城河
-- **证据锚点**：今日 X 热搜（`@ai_funss` / `@luojiuyue`）显示 Anthropic 将于明日（`2026-11-12`）启用穿透式地区与实控人封禁，大量依赖国内中转或普通机场的独立开发者面临断粮。
-- **你的优势**：
-  1. 你已用 Ultra 每月 `$100` 赠金建成全球唯一的独享原生美西 IP 专线（[`docs/gcp_dual_node_vpn.md`](file:///Users/kaykel/AI_PROJECTS/AI%20OS%20Backup_Mac/google-ai-ultra-lab/docs/gcp_dual_node_vpn.md)，`35.194.245.4` 台湾接力 `35.247.83.37` 俄勒冈）；
-  2. 你在 Antigravity 内直接享有 Google 官方托管的 **`Claude Opus 5.5` (100% 满额) + `Gemini 4 Carbon` (98% 满额)**，完全不受第三方 API 封号影响。
+### 洞察 2：你的「🇸🇬 新加坡公民与本土合规环境」是做出海被动收入最稀缺的天然降维打击优势
+- **核心纠偏与战略重估**：
+  - 你在 Obsidian 收藏的多篇教程（如 `@GoSailGlobal`《人在国内如何注册美国公司申请开发者账号》、`@app_sail`《美国手机号办理》、`@chasen_liao`《IP 节点防封》）反映了中文独立开发者最大的痛点——**花大量精力解决合规身份、海外收款（Stripe/LemonSqueezy）与 API 封号问题**（尤其今日 X 热议 11-12 起 Anthropic 对非支持地区及中国实控主体的穿透式封禁）。
+  - **你的天然优势**：作为**新加坡人、日常在新加坡本土直接合规使用 Anthropic、OpenAI 与 Google Gemini**，你根本不需要折腾假海外壳公司或日常挂 VPN（已搭建的 GCP/腾讯云 VPN 仅在你去中国大陆出差时作为漫游备用，平时零心智负担）：
+    1. **100% 原生合规直连**：OpenAI、Anthropic Claude、Google AI Ultra（含新加坡直接支持的 `Project Genie`、`Google Health Premium`、`Gemini 4 Carbon`）全部本土直连、零风控损耗；
+    2. **零门槛全球收银台（Stripe SG / Lemon Squeezy / Paddle / PayNow）**：可随时用新加坡身份零成本开通 Stripe SG 账户直接收全球美元/新币，无需像大陆开发者那样每年花几千美金维护美国 LLC 和报税；
+    3. **TikTok Shop SG & YouTube YPP SG 本土绿色通道**：直接符合新加坡本地创作者与 Affiliate 结算资格，收益直达新加坡本地银行账户。
 
 ### 洞察 3：量化交易是离钱最近的被动收入，但必须用 Colab G4 跑大规模参数回测来过滤低胜率信号
 - **证据锚点**：
