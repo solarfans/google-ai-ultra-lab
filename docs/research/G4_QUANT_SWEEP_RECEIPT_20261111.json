@@ -1,0 +1,279 @@
+{
+  "gpu_device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "vram_gb": 95.0,
+  "elapsed_sec": 43.34,
+  "total_argon_combinations_tested": 38880,
+  "bta_gpu_weights_tested": 60000,
+  "baseline_31d": {
+    "net_profit_usdt": -1853.06,
+    "return_pct": -4.91,
+    "closed_trades": 59,
+    "wins": 29,
+    "losses": 30,
+    "win_rate_pct": 49.15,
+    "profit_factor": 1.021,
+    "max_dd_pct": 8.52,
+    "total_fees_usdt": 3797.79,
+    "addons_triggered": 21,
+    "open_pnl_usdt": -154.09
+  },
+  "top_5_argon_configs": [
+    {
+      "params": {
+        "ema_fast_period": 24,
+        "ema_slow_period": 50,
+        "ema_trend_period": 150,
+        "atr_stop_multiplier": 3.0,
+        "breakeven_trigger_r": 1.5,
+        "breakeven_lock_r": 0.2,
+        "addon_trigger_r": 1.6,
+        "trail_atr_mult": 2.0,
+        "cooldown_bars": 3,
+        "min_candle_body_atr": 0.0
+      },
+      "metrics": {
+        "net_profit_usdt": 1705.26,
+        "return_pct": 4.52,
+        "closed_trades": 31,
+        "wins": 16,
+        "losses": 15,
+        "win_rate_pct": 51.61,
+        "profit_factor": 1.534,
+        "max_dd_pct": 2.14,
+        "total_fees_usdt": 1563.25,
+        "addons_triggered": 14,
+        "open_pnl_usdt": -161.84
+      },
+      "composite_score": 1222.37
+    },
+    {
+      "params": {
+        "ema_fast_period": 24,
+        "ema_slow_period": 50,
+        "ema_trend_period": 150,
+        "atr_stop_multiplier": 3.0,
+        "breakeven_trigger_r": 1.5,
+        "breakeven_lock_r": 0.2,
+        "addon_trigger_r": 2.0,
+        "trail_atr_mult": 2.0,
+        "cooldown_bars": 3,
+        "min_candle_body_atr": 0.0
+      },
+      "metrics": {
+        "net_profit_usdt": 1640.59,
+        "return_pct": 4.35,
+        "closed_trades": 31,
+        "wins": 16,
+        "losses": 15,
+        "win_rate_pct": 51.61,
+        "profit_factor": 1.516,
+        "max_dd_pct": 2.08,
+        "total_fees_usdt": 1502.04,
+        "addons_triggered": 8,
+        "open_pnl_usdt": -161.57
+      },
+      "composite_score": 1195.74
+    },
+    {
+      "params": {
+        "ema_fast_period": 24,
+        "ema_slow_period": 50,
+        "ema_trend_period": 150,
+        "atr_stop_multiplier": 3.0,
+        "breakeven_trigger_r": 1.5,
+        "breakeven_lock_r": 0.35,
+        "addon_trigger_r": 1.6,
+        "trail_atr_mult": 2.0,
+        "cooldown_bars": 3,
+        "min_candle_body_atr": 0.0
+      },
+      "metrics": {
+        "net_profit_usdt": 1680.1,
+        "return_pct": 4.45,
+        "closed_trades": 31,
+        "wins": 16,
+        "losses": 15,
+        "win_rate_pct": 51.61,
+        "profit_factor": 1.53,
+        "max_dd_pct": 2.16,
+        "total_fees_usdt": 1575.95,
+        "addons_triggered": 14,
+        "open_pnl_usdt": -161.73
+      },
+      "composite_score": 1190.07
+    },
+    {
+      "params": {
+        "ema_fast_period": 24,
+        "ema_slow_period": 50,
+        "ema_trend_period": 150,
+        "atr_stop_multiplier": 3.0,
+        "breakeven_trigger_r": 1.5,
+        "breakeven_lock_r": 0.35,
+        "addon_trigger_r": 2.0,
+        "trail_atr_mult": 2.0,
+        "cooldown_bars": 3,
+        "min_candle_body_atr": 0.0
+      },
+      "metrics": {
+        "net_profit_usdt": 1633.01,
+        "return_pct": 4.33,
+        "closed_trades": 31,
+        "wins": 16,
+        "losses": 15,
+        "win_rate_pct": 51.61,
+        "profit_factor": 1.515,
+        "max_dd_pct": 2.08,
+        "total_fees_usdt": 1505.35,
+        "addons_triggered": 8,
+        "open_pnl_usdt": -161.54
+      },
+      "composite_score": 1189.43
+    },
+    {
+      "params": {
+        "ema_fast_period": 20,
+        "ema_slow_period": 45,
+        "ema_trend_period": 150,
+        "atr_stop_multiplier": 2.3,
+        "breakeven_trigger_r": 1.0,
+        "breakeven_lock_r": 0.35,
+        "addon_trigger_r": 1.6,
+        "trail_atr_mult": 1.8,
+        "cooldown_bars": 6,
+        "min_candle_body_atr": 0.0
+      },
+      "metrics": {
+        "net_profit_usdt": 2152.96,
+        "return_pct": 5.71,
+        "closed_trades": 48,
+        "wins": 30,
+        "losses": 18,
+        "win_rate_pct": 62.5,
+        "profit_factor": 1.608,
+        "max_dd_pct": 3.14,
+        "total_fees_usdt": 2630.55,
+        "addons_triggered": 8,
+        "open_pnl_usdt": -213.78
+      },
+      "composite_score": 1102.53
+    }
+  ],
+  "bta_calibration": {
+    "observations_count": 2319,
+    "feature_ic_report": {
+      "price_change_24h": {
+        "ic_15m": -0.1343,
+        "ic_1h": -0.2321
+      },
+      "oi_change_1h": {
+        "ic_15m": -0.0315,
+        "ic_1h": -0.1033
+      },
+      "oi_change_4h": {
+        "ic_15m": -0.0445,
+        "ic_1h": -0.1362
+      },
+      "taker_buy_sell_15m": {
+        "ic_15m": -0.001,
+        "ic_1h": 0.0412
+      },
+      "taker_buy_sell_1h": {
+        "ic_15m": 0.0087,
+        "ic_1h": 0.0001
+      },
+      "top_trader_pos_raw": {
+        "ic_15m": 0.0015,
+        "ic_1h": -0.0082
+      },
+      "top_trader_pos_zscore": {
+        "ic_15m": -0.0311,
+        "ic_1h": -0.0946
+      },
+      "obi_top10": {
+        "ic_15m": 0.0271,
+        "ic_1h": 0.0233
+      },
+      "obi_top20": {
+        "ic_15m": 0.0218,
+        "ic_1h": 0.0249
+      },
+      "basis_bps": {
+        "ic_15m": -0.0205,
+        "ic_1h": -0.0467
+      },
+      "funding_rate_apr": {
+        "ic_15m": -0.0261,
+        "ic_1h": -0.0439
+      }
+    },
+    "best_composite_corr": 0.2449,
+    "optimal_weights": {
+      "price_24h": -0.87,
+      "oi_4h": -0.269,
+      "taker_15m": 0.153,
+      "taker_1h": 0.028,
+      "top_pos_zscore": -0.057,
+      "obi_top10": -0.227,
+      "obi_top20": 0.299,
+      "basis_bps": -0.055
+    },
+    "calibrated_regime_performance": {
+      "calibrated_bear_avg_1h_bps": -30.92,
+      "calibrated_bear_short_win_rate_pct": 67.24,
+      "calibrated_bull_avg_1h_bps": 17.5,
+      "calibrated_bull_long_win_rate_pct": 60.86
+    },
+    "obi_gate_sweep": [
+      {
+        "obi_threshold": 0.0,
+        "short_signals": 191,
+        "short_1h_win_rate_pct": 72.77,
+        "short_1h_avg_gain_bps": 45.31,
+        "long_signals": 931
+      },
+      {
+        "obi_threshold": 0.1,
+        "short_signals": 154,
+        "short_1h_win_rate_pct": 71.43,
+        "short_1h_avg_gain_bps": 48.59,
+        "long_signals": 683
+      },
+      {
+        "obi_threshold": 0.15,
+        "short_signals": 144,
+        "short_1h_win_rate_pct": 72.22,
+        "short_1h_avg_gain_bps": 46.76,
+        "long_signals": 591
+      },
+      {
+        "obi_threshold": 0.2,
+        "short_signals": 136,
+        "short_1h_win_rate_pct": 71.32,
+        "short_1h_avg_gain_bps": 43.11,
+        "long_signals": 516
+      },
+      {
+        "obi_threshold": 0.25,
+        "short_signals": 121,
+        "short_1h_win_rate_pct": 69.42,
+        "short_1h_avg_gain_bps": 41.14,
+        "long_signals": 460
+      },
+      {
+        "obi_threshold": 0.3,
+        "short_signals": 107,
+        "short_1h_win_rate_pct": 66.36,
+        "short_1h_avg_gain_bps": 39.07,
+        "long_signals": 418
+      },
+      {
+        "obi_threshold": 0.4,
+        "short_signals": 84,
+        "short_1h_win_rate_pct": 66.67,
+        "short_1h_avg_gain_bps": 40.47,
+        "long_signals": 350
+      }
+    ]
+  }
+}
