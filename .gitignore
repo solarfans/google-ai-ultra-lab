@@ -19,3 +19,21 @@ services/telegram_bot/data/
 pipelines/short_drama/assets/clips/
 pipelines/short_drama/concat_list.txt
 pipelines/short_drama/assets/concat_list.txt
+
+# Heavy rendered video/audio intermediates & masters (>50-100MB; keep local / 30TB Drive)
+pipelines/warcraft_illidan_ep01/*.mp4
+pipelines/warcraft_illidan_ep01/renders/
+pipelines/warcraft_illidan_ep01/master_work/
+pipelines/fern_doc_ep01/*.mp4
+pipelines/fern_doc_ep01/*.mp3
+pipelines/fern_doc_ep01/*.jpg
+pipelines/fern_doc_ep01/*.png
+pipelines/fern_doc_ep01/*.txt
+pipelines/fern_doc_ep01/*.json
+pipelines/fern_doc_ep01/assets/*.mp4
+pipelines/tiktok_shop_sg/audio/
+pipelines/tiktok_shop_sg/outputs/
+pipelines/tiktok_shop_sg/product_*/
+pipelines/short_drama/audio_previews/
+pipelines/short_drama/*_Preview.mp4
+pipelines/short_drama/assets_manju_v2/*.mp4

@@ -1,23 +1,36 @@
 # Google AI Ultra Lab — Current State & Ledger
 
-**最后更新**：2026-11-10 23:36 SGT (MacBook Pro)  
-**项目状态**：`AI_MANJU_SOP_V4_5_HYBRID_PIPELINE_LIVE / EP01_EP02_V2_AND_EP03_DELIVERED / ZERO_BURN_SAFE`  
+**最后更新**：2026-11-13 00:25 SGT (MacBook Pro)  
+**项目状态**：`HOLLYWOOD_CINEMA_SOP_V5_0_LIVE / FLOW_CHANNEL_A_25050_PERSISTED / ILLIDAN_EP01_1080P_DELIVERED / GCP_CREDIT_LEDGER_ACTIVE`  
 **负责席位**：Antigravity Desktop (MacBook)  
-**核心操作总纲**：[**skills/google-ai-ultra/SKILL.md**](./skills/google-ai-ultra/SKILL.md) | [**docs/AI_MANJU_AND_ULTRA_SOP.md**](./docs/AI_MANJU_AND_ULTRA_SOP.md) | [**docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md**](./docs/research/GOOGLE_AI_ULTRA_VALUE_AND_CREATOR_STRATEGY_2026-11-10.md)
+**核心操作总纲**：[**skills/google-ai-ultra/SKILL.md**](./skills/google-ai-ultra/SKILL.md) | [**docs/GCP_CREDIT_LEDGER.md**](./docs/GCP_CREDIT_LEDGER.md) | [**docs/research/HOLLYWOOD_AI_CINEMA_BENCHMARKS_TOOLS_AND_SOP_2026-11-12.md**](./docs/research/HOLLYWOOD_AI_CINEMA_BENCHMARKS_TOOLS_AND_SOP_2026-11-12.md)
 
 ---
 
-## 1. 订阅与五大独立成本池清单（2026-11-10 核实口径）
+## 1. 订阅与五大独立成本池清单（2026-11-13 核实口径）
 
-| 权益项目 | 官方标称/2026-11-10 规则 | 当前实测状态 | 生产定位与验证凭据 |
+| 权益项目 | 官方标称/2026-11-13 规则 | 当前实测状态 | 生产定位与验证凭据 |
 | :--- | :--- | :--- | :--- |
-| **会员级别** | Google AI Ultra 20x (30 TB) | **已确认** | Google One 首页显示 "Google AI Ultra, 30 TB"；Apple 订阅 `₺2,949.99/月` |
-| **1. AGY / Gemini 4 Argon** | Ultra 20x 档位 | **已就绪（余量充裕）** | 常驻总导演、连续性编剧、多模态抽帧与音轨冷读 QA |
-| **2. Colab GPU 算力 (`CU`)** | 标准发放 2,000 CU/月（含历史结余） | **已确认 (`2,480.89 CU`)** | `ultra_meter.py usage` 实测余额 `2,480.89 CU`，**活跃实例 `0` (`0.00 CU/h`)**；主力跑 `MiniMax-H3` 角色表演与口型 |
-| **3. Flow Video (`Credits`)** | 25,000 credits/月（按月刷新不结转） | **已就绪** | `Veo 3.1 Lite`（Ultra 20x Lower Priority 为 **`0 credits`**）+ `Omni Flash 1.2`（前 10s 为 `3 credits/s`）；用于空镜、大场面转场与三镜同题 A/B |
-| **4. Flow Music (`Credits`)** | 30,000 credits/月（含商业授权） | **已就绪** | Member 明确包含商业使用权，独立于视频积分池，用于古风主题曲与情绪铺底 BGM |
-| **5. GDP Cloud & 30TB Drive** | US$100/月 Cloud Credits + 30TB Drive | **2026-11 已入账 (`SGD 128.28`)** | Cloud Billing 含 `Free Trial SGD 384.83` + `GDP Monthly SGD 128.28`；30TB Drive 归档无损母带与大模型权重 |
-| **本地 M3 Pro 算力** | Apple Silicon M3 Pro 36GB | **已部署运行** | 本地零成本执行 `edge-tts` Neural 音色合成、FFmpeg 双轨混音、6 道门禁质检与字幕压制 |
+| **会员级别** | Google AI Ultra 20x (30 TB) | **已确认 (`ULTRA`)** | Google One & `flow.google.com` 右上角显示 `ULTRA` |
+| **1. AGY / Gemini 4 Argon** | Ultra 20x 档位 | **已就绪（余量充裕）** | 常驻总导演、连续性编剧、`image-generator` 角色三视图锁脸、多模态全片 `.mp4` 视听冷读 QA |
+| **2. Flow Video (`Credits`) — 通道 A 主力** | 25,000 credits/月（按账单月刷新不结转） | **已登录持久化 (`25,050 credits`)** | 内置浏览器已完成 `flow.google.com` 持久化登录（`2026-12-07 16:21` 重置）；含最新 **`Omni 1.2 Flash`**、`Veo 3.1 Quality/Fast` 及 `0 credits` 的 `Veo 3.1 Lite [Lower Priority]`；**唯一默认电影级视频主力（`$0` 赠金消耗）** |
+| **3. Flow Music (`Credits`)** | 30,000 credits/月（含商业授权） | **已就绪 (`30,000 credits`)** | Member 明确包含商业使用权，独立于视频积分池，用于主题曲与情绪铺底 BGM |
+| **4. GDP Cloud & Free Trial — 通道 B 受控** | Free Trial `SGD 384.83` + GDP `SGD 128.28/月` | **账本托管中（余约 `SGD 487.72` / `95.05%`）** | 由 [**`docs/GCP_CREDIT_LEDGER.md`**](./docs/GCP_CREDIT_LEDGER.md) 逐笔精确记账；视频 API 默认上锁，日常仅用于 `lyria-002` 交响配乐（`~$0.12/集`）与双机 VPN（`~SGD 9.75/月`） |
+| **5. Colab GPU 算力 (`CU`)** | 标准发放 2,000 CU/月（含历史结余） | **已确认 (`2,477.54 CU`)** | `ultra_meter.py usage` 实测余额 `2,477.54 CU`，**活跃实例 `0` (`0.00 CU/h`)**；专用于量化张量寻优与批量计算（严禁再用于低清无脸假人视频拼凑） |
+| **本地 M3 Pro 算力** | Apple Silicon M3 Pro 36GB | **已部署运行** | 本地零成本执行 `2.35:1` 变形宽银幕暗夜 LUT 调色、FFmpeg 交响混音与 `<90 MB` `+faststart` 母带压制 |
+
+---
+
+## 1.5 好莱坞真人暗黑电影工业流 v5.0 与《魔兽世界：伊利丹》Ep01 通关（2026-11-13 SGT）
+
+- **全量复盘与对标升级**：
+  - 彻底复盘并封杀此前 TikTok 硬广拼贴 (`LL-008`/`LL-009`) 与 Silk Road 无脸青色假人纪实片 (`LL-010`) 的“图省事”顽疾；
+  - 深度拆解 YouTube 百万级标杆（`Avaren` 92.5万播放《阿尔萨斯》、《Pop Lab AI》27.6万播放、《逆风北伐》36.4万播放）及 GitHub 2026-11 前五高星工具（`Toonflow-app ★21.5k`、`huobao-drama ★17.3k`、`ViMax ★12.9k`、`shuohao-skills ★6.5k`、`drama-skills ★4.1k`），沉淀完整报告 [**`docs/research/HOLLYWOOD_AI_CINEMA_BENCHMARKS_TOOLS_AND_SOP_2026-11-12.md`**](./docs/research/HOLLYWOOD_AI_CINEMA_BENCHMARKS_TOOLS_AND_SOP_2026-11-12.md)。
+- **首部好莱坞真人暗黑电影级短片交付（`pipelines/warcraft_illidan_ep01/`）**：
+  - 剧目：**《ILLIDAN: THE PRICE OF SACRIFICE / 背叛者的献祭：费伍德雨夜吞噬古尔丹之颅与兄弟放逐》**（`1080p`, `2.35:1` 宽银幕, `42.10s`, 8 镜正反打快切 + 原生英语口型咬字 + 暴雨邪能物理音效 + `Lyria-002` D 小调大提琴/铜管战鼓双段交响配乐）；
+  - 定妆三视图、7 张关键帧母片与分镜单已归档于 [`pipelines/warcraft_illidan_ep01/STORYBOARD_EP01.md`](./pipelines/warcraft_illidan_ep01/STORYBOARD_EP01.md)；消费赠金 `USD $18.52` (`SGD 23.76`) 已精确记入 [`docs/GCP_CREDIT_LEDGER.md`](./docs/GCP_CREDIT_LEDGER.md) (`TX-20261112-002`)。
+- **通道 A（`flow.google.com`）持久化打通**：
+  - Antigravity 内置浏览器已完成 Google AI Ultra 账号一次性登录并保存会话，核验余额 **`25,050` Flow Credits** 及最新旗舰模型 **`Omni 1.2 Flash`** 就绪；后续剧集默认 100% 走通道 A（`$0` 赠金消耗）。
 
 ---
 

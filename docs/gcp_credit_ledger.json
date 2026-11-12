@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "project_id": "project-665ac784-237e-4a71-ad0",
+    "billing_account_label": "My Billing Account (Google AI Ultra Main)",
+    "fx_usd_to_sgd": 1.2828,
+    "fx_note": "Derived directly from Google Cloud Billing official conversion (US$300.00 -> SGD 384.83, US$100.00 -> SGD 128.28).",
+    "paid_billing_upgraded": false,
+    "last_updated_sgt": "2026-11-13 00:22 SGT"
+  },
+  "gcp_credit_pools": [
+    {
+      "pool_id": "GCP_FREE_TRIAL_90D",
+      "name": "Google Cloud 90-Day Free Trial Credit",
+      "granted_date": "2026-11-08",
+      "expires_date": "2027-02-07",
+      "initial_usd": 300.00,
+      "initial_sgd": 384.83,
+      "notes": "90-day validity; non-renewable; Paid Upgrade NOT enabled (hard zero-overcharge protection)."
+    },
+    {
+      "pool_id": "GDP_ULTRA_MONTHLY_2026_11",
+      "name": "Google Developer Program Premium Benefit (Ultra Monthly Credit - Nov 2026)",
+      "granted_date": "2026-11-08",
+      "expires_date": "2027-11-08",
+      "initial_usd": 100.00,
+      "initial_sgd": 128.28,
+      "notes": "CREDIT_TYPE_MONTHLY applied to My Billing Account via Google Builders Hub."
+    }
+  ],
+  "non_gcp_ultra_quotas": [
+    {
+      "quota_id": "FLOW_VIDEO_MONTHLY",
+      "name": "Google Flow Video Credits (Channel A — Primary Cinema Engine)",
+      "surface": "https://flow.google.com (AGY Persistent Built-in Browser)",
+      "monthly_allowance": "25,000 credits/mo (non-rollover)",
+      "verified_balance": "25,050 credits",
+      "resets_at": "2026-12-07 16:21 SGT",
+      "gcp_burn": "$0.00"
+    },
+    {
+      "quota_id": "FLOW_MUSIC_MONTHLY",
+      "name": "Google Flow Music Credits (Commercial License)",
+      "surface": "Google Flow Music",
+      "monthly_allowance": "30,000 credits/mo",
+      "verified_balance": "30,000 credits",
+      "resets_at": "Monthly billing cycle",
+      "gcp_burn": "$0.00"
+    },
+    {
+      "quota_id": "COLAB_ULTRA_CU",
+      "name": "Colab Enterprise/Pro+ GPU Compute Units (G4 96GB Blackwell)",
+      "surface": "colab-cli / ultra_meter.py",
+      "monthly_allowance": "2,000 CU/mo (+ rollover)",
+      "verified_balance": "2,477.54 CU (0 active instances, 0.0 CU/h)",
+      "resets_at": "Monthly billing cycle",
+      "gcp_burn": "$0.00"
+    }
+  ],
+  "unit_pricing_reference_usd": {
+    "veo-3.1-generate-001_1080p_audio": {
+      "unit": "per_second",
+      "usd": 0.40,
+      "sgd": 0.5131,
+      "notes": "Vertex AI Channel B flagship Veo 3.1 Quality with native 48kHz audio & lip-sync (LOCKED by default; use Channel A Flow instead)."
+    },
+    "veo-3.1-fast-generate-001_audio": {
+      "unit": "per_second",
+      "usd": 0.12,
+      "sgd": 0.1539,
+      "notes": "Vertex AI Veo 3.1 Fast with audio."
+    },
+    "veo-3.1-lite-generate-001": {
+      "unit": "per_second",
+      "usd": 0.08,
+      "sgd": 0.1026,
+      "notes": "Vertex AI Veo 3.1 Lite (0 credits on Flow Lower Priority!)."
+    },
+    "lyria-002_30s_stem": {
+      "unit": "per_30s_clip",
+      "usd": 0.06,
+      "sgd": 0.0770,
+      "notes": "Vertex AI Lyria-002 instrumental film score (~$0.12 / SGD 0.15 per 2-stem episode)."
+    },
+    "gcp_dual_node_vpn_fixed": {
+      "unit": "per_month",
+      "usd": 7.60,
+      "sgd": 9.75,
+      "notes": "node-tw-entry-01 (asia-east1-b e2-micro + static IP) + node-us-exit-01 (us-west1-b Free Tier e2-micro), 250GB/mo cap."
+    }
+  },
+  "transactions": [
+    {
+      "tx_id": "TX-20261108-001",
+      "date": "2026-11-08 ~ 2026-11-12",
+      "category": "INFRA_VPN",
+      "project_or_pipeline": "gcp_dual_node_vpn",
+      "service": "Compute Engine + VPC Egress (5 days accrued @ ~US$7.60/mo)",
+      "quantity_detail": "5 days × US$0.253/day (node-tw-entry-01 + node-us-exit-01)",
+      "usd": 1.27,
+      "sgd": 1.63,
+      "authorized_by": "Owner (2026-11-08 VPN deployment)",
+      "notes": "Ongoing monthly infrastructure (~SGD 9.75/mo), guarded by 250GB/mo traffic_guard.sh."
+    },
+    {
+      "tx_id": "TX-20261112-002",
+      "date": "2026-11-12",
+      "category": "VERTEX_AI_CINEMA",
+      "project_or_pipeline": "pipelines/warcraft_illidan_ep01",
+      "service": "Vertex AI veo-3.1-generate-001 (1080p + Native Audio) + lyria-002",
+      "quantity_detail": "8 Veo 3.1 clips = 46s raw (shot01 4s, shot02 6s, shot03 4s, shot04 6s, shot05 6s, shot06 6s, shot07 6s, shot08 8s) @ $0.40/s ($18.40) + 2 Lyria-002 30s stems @ $0.06 ($0.12); 0 wasted retries",
+      "usd": 18.52,
+      "sgd": 23.76,
+      "authorized_by": "Owner (Illidan Ep01 benchmark validation prior to Channel A Flow login)",
+      "notes": "Delivered 42.10s 1080p Cinema Master. Subsequent episodes switched to Channel A (Google Flow 25,050 monthly credits = $0 GCP spend)."
+    }
+  ]
+}
