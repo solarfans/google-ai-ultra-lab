@@ -1,0 +1,117 @@
+{
+  "episode_id": "Ep01",
+  "channel": "How Markets Break",
+  "title": "3 Signals That Separate a Liquidity Flush from a Bear Market",
+  "window_start": "2026-11-02",
+  "output_prefix": "HowMarketsBreak_Ep01_Three_Liquidity_Signals",
+  "downloads_dir": "/Users/kaykel/Downloads/2026-11-20_HowMarketsBreak_Ep01_Master",
+  "music_library_catalog": "assets/music_library/how_markets_break/CATALOG.json",
+  "music_segments": [
+    {
+      "track_id": "hmb_01_tension_pulse",
+      "start_sec": 0,
+      "duration_sec": 30.0
+    },
+    {
+      "track_id": "hmb_02_data_analysis",
+      "start_sec": 0,
+      "duration_sec": 32.0
+    },
+    {
+      "track_id": "hmb_03_liquidity_crisis",
+      "start_sec": 0,
+      "duration_sec": 24.0
+    },
+    {
+      "track_id": "hmb_04_aftermath_resolve",
+      "start_sec": 0,
+      "duration_sec": 24.0
+    }
+  ],
+  "crossfade_sec": 2.0,
+  "voice": {
+    "name": "en-US-AndrewMultilingualNeural",
+    "rate": "-4%",
+    "pitch": "-2Hz",
+    "pause_between_beats_sec": 0.45
+  },
+  "beats": [
+    {
+      "beat_id": "beat01",
+      "text": "Every crash starts the same way: red screens, falling gold, and panic headlines. Watching price alone won't tell you whether it's a forced flush or a real bear market. Institutions watch three deeper signals instead."
+    },
+    {
+      "beat_id": "beat02",
+      "text": "Signal one: corporate junk credit. In true systemic bear markets, high-yield bonds crack first as defaults loom. Yet right now, while Bitcoin dropped twenty-three percent and gold fell thirteen, high-yield credit barely moved — down under two percent from its November high."
+    },
+    {
+      "beat_id": "beat03",
+      "text": "Credit isn't panicking. That tells you leverage is liquidating — not the real economy collapsing."
+    },
+    {
+      "beat_id": "beat04",
+      "text": "Signal two: the VIX term structure. Normally, three-month volatility costs more than thirty-day panic. Today, spot VIX spiked near thirty — pushing the VIX-to-three-month ratio to one point one zero. Extreme inversion signals emergency hedging near peak liquidation."
+    },
+    {
+      "beat_id": "beat05",
+      "text": "Signal three is the missing green light: the Dollar and gold turn. Ten-year Treasury yields eased slightly off their five point one five percent peak, but the U.S. Dollar remains pinned near one hundred and four, keeping pressure on gold and risk assets."
+    },
+    {
+      "beat_id": "beat06",
+      "text": "Put all three together. Credit is green, volatility inversion is amber, and the Dollar is still red. Until the Dollar rolls over and gold decouples higher, volatility stays violent — but without a credit crack, this still looks like a flush, not a structural bear market."
+    },
+    {
+      "beat_id": "beat07",
+      "text": "Watch credit, volatility inversion, and the Dollar — not the headlines. In Episode Two, we trace how margin calls cascade across portfolios in real time. Subscribe to How Markets Break."
+    }
+  ],
+  "flow_shots": [
+    {
+      "shot_id": "shot01",
+      "label": "Stormy Trading Tower Dusk",
+      "prompt": "Cinematic slow dolly forward inside a dark minimalist glass trading observatory high above a rain-swept financial metropolis at dusk, cold steel-blue storm clouds outside floor-to-ceiling wet glass, subtle reflections of distant amber city lights on dark slate floor, ARRI Alexa 65 anamorphic documentary cinematography, soft rain on glass Foley, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot02",
+      "label": "Institutional Bond Vault Corridor",
+      "prompt": "Slow symmetrical camera glide down a dark high-security architectural glass and brushed-steel institutional archive corridor, subtle cyan and muted amber recessed strip lights reflecting along polished obsidian flooring, cool quiet atmospheric haze, ARRI Alexa 65 anamorphic documentary cinematography, faint low HVAC room tone, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot03",
+      "label": "Nocturnal Global Port & Harbor",
+      "prompt": "Slow moody aerial drone push forward over a vast storm-lit international container port and financial harbor at midnight under fast-moving dark clouds, tall amber crane beacons reflecting across rippling black ocean water in light rain, ARRI Alexa 65 anamorphic documentary cinematography, distant harbor wind and rain Foley, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot04",
+      "label": "Dark Mission-Control Observatory",
+      "prompt": "Dramatic slow lateral tracking shot inside a dark obsidian macro research control hall with soft volumetric amber and steel-blue light shafts cutting through fine atmospheric mist, sleek matte-black curved desks in shadow with abstract blurred bokeh glows and zero readable text, ARRI Alexa 65 anamorphic documentary cinematography, faint ambient room hum, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot05",
+      "label": "Calm Dawn Horizon Over Dark Lake",
+      "prompt": "Slow serene high-altitude aerial glide across a dark glass-calm mountain lake at pre-dawn as retreating black storm clouds open to reveal a razor-thin warm golden horizon line reflected symmetrically on the dark water, ARRI Alexa 65 anamorphic documentary cinematography, gentle dawn breeze Foley, zero background music, no subtitles, no text, no watermark."
+    }
+  ],
+  "vertical_headers": {
+    "beat01b": {
+      "kicker": "HOW MARKETS BREAK · EPISODE 01",
+      "title": "3 Institutional Liquidity Signals"
+    },
+    "beat02": {
+      "kicker": "SIGNAL 01 · CREDIT MARKET TRUTH SERUM",
+      "title": "Crypto & Gold Fell — Credit Held"
+    },
+    "beat04": {
+      "kicker": "SIGNAL 02 · VOLATILITY TERM STRUCTURE",
+      "title": "Near-Term Fear Above 3M Fear"
+    },
+    "beat05b": {
+      "kicker": "SIGNAL 03 · THE MISSING GREEN LIGHT",
+      "title": "Yields, Dollar Pressure & Gold"
+    },
+    "beat06b": {
+      "kicker": "EPISODE 01 · DIAGNOSTIC SCOREBOARD",
+      "title": "Liquidity Flush vs Bear Market"
+    }
+  }
+}

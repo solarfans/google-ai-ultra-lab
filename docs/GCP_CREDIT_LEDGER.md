@@ -1,6 +1,6 @@
 # Google Cloud 赠金与 Google AI Ultra 跨池算力总账本 (GCP Credit Ledger)
 
-> **最后更新**：`2026-11-13 00:22 SGT`  
+> **最后更新**：`2026-11-20 19:04 SGT`  
 > **关联 GCP 项目**：`project-665ac784-237e-4a71-ad0` (`My Billing Account (Google AI Ultra Main)`)  
 > **官方计费折算汇率**：`1 USD = 1.2828 SGD`（按 Google Billing 实盘入账 `US$300 -> SGD 384.83`、`US$100 -> SGD 128.28` 锚定）  
 > **付费升级状态（防超额硬熔断）**：**`Paid Billing 未开启（Free Trial 保护态）`** —— 即使赠金耗尽也只会停机/拒绝 API，**0% 信用卡超额扣费风险**  
@@ -13,10 +13,10 @@
 | 指标项 | 美元口径 (USD) | 新币口径 (SGD) | 占比 / 到期护栏 |
 | :--- | ---: | ---: | :--- |
 | **GCP 账面初始赠金总额** | `$400.00` | **`SGD 513.11`** | Free Trial `SGD 384.83` + 2026-11 GDP 月度 `SGD 128.28` |
-| **累计已消耗赠金（估算）** | `$19.79` | **`SGD 25.39`** | 含《伊利丹 Ep01》`SGD 23.76` + 双机 VPN 5 天摊销 `SGD 1.63` |
-| **当前预计剩余可用总额** | **`$380.21`** | **`SGD 487.72`** | **剩余 `95.05%`**（安全水位 > 80%） |
-| ↳ *若优先抵扣 90 天试用赠金* | `$280.20` | `SGD 359.44` (另加月度 `SGD 128.28`) | Free Trial **2027-02-07** 到期清零 |
-| ↳ *若优先抵扣 11 月开发者赠金* | `$80.21` | `SGD 102.89` (另加试用 `SGD 384.83`) | GDP 月度福利按月发放 US$100 |
+| **累计已消耗赠金（估算）** | `$19.91` | **`SGD 25.54`** | 含《伊利丹 Ep01》`SGD 23.76` + 双机 VPN 5 天摊销 `SGD 1.63` |
+| **当前预计剩余可用总额** | **`$380.09`** | **`SGD 487.57`** | **剩余 `95.02%`**（安全水位 > 80%） |
+| ↳ *若优先抵扣 90 天试用赠金* | `$280.08` | `SGD 359.29` (另加月度 `SGD 128.28`) | Free Trial **2027-02-07** 到期清零 |
+| ↳ *若优先抵扣 11 月开发者赠金* | `$80.09` | `SGD 102.74` (另加试用 `SGD 384.83`) | GDP 月度福利按月发放 US$100 |
 
 ---
 
@@ -47,6 +47,7 @@
 | :--- | :---: | :--- | :--- | :--- | ---: | ---: | :--- |
 | `TX-20261108-001` | `2026-11-08 ~ 2026-11-12` | `INFRA_VPN` | `gcp_dual_node_vpn` | **Compute Engine + VPC Egress (5 days accrued @ ~US$7.60/mo)**<br>5 days × US$0.253/day (node-tw-entry-01 + node-us-exit-01) | `$1.27` | **`SGD 1.63`** | Owner (2026-11-08 VPN deployment) — Ongoing monthly infrastructure (~SGD 9.75/mo), guarded by 250GB/mo traffic_guard.sh. |
 | `TX-20261112-002` | `2026-11-12` | `VERTEX_AI_CINEMA` | `pipelines/warcraft_illidan_ep01` | **Vertex AI veo-3.1-generate-001 (1080p + Native Audio) + lyria-002**<br>8 Veo 3.1 clips = 46s raw (shot01 4s, shot02 6s, shot03 4s, shot04 6s, shot05 6s, shot06 6s, shot07 6s, shot08 8s) @ $0.40/s ($18.40) + 2 Lyria-002 30s stems @ $0.06 ($0.12); 0 wasted retries | `$18.52` | **`SGD 23.76`** | Owner (Illidan Ep01 benchmark validation prior to Channel A Flow login) — Delivered 42.10s 1080p Cinema Master. Subsequent episodes switched to Channel A (Google Flow 25,050 monthly credits = $0 GCP spend). |
+| `TX-20261120-003` | `2026-11-20` | `VERTEX_AI_SCORE` | `how_markets_break_y0` | **Vertex AI lyria-002**<br>2 stems @ zsh.06 | `$0.12` | **`SGD 0.15`** | Owner — How Markets Break Y0 dark institutional documentary underscore |
 
 ---
 

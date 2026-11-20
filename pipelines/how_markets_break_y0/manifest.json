@@ -1,0 +1,16 @@
+{
+  "channel": "How Markets Break",
+  "episode_id": "Y0",
+  "track": "A_dark_macro_finance_documentary",
+  "title": "Why Gold, Bitcoin, and Tech Stocks Are Crashing Together — The Liquidity Trap",
+  "concept": "100% original English macro-financial visual documentary explaining cross-asset forced liquidation when 10Y Treasury yields breach 5%, DXY surges, and VIX doubles — combining verified real-market data animations with dark architectural cinema metaphors. Educational market mechanics only; no financial advice.",
+  "language": "en",
+  "original_ip": true,
+  "ai_disclosure_required": true,
+  "audio_source": "Original restrained documentary English AI male narrator (YouTube AI disclosure enabled) + Google Flow Music commercial dark ambient score",
+  "flow_credit_budget": 900,
+  "flow_music_credit_budget": 300,
+  "gcp_usd_budget": 0,
+  "target_duration_sec": 75,
+  "aspect_ratios": ["16:9", "9:16_cutdown"]
+}

@@ -5,7 +5,7 @@
     "fx_usd_to_sgd": 1.2828,
     "fx_note": "Derived directly from Google Cloud Billing official conversion (US$300.00 -> SGD 384.83, US$100.00 -> SGD 128.28).",
     "paid_billing_upgraded": false,
-    "last_updated_sgt": "2026-11-13 00:22 SGT"
+    "last_updated_sgt": "2026-11-20 19:04 SGT"
   },
   "gcp_credit_pools": [
     {
@@ -13,7 +13,7 @@
       "name": "Google Cloud 90-Day Free Trial Credit",
       "granted_date": "2026-11-08",
       "expires_date": "2027-02-07",
-      "initial_usd": 300.00,
+      "initial_usd": 300.0,
       "initial_sgd": 384.83,
       "notes": "90-day validity; non-renewable; Paid Upgrade NOT enabled (hard zero-overcharge protection)."
     },
@@ -22,7 +22,7 @@
       "name": "Google Developer Program Premium Benefit (Ultra Monthly Credit - Nov 2026)",
       "granted_date": "2026-11-08",
       "expires_date": "2027-11-08",
-      "initial_usd": 100.00,
+      "initial_usd": 100.0,
       "initial_sgd": 128.28,
       "notes": "CREDIT_TYPE_MONTHLY applied to My Billing Account via Google Builders Hub."
     }
@@ -59,7 +59,7 @@
   "unit_pricing_reference_usd": {
     "veo-3.1-generate-001_1080p_audio": {
       "unit": "per_second",
-      "usd": 0.40,
+      "usd": 0.4,
       "sgd": 0.5131,
       "notes": "Vertex AI Channel B flagship Veo 3.1 Quality with native 48kHz audio & lip-sync (LOCKED by default; use Channel A Flow instead)."
     },
@@ -78,12 +78,12 @@
     "lyria-002_30s_stem": {
       "unit": "per_30s_clip",
       "usd": 0.06,
-      "sgd": 0.0770,
+      "sgd": 0.077,
       "notes": "Vertex AI Lyria-002 instrumental film score (~$0.12 / SGD 0.15 per 2-stem episode)."
     },
     "gcp_dual_node_vpn_fixed": {
       "unit": "per_month",
-      "usd": 7.60,
+      "usd": 7.6,
       "sgd": 9.75,
       "notes": "node-tw-entry-01 (asia-east1-b e2-micro + static IP) + node-us-exit-01 (us-west1-b Free Tier e2-micro), 250GB/mo cap."
     }
@@ -112,6 +112,18 @@
       "sgd": 23.76,
       "authorized_by": "Owner (Illidan Ep01 benchmark validation prior to Channel A Flow login)",
       "notes": "Delivered 42.10s 1080p Cinema Master. Subsequent episodes switched to Channel A (Google Flow 25,050 monthly credits = $0 GCP spend)."
+    },
+    {
+      "tx_id": "TX-20261120-003",
+      "date": "2026-11-20",
+      "category": "VERTEX_AI_SCORE",
+      "project_or_pipeline": "how_markets_break_y0",
+      "service": "Vertex AI lyria-002",
+      "quantity_detail": "2 stems @ zsh.06",
+      "usd": 0.12,
+      "sgd": 0.15,
+      "authorized_by": "Owner",
+      "notes": "How Markets Break Y0 dark institutional documentary underscore"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "channel": "How Markets Break",
+  "episode_id": "Ep01",
+  "track": "A_dark_macro_finance_documentary",
+  "title": "3 Signals That Separate a Liquidity Flush from a Bear Market",
+  "concept": "100% original English macro-financial visual documentary breaking down the three institutional liquidity signals (high-yield junk credit HYG vs risk assets, VIX/VIX3M term structure inversion, and 10Y yield / US Dollar / Gold turn) using verified Yahoo Finance daily closes paired with zero-upload Flow Omni 1.2 Flash cinema plates and Flow Music instrumental library scoring ($0.00 GCP burn). Educational market mechanics only; no financial advice.",
+  "language": "en",
+  "original_ip": true,
+  "ai_disclosure_required": true,
+  "audio_source": "Original restrained documentary English AI male narrator (YouTube AI disclosure enabled) + local Flow Music commercial instrumental library (CATALOG.json, $0.00 GCP)",
+  "flow_credit_budget": 900,
+  "flow_music_credit_budget": 0,
+  "gcp_usd_budget": 0,
+  "gcp_video_budget_usd": 0,
+  "gcp_audio_budget_usd": 0,
+  "target_duration_sec": 95,
+  "aspect_ratios": [
+    "16:9",
+    "9:16_cutdown"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "episode_id": "Ep01",
+  "project_name": "How Markets Break Ep01",
+  "flow_settings": {
+    "mode": "Video",
+    "video_type": "Ingredients",
+    "aspect_ratio": "16:9",
+    "model": "Omni 1.2 Flash",
+    "resolution": "720p",
+    "duration_sec": 8,
+    "outputs_per_prompt": "x1"
+  },
+  "zero_confirmation_mode": true,
+  "shots": [
+    {
+      "shot_id": "shot01",
+      "label": "Stormy Trading Tower Dusk",
+      "prompt": "Cinematic slow dolly forward inside a dark minimalist glass trading observatory high above a rain-swept financial metropolis at dusk, cold steel-blue storm clouds outside floor-to-ceiling wet glass, subtle reflections of distant amber city lights on dark slate floor, ARRI Alexa 65 anamorphic documentary cinematography, soft rain on glass Foley, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot02",
+      "label": "Institutional Bond Vault Corridor",
+      "prompt": "Slow symmetrical camera glide down a dark high-security architectural glass and brushed-steel institutional archive corridor, subtle cyan and muted amber recessed strip lights reflecting along polished obsidian flooring, cool quiet atmospheric haze, ARRI Alexa 65 anamorphic documentary cinematography, faint low HVAC room tone, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot03",
+      "label": "Nocturnal Global Port & Harbor",
+      "prompt": "Slow moody aerial drone push forward over a vast storm-lit international container port and financial harbor at midnight under fast-moving dark clouds, tall amber crane beacons reflecting across rippling black ocean water in light rain, ARRI Alexa 65 anamorphic documentary cinematography, distant harbor wind and rain Foley, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot04",
+      "label": "Dark Mission-Control Observatory",
+      "prompt": "Dramatic slow lateral tracking shot inside a dark obsidian macro research control hall with soft volumetric amber and steel-blue light shafts cutting through fine atmospheric mist, sleek matte-black curved desks in shadow with abstract blurred bokeh glows and zero readable text, ARRI Alexa 65 anamorphic documentary cinematography, faint ambient room hum, zero background music, no subtitles, no text, no watermark."
+    },
+    {
+      "shot_id": "shot05",
+      "label": "Calm Dawn Horizon Over Dark Lake",
+      "prompt": "Slow serene high-altitude aerial glide across a dark glass-calm mountain lake at pre-dawn as retreating black storm clouds open to reveal a razor-thin warm golden horizon line reflected symmetrically on the dark water, ARRI Alexa 65 anamorphic documentary cinematography, gentle dawn breeze Foley, zero background music, no subtitles, no text, no watermark."
+    }
+  ]
+}

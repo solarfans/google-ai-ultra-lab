@@ -1,0 +1,64 @@
+{
+  "library_id": "how_markets_break_v1",
+  "channel": "How Markets Break",
+  "source": "https://www.flowmusic.app (Lyria 3.5, Instrumental Mode ON)",
+  "session_url": "https://www.flowmusic.app/session/d2c5b63a-b30d-4f54-9f9f-2f7d764dc126?t=true",
+  "gcp_spend_usd": 0.0,
+  "flow_music_credits": {
+    "balance_before": 30530,
+    "balance_after": 30525,
+    "credits_spent_total": 5
+  },
+  "audio_standard": {
+    "format": "pcm_s16le",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "license": "Google Flow Music Member Commercial License"
+  },
+  "tracks": [
+    {
+      "id": "hmb_01_tension_pulse",
+      "file": "hmb_01_tension_pulse.wav",
+      "raw_file": "raw/hmb_01_tension_pulse_raw.wav",
+      "song_url": "https://www.flowmusic.app/song/397e9603-2c84-4107-abcc-9997b3eff65e",
+      "duration_sec": 152.416,
+      "bpm_target": 86,
+      "key": "D minor",
+      "mood_usage": "Opening mystery, structural setup, slow analytical tension",
+      "prompt": "Minimalist dark institutional finance documentary underscore in D minor, tense pulsing analog sub-bass, muted low cello ostinato, subtle ticking metallic clock pulse, sparse crystalline piano notes, restrained analytical suspense, 86 bpm, instrumental only"
+    },
+    {
+      "id": "hmb_02_data_analysis",
+      "file": "hmb_02_data_analysis.wav",
+      "raw_file": "raw/hmb_02_data_analysis_raw.wav",
+      "song_url": "https://www.flowmusic.app/song/1ff40cb6-29a6-4214-95ca-aa07b68c1570",
+      "duration_sec": 152.832,
+      "bpm_target": 92,
+      "key": "C minor",
+      "mood_usage": "Chart breakdown, macro pressure gauges, mechanism dissection",
+      "prompt": "Cool minimalist investigative economic documentary background underscore in C minor, steady understated bass pulse, clean muted felt piano arpeggio, subtle analog electronic texture, calm authoritative focus, 92 bpm, instrumental only"
+    },
+    {
+      "id": "hmb_03_liquidity_crisis",
+      "file": "hmb_03_liquidity_crisis.wav",
+      "raw_file": "raw/hmb_03_liquidity_crisis_raw.wav",
+      "song_url": "https://www.flowmusic.app/song/d1f58c68-b924-4efd-9e53-43eda7040215",
+      "duration_sec": 177.365,
+      "bpm_target": 96,
+      "key": "D minor",
+      "mood_usage": "Margin call cascade, forced liquidation climax, cross-asset drawdown",
+      "prompt": "Dark urgent financial crisis documentary tension bed in D minor, driving low string ostinato, deep ominous analog synth bass, restrained cinematic percussion hits, rising pressure without loud melody, 96 bpm, instrumental only"
+    },
+    {
+      "id": "hmb_04_aftermath_resolve",
+      "file": "hmb_04_aftermath_resolve.wav",
+      "raw_file": "raw/hmb_04_aftermath_resolve_raw.wav",
+      "song_url": "https://www.flowmusic.app/song/f9eeee37-41ef-452d-a7f7-7231c51503f4",
+      "duration_sec": 162.869,
+      "bpm_target": 74,
+      "key": "D minor",
+      "mood_usage": "Outro reflection, risk checklist synthesis, end-slate calm resolution",
+      "prompt": "Reflective dark ambient documentary outro underscore in D minor, warm distant cello sustain, sparse melancholic piano chords, soft atmospheric pad, calm analytical resolution, 74 bpm, instrumental only"
+    }
+  ]
+}

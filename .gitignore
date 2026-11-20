@@ -37,3 +37,9 @@ pipelines/tiktok_shop_sg/product_*/
 pipelines/short_drama/audio_previews/
 pipelines/short_drama/*_Preview.mp4
 pipelines/short_drama/assets_manju_v2/*.mp4
+assets/music_library/**/*.wav
+assets/music_library/**/*.mp3
+pipelines/how_markets_break_*/renders/
+pipelines/how_markets_break_*/output/
+pipelines/how_markets_break_*/motion_assets/
+pipelines/how_markets_break_*/audio/
