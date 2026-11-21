@@ -1,7 +1,9 @@
-Google turned Gemini Spark into Gemini Tasks, a cloud agent that keeps working after you lock your phone.
-Flip Chat to Task, and Google runs an isolated cloud computer and remote browser, or controls Chrome on your Mac.
-It's free in six countries with ten daily schedules. Pro and Ultra unlock fifty schedules, fifteen parallel tasks, plus Gmail and topic monitors.
-ChatGPT Dots needs a hundred-dollar Pro plan for team workflows, while Gemini Tasks lives right inside Gmail, Drive, and Chrome.
-Here is the big catch: Tasks share a rolling five-hour compute pool. One Ultra user hit the wall in ninety minutes on two heavy jobs.
-Plus business calls and Google Pay checkout remain U.S. only, and topic monitors aren't fast enough for instant ticket drops.
-The playbook: run Gmail monitors, Workspace reports, and web sweeps in Gemini Tasks, and keep heavy code on your local stack.
+Google just launched Tasks in Gemini, and it turns AI from a chatbot into a background assistant that actually finishes the job.
+In Chat mode, you ask a question and wait. Flip to Task mode, hand over a real job, and walk away while Gemini works in the cloud.
+Here is how people actually use it. First, a daily morning briefing. Type, every morning at seven a.m., scan the biggest AI launches and send me a one-page summary.
+Second, multi-step web research. Give it a topic, and you can watch Gemini think, search Google, visit live websites, and return a clean table or editable Canvas report.
+Third, recurring monitors. Schedule weekly website or price checks, or connect Gmail and Drive so Gemini flags important emails and drafts replies before Monday morning.
+And it never goes rogue. Before touching your Google Drive, sending an email, or signing into a site, Gemini pauses and knocks until you click Connect.
+Google rolled out a free tier in six countries, the U.S., Canada, Japan, South Korea, Australia, and India, with ten daily schedules. Pro and Ultra unlock fifty schedules, fifteen parallel tasks, and global access.
+Two quick tips before you start. First, Tasks share a rolling five-hour compute budget, so keep each prompt tightly scoped instead of dumping ten jobs into one. Second, save repeat workflows as slash Skills so you never retype instructions.
+To try your first task today, open Gemini, flip to Task, describe one clear job, put the timing first, and review the first run. Follow for more practical AI breakdowns.
