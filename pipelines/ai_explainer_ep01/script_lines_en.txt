@@ -1,0 +1,6 @@
+Google dropped Carbon, Hydrogen, and Neon in eight days, flooding the menu with twenty-seven Gemini 4 tiers.
+Stop comparing them by raw rank. They are three completely different work lanes.
+Lock seventy-five percent of your daily work on Neon. It ranks number one in coding at fifty-eight point six, runs three times faster and thirty-two percent cheaper than Carbon, just watch the two hundred K context slowdown.
+Carbon digs deepest for subtle bugs, but even a tiny edit takes seven to eight minutes. Save it strictly for ten-plus file refactors and live risk audits.
+Hydrogen runs two and a half times faster than three point eight Flash and finishes quick scripts in seconds. Just never run Extra solo, or you'll hit a sixty-second stream timeout.
+Here's the cheat sheet: run Orchestrator by default, let Neon plan and Hydrogen execute, open a fresh chat per task, and call Claude Opus for final release audits.

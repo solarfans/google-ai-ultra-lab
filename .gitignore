@@ -43,3 +43,25 @@ pipelines/how_markets_break_*/renders/
 pipelines/how_markets_break_*/output/
 pipelines/how_markets_break_*/motion_assets/
 pipelines/how_markets_break_*/audio/
+
+# Digital twin personal biometrics, local tool runtimes & explainer renders
+assets/digital_twin/
+tools_runtime/
+pipelines/ai_explainer_ep01/audio/
+pipelines/ai_explainer_ep01/audio_en/
+pipelines/ai_explainer_ep01/audio_male/
+pipelines/ai_explainer_ep01/outputs/
+pipelines/ai_explainer_ep01/reference_breakdown/
+pipelines/ai_explainer_ep01/benchmark_videos/
+pipelines/ai_explainer_ep01/pk_*/out/
+pipelines/ai_explainer_ep01/pk_*/**/out/
+pipelines/ai_explainer_ep01/pk_*/node_modules
+pipelines/ai_explainer_ep01/pk_*/**/node_modules
+pipelines/ai_explainer_ep01/pk_*/.hyperframes/
+pipelines/ai_explainer_ep01/pk_*/snapshots_pk/
+pipelines/ai_explainer_ep01/pk_*/assets/anchor.png
+pipelines/ai_explainer_ep01/pk_*/assets/voice*.mp3
+pipelines/ai_explainer_ep01/pk_*/remotion/public/anchor.png
+pipelines/ai_explainer_ep01/pk_*/remotion/public/avatar*.mp4
+pipelines/ai_explainer_ep01/pk_*/remotion/public/voice*.mp3
+pipelines/ai_explainer_ep01/pk_*/remotion/stills*/
