@@ -65,3 +65,5 @@ pipelines/ai_explainer_ep01/pk_*/remotion/public/anchor.png
 pipelines/ai_explainer_ep01/pk_*/remotion/public/avatar*.mp4
 pipelines/ai_explainer_ep01/pk_*/remotion/public/voice*.mp3
 pipelines/ai_explainer_ep01/pk_*/remotion/stills*/
+pipelines/ai_explainer_ep02/audio/
+pipelines/ai_explainer_ep02/outputs/

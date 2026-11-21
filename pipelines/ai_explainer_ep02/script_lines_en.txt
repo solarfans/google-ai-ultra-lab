@@ -1,0 +1,7 @@
+Google turned Gemini Spark into Gemini Tasks, a cloud agent that keeps working after you lock your phone.
+Flip Chat to Task, and Google runs an isolated cloud computer and remote browser, or controls Chrome on your Mac.
+It's free in six countries with ten daily schedules. Pro and Ultra unlock fifty schedules, fifteen parallel tasks, plus Gmail and topic monitors.
+ChatGPT Dots needs a hundred-dollar Pro plan for team workflows, while Gemini Tasks lives right inside Gmail, Drive, and Chrome.
+Here is the big catch: Tasks share a rolling five-hour compute pool. One Ultra user hit the wall in ninety minutes on two heavy jobs.
+Plus business calls and Google Pay checkout remain U.S. only, and topic monitors aren't fast enough for instant ticket drops.
+The playbook: run Gmail monitors, Workspace reports, and web sweeps in Gemini Tasks, and keep heavy code on your local stack.
