@@ -35,6 +35,7 @@ pipelines/tiktok_shop_sg/audio/
 pipelines/tiktok_shop_sg/outputs/
 pipelines/tiktok_shop_sg/product_*/
 pipelines/short_drama/audio_previews/
+pipelines/short_drama/*.mp4
 pipelines/short_drama/*_Preview.mp4
 pipelines/short_drama/assets_manju_v2/*.mp4
 assets/music_library/**/*.wav

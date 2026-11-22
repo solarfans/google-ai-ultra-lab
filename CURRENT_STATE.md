@@ -1,9 +1,20 @@
 # Google AI Ultra Lab — Current State & Ledger
 
-**最后更新**：2026-11-13 00:25 SGT (MacBook Pro)  
-**项目状态**：`HOLLYWOOD_CINEMA_SOP_V5_0_LIVE / FLOW_CHANNEL_A_25050_PERSISTED / ILLIDAN_EP01_1080P_DELIVERED / GCP_CREDIT_LEDGER_ACTIVE`  
+**最后更新**：2026-11-22 18:35 SGT (MacBook Pro)  
+**项目状态**：`HOLLYWOOD_CINEMA_SOP_V5_0_LIVE / AI_EXPLAINER_DUAL_TRACK_V5_2_SOLIDIFIED / FLOW_CHANNEL_A_24810_PERSISTED / GCP_CREDIT_LEDGER_ACTIVE`  
 **负责席位**：Antigravity Desktop (MacBook)  
-**核心操作总纲**：[**skills/google-ai-ultra/SKILL.md**](./skills/google-ai-ultra/SKILL.md) | [**docs/GCP_CREDIT_LEDGER.md**](./docs/GCP_CREDIT_LEDGER.md) | [**docs/research/HOLLYWOOD_AI_CINEMA_BENCHMARKS_TOOLS_AND_SOP_2026-11-12.md**](./docs/research/HOLLYWOOD_AI_CINEMA_BENCHMARKS_TOOLS_AND_SOP_2026-11-12.md)
+**核心操作总纲**：[**skills/google-ai-ultra/SKILL.md**](./skills/google-ai-ultra/SKILL.md) (v5.2) | [**skills/google-ai-ultra/references/ai_explainer_sop.md**](./skills/google-ai-ultra/references/ai_explainer_sop.md) | [**docs/GCP_CREDIT_LEDGER.md**](./docs/GCP_CREDIT_LEDGER.md)
+
+---
+
+## 0. 2026-11-22 管线固化与磁盘清理基线
+
+- **Global EN AI Explainer 双轨管线固化（`google-ai-ultra` Skill v5.2）**：
+  - **Track A（默认 `$0 / 0 CU` 纯动效 UI + WordBoundary 白底字幕 — Ep02 v2 基线）**：`scripts/synth_ep02_v2_en_brian.py`（`en-US-BrianMultilingualNeural` `+1%` + `WordBoundary` 药丸字幕 + 程序化 `pop/whoosh/tick` 音效 + Flow Music `-22 dB`）+ `pipelines/ai_explainer_ep01/pk_talkcraft/remotion/src/ep02_components.tsx`（`Ep02GeminiTasks` `16:9` & `Ep02GeminiTasksVertical` `9:16`）。
+  - **Track B（按需 Colab G4 `InfiniteTalk` 真实口型数字人 — Ep01 LipSync 基线）**：`scripts/synth_en_v2_brian.py`（`<58s` Shorts 安全时长 + `anchor_832x480.png`）+ `scripts/run_phase_b_infinitetalk_g4.py` + `scripts/g4_infinitetalk_worker.py`（~`2.92 CU` / ~`18.5m`）+ `MainEN.tsx` / `MainENVertical.tsx`（根级 `<OffthreadVideo>` 零重置口型合成）。
+- **《魔兽世界：伊利丹》Ep01 好莱坞暗黑短片基线保留**：
+  - 保留已验收 `1080p` 母带 [`Illidan_The_Betrayer_1080p_Clean.mp4`](./pipelines/warcraft_illidan_ep01/Illidan_The_Betrayer_1080p_Clean.mp4) (`62M`) 与 [`Illidan_The_Betrayer_1080p_Subtitled.mp4`](./pipelines/warcraft_illidan_ep01/Illidan_The_Betrayer_1080p_Subtitled.mp4) (`61M`)、分镜 [`STORYBOARD_EP01.md`](./pipelines/warcraft_illidan_ep01/STORYBOARD_EP01.md)、定妆/关键帧 `assets/` 及渲染脚本；工作流已固化于 [`cinema_flow_veo_sop.md`](./skills/google-ai-ultra/references/cinema_flow_veo_sop.md)。
+- **废弃实验媒资清理（2026-11-22）**：已清理 `tiktok_shop_sg`、`fern_doc_ep01`、`how_markets_break_*` 渲染/中间图表、`warcraft_illidan_ep01/{master_work,renders}` 及超大重复母带、`ai_explainer_ep01` 对标拆解与试音过程、`short_drama` 历史 `.mp4`（代码与 `json/md` 保留，`.gitignore` 已拦截 `pipelines/short_drama/*.mp4`），以及已退役的 `tools_runtime/{voxcpm2,hyperframes,rea-video}` 与 `~/.cache/huggingface/hub` 中的 `VoxCPM2`（`video-talkcraft` 与 `assets/{digital_twin,music_library}` 完整保留）。
 
 ---
 
