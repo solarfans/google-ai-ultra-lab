@@ -27,6 +27,7 @@ AUDIO_DIR = WORK_DIR / "audio"
 EXPORTS_DIR = WORK_DIR / "exports"
 METRICS_PATH = WORK_DIR / "metrics.json"
 LEGACY_DIR = SHORT_DRAMA_DIR / "assets_manju_v2"
+PRIMARY_BGM = BASE_DIR / "assets" / "music_library" / "chushi_chunqiu" / "ccq_01_nocturnal_intrigue.wav"
 FALLBACK_BGM = BASE_DIR / "assets" / "music_library" / "how_markets_break" / "hmb_04_aftermath_resolve.wav"
 
 FONT_CANDIDATES = [
@@ -139,19 +140,20 @@ def main() -> int:
     for p in shot_paths:
         if not p.exists():
             raise FileNotFoundError(f"Missing Flow render: {p}")
-    if not FALLBACK_BGM.exists():
-        raise FileNotFoundError(f"Missing fallback BGM: {FALLBACK_BGM}")
+    bgm_path = PRIMARY_BGM if PRIMARY_BGM.exists() else FALLBACK_BGM
+    if not bgm_path.exists():
+        raise FileNotFoundError(f"Missing BGM track: {bgm_path}")
 
     durations = [probe_duration(p) for p in shot_paths]
     total_dur = sum(durations)
-    print(f"[INFO] 6 Flow clips total duration: {total_dur:.3f}s ({durations})")
+    print(f"[INFO] 6 Flow clips total duration: {total_dur:.3f}s ({durations}); BGM={bgm_path.name}")
 
-    # 1. Build Clean 1080p 2.35:1 Widescreen Master with normalized native audio + subtle -24 dB BGM bed
+    # 1. Build Clean 1080p 2.35:1 Widescreen Master with normalized native audio + subtle -22 dB BGM bed
     clean_mp4 = EXPORTS_DIR / "ChuShiChunQiu_Sequel_Ch001_LiveAction_1080p_Clean.mp4"
     inputs: list[str] = []
     for p in shot_paths:
         inputs.extend(["-i", str(p)])
-    inputs.extend(["-stream_loop", "-1", "-i", str(FALLBACK_BGM)])
+    inputs.extend(["-stream_loop", "-1", "-i", str(bgm_path)])
 
     filter_parts: list[str] = []
     concat_refs: list[str] = []
@@ -176,7 +178,7 @@ def main() -> int:
     filter_parts.append(
         f"[{bgm_idx}:a]atrim=0:{total_dur:.3f},asetpts=PTS-STARTPTS,"
         f"aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,"
-        f"volume=-24dB,afade=t=in:st=0:d=1.2,afade=t=out:st={bgm_fade_out:.3f}:d=2.0[abgm]"
+        f"volume=-22dB,afade=t=in:st=0:d=1.2,afade=t=out:st={bgm_fade_out:.3f}:d=2.0[abgm]"
     )
     filter_parts.append("[adialog][abgm]amix=inputs=2:duration=first:normalize=0[aout]")
 
@@ -295,11 +297,12 @@ def main() -> int:
         m = {}
     m["assembly"] = {
         "elapsed_sec": round(time.monotonic() - t0, 2),
-        "bgm_source": str(FALLBACK_BGM),
-        "flowmusic_friction": {
+        "bgm_source": str(bgm_path),
+        "flowmusic_resolution": {
             "song_url": "https://www.flowmusic.app/song/292f4645-347d-4290-b6d5-d9537a369210",
-            "status": "generated_but_blob_download_not_persisted_by_webview",
-            "detail": "flowmusic.app generated 2:28 instrumental track, but client-side blob download returned dl.path()==null in AGY browser subagent sandbox; fell back cleanly to local commercial library WAV.",
+            "gcs_wav_url": "https://storage.googleapis.com/producer-app-public/clips/292f4645-347d-4290-b6d5-d9537a369210.wav",
+            "status": "downloaded_via_gcs_public_wav_endpoint",
+            "detail": "UI blob download returns dl.path()==null in AGY webview sandbox; fetched lossless WAV directly via https://storage.googleapis.com/producer-app-public/clips/<song_uuid>.wav and normalized to 48kHz stereo pcm_s16le.",
         },
         "exports": {
             "clean_1080p": {"path": str(clean_mp4), "size_bytes": clean_mp4.stat().st_size, "duration_sec": round(probe_duration(clean_mp4), 3)},

@@ -646,22 +646,23 @@
   "credits_before": 24836,
   "updated_at_utc": "2026-11-24T15:07:36.245512+00:00",
   "assembly": {
-    "elapsed_sec": 38.55,
-    "bgm_source": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/assets/music_library/how_markets_break/hmb_04_aftermath_resolve.wav",
-    "flowmusic_friction": {
+    "elapsed_sec": 38.42,
+    "bgm_source": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/assets/music_library/chushi_chunqiu/ccq_01_nocturnal_intrigue.wav",
+    "flowmusic_resolution": {
       "song_url": "https://www.flowmusic.app/song/292f4645-347d-4290-b6d5-d9537a369210",
-      "status": "generated_but_blob_download_not_persisted_by_webview",
-      "detail": "flowmusic.app generated 2:28 instrumental track, but client-side blob download returned dl.path()==null in AGY browser subagent sandbox; fell back cleanly to local commercial library WAV."
+      "gcs_wav_url": "https://storage.googleapis.com/producer-app-public/clips/292f4645-347d-4290-b6d5-d9537a369210.wav",
+      "status": "downloaded_via_gcs_public_wav_endpoint",
+      "detail": "UI blob download returns dl.path()==null in AGY webview sandbox; fetched lossless WAV directly via https://storage.googleapis.com/producer-app-public/clips/<song_uuid>.wav and normalized to 48kHz stereo pcm_s16le."
     },
     "exports": {
       "clean_1080p": {
         "path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Sequel_Ch001_LiveAction_1080p_Clean.mp4",
-        "size_bytes": 21323961,
+        "size_bytes": 21324460,
         "duration_sec": 60.6
       },
       "subtitled_1080p": {
         "path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Sequel_Ch001_LiveAction_1080p_Subtitled.mp4",
-        "size_bytes": 20707288,
+        "size_bytes": 20707787,
         "duration_sec": 60.6
       },
       "colab_baseline": {

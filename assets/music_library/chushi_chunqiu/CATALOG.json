@@ -1,0 +1,27 @@
+{
+  "library_id": "chushi_chunqiu_v1",
+  "channel": "ChuShiChunQiu Live-Action Drama",
+  "source": "https://www.flowmusic.app (Lyria 3.5, Instrumental Mode ON)",
+  "gcp_spend_usd": 0.0,
+  "audio_standard": {
+    "format": "pcm_s16le",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "license": "Google Flow Music Member Commercial License"
+  },
+  "tracks": [
+    {
+      "id": "ccq_01_nocturnal_intrigue",
+      "file": "ccq_01_nocturnal_intrigue.wav",
+      "raw_file": "raw/ccq_01_nocturnal_intrigue_raw.wav",
+      "song_uuid": "292f4645-347d-4290-b6d5-d9537a369210",
+      "song_url": "https://www.flowmusic.app/song/292f4645-347d-4290-b6d5-d9537a369210",
+      "gcs_wav_url": "https://storage.googleapis.com/producer-app-public/clips/292f4645-347d-4290-b6d5-d9537a369210.wav",
+      "duration_sec": 148.139,
+      "bpm_target": 76,
+      "key": "D minor",
+      "mood_usage": "Nocturnal Chinese historical political intrigue, tavern & yamen courtyard suspense",
+      "prompt": "Restrained nocturnal Chinese historical political thriller film score in D minor, lonely low cello drone, sparse distant guzheng plucks, muted wooden percussion pulse, subtle melancholic bamboo xiao flute, tense atmospheric suspense, 76 bpm, instrumental only"
+    }
+  ]
+}
