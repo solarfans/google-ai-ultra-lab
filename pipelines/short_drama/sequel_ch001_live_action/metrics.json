@@ -1,0 +1,720 @@
+{
+  "benchmark_name": "ChuShiChunQiu Sequel CH001 Live-Action (Google Flow) vs Legacy Colab Manju",
+  "source_chapter": "novel-continuation-lab/books/chushi-chunqiu/accepted/CH001.md",
+  "created_at_utc": "2026-11-24T14:46:52.624749+00:00",
+  "prior_3d_manju_probe": {
+    "shot01_8s_720p_elapsed_sec": 119.41,
+    "shot01_credits_spent": 24,
+    "shot01_upscale_1080p_rc": 15,
+    "shot01_upscale_error": "BrowserSessionClosedError / TargetClosedError",
+    "shot02_minor_filter_rc": 1,
+    "shot02_minor_filter_error": "Flow failed the generation (code 3): PUBLIC_ERROR_MINOR"
+  },
+  "actors": {
+    "chuzheng": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_chuzheng.png",
+      "returncode": 0,
+      "elapsed_sec": 46.26,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image t2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "f9291556-c370-4996-96b8-dc3165e7dc48",
+            "workflow_id": "c429a59c-7bec-461e-881a-3d5fa19a7733",
+            "seed": 1546316158,
+            "prompt": "Photorealistic live-action film casting portrait, 26-year-old handsome East Asian Chinese male actor (Chu Zheng), sharp intelligent dark eyes, calm subtly smiling aristocratic expression, natural human skin texture with realistic pores, traditional Song-Ming dynasty dark teal-black (玄青) silk robe with subtle dark-silver cloud embroidery, white jade hair crown, neutral warm gray studio backdrop, even neutral white studio key lighting, shot on ARRI Alexa 65 85mm lens, strictly photorealistic real human actor, zero anime, zero 3D CG, no text.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_PORTRAIT_THREE_FOUR",
+            "dimensions": {
+              "width": 896,
+              "height": 1200
+            },
+            "fife_url": "https://flow-content.google/image/f9291556-c370-4996-96b8-dc3165e7dc48?Expires=1795553220&KeyName=labs-flow-prod-cdn-key&Signature=fntsDnLp3Ft54BQb3FZClUfOQS0",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_chuzheng.jpg"
+          }
+        ]
+      },
+      "ffprobe": {
+        "exists": false
+      },
+      "stdout_tail": "low_id\": \"c429a59c-7bec-461e-881a-3d5fa19a7733\",\n      \"seed\": 1546316158,\n      \"prompt\": \"Photorealistic live-action film casting portrait, 26-year-old handsome East Asian Chinese male actor (Chu Zheng), sharp intelligent dark eyes, calm subtly smiling aristocratic expression, natural human skin texture with realistic pores, traditional Song-Ming dynasty dark teal-black (\\u7384\\u9752) silk robe with subtle dark-silver cloud embroidery, white jade hair crown, neutral warm gray studio backdrop, even neutral white studio key lighting, shot on ARRI Alexa 65 85mm lens, strictly photorealistic real human actor, zero anime, zero 3D CG, no text.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_PORTRAIT_THREE_FOUR\",\n      \"dimensions\": {\n        \"width\": 896,\n        \"height\": 1200\n      },\n      \"fife_url\": \"https://flow-content.google/image/f9291556-c370-4996-96b8-dc3165e7dc48?Expires=1795553220&KeyName=labs-flow-prod-cdn-key&Signature=fntsDnLp3Ft54BQb3FZClUfOQS0\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_chuzheng.jpg\"\n    }\n  ]\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_command\": \"image t2i\", \"correlation_id\": \"8f3b0921-6a49-4450-abe3-ad7b3d9a7e9b\", \"cli_version\": \"0.106.0\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:46:54.322775Z\"}\n"
+    },
+    "chuxuan": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_chuxuan.png",
+      "returncode": 0,
+      "elapsed_sec": 46.28,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image t2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "c193d879-c405-4f30-9498-c276333b8f7e",
+            "workflow_id": "1f23e943-bf0a-408d-9396-147856270e41",
+            "seed": 658574993,
+            "prompt": "Photorealistic live-action film casting portrait, 32-year-old stern aristocratic East Asian Chinese male actor (Chu Xuan), sharp chiseled jawline, calculating deep-set eyes, neatly trimmed subtle noble facial hair, natural human skin texture, deep burgundy-plum (深绛紫) embroidered heavy silk robe with dark bronze belt clasp, ornate gold filigree hair crown, neutral warm gray studio backdrop, even neutral white studio key lighting, shot on ARRI Alexa 65 85mm lens, strictly photorealistic real human actor, zero anime, zero 3D CG, no text.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_PORTRAIT_THREE_FOUR",
+            "dimensions": {
+              "width": 896,
+              "height": 1200
+            },
+            "fife_url": "https://flow-content.google/image/c193d879-c405-4f30-9498-c276333b8f7e?Expires=1795553270&KeyName=labs-flow-prod-cdn-key&Signature=8B4EFDC7coEJqqwhqEsdA6M7AF0",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_chuxuan.jpg"
+          }
+        ]
+      },
+      "ffprobe": {
+        "exists": false
+      },
+      "stdout_tail": "kflow_id\": \"1f23e943-bf0a-408d-9396-147856270e41\",\n      \"seed\": 658574993,\n      \"prompt\": \"Photorealistic live-action film casting portrait, 32-year-old stern aristocratic East Asian Chinese male actor (Chu Xuan), sharp chiseled jawline, calculating deep-set eyes, neatly trimmed subtle noble facial hair, natural human skin texture, deep burgundy-plum (\\u6df1\\u7edb\\u7d2b) embroidered heavy silk robe with dark bronze belt clasp, ornate gold filigree hair crown, neutral warm gray studio backdrop, even neutral white studio key lighting, shot on ARRI Alexa 65 85mm lens, strictly photorealistic real human actor, zero anime, zero 3D CG, no text.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_PORTRAIT_THREE_FOUR\",\n      \"dimensions\": {\n        \"width\": 896,\n        \"height\": 1200\n      },\n      \"fife_url\": \"https://flow-content.google/image/c193d879-c405-4f30-9498-c276333b8f7e?Expires=1795553270&KeyName=labs-flow-prod-cdn-key&Signature=8B4EFDC7coEJqqwhqEsdA6M7AF0\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_chuxuan.jpg\"\n    }\n  ]\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"correlation_id\": \"eeca97c4-f140-4d90-89e0-0b851634146b\", \"cli_command\": \"image t2i\", \"cli_version\": \"0.106.0\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:47:44.191014Z\"}\n"
+    },
+    "ningxiaoxian": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_ningxiaoxian.png",
+      "returncode": 0,
+      "elapsed_sec": 36.77,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image t2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "03ab563d-b2f3-4aee-8513-e0765939c95a",
+            "workflow_id": "16fe1e35-1226-4aa0-b7d0-f80a56ffef05",
+            "seed": 1127860092,
+            "prompt": "Photorealistic live-action film casting portrait, 27-year-old graceful poised East Asian Chinese actress (Ning Xiaoxian), refined noble oval face, cool calm intelligent eyes with a hint of weariness, natural skin texture, moon-white (月白) woven silk cloak with fur-trimmed collar over pale celadon silk inner robe, understated jade and silver hairpin, neutral warm gray studio backdrop, even neutral white studio key lighting, shot on ARRI Alexa 65 85mm lens, strictly photorealistic real human actress, zero anime, zero 3D CG, no text.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_PORTRAIT_THREE_FOUR",
+            "dimensions": {
+              "width": 896,
+              "height": 1200
+            },
+            "fife_url": "https://flow-content.google/image/03ab563d-b2f3-4aee-8513-e0765939c95a?Expires=1795553320&KeyName=labs-flow-prod-cdn-key&Signature=KYr5jq6yuOZUCAWuBCRILZ_GagE",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_ningxiaoxian.jpg"
+          }
+        ]
+      },
+      "ffprobe": {
+        "exists": false
+      },
+      "stdout_tail": "\"workflow_id\": \"16fe1e35-1226-4aa0-b7d0-f80a56ffef05\",\n      \"seed\": 1127860092,\n      \"prompt\": \"Photorealistic live-action film casting portrait, 27-year-old graceful poised East Asian Chinese actress (Ning Xiaoxian), refined noble oval face, cool calm intelligent eyes with a hint of weariness, natural skin texture, moon-white (\\u6708\\u767d) woven silk cloak with fur-trimmed collar over pale celadon silk inner robe, understated jade and silver hairpin, neutral warm gray studio backdrop, even neutral white studio key lighting, shot on ARRI Alexa 65 85mm lens, strictly photorealistic real human actress, zero anime, zero 3D CG, no text.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_PORTRAIT_THREE_FOUR\",\n      \"dimensions\": {\n        \"width\": 896,\n        \"height\": 1200\n      },\n      \"fife_url\": \"https://flow-content.google/image/03ab563d-b2f3-4aee-8513-e0765939c95a?Expires=1795553320&KeyName=labs-flow-prod-cdn-key&Signature=KYr5jq6yuOZUCAWuBCRILZ_GagE\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/actors/actor_ningxiaoxian.jpg\"\n    }\n  ]\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_version\": \"0.106.0\", \"cli_command\": \"image t2i\", \"correlation_id\": \"e1d1028c-5d7e-4e2f-a1d4-b53d4a19bfe3\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:48:33.683296Z\"}\n"
+    }
+  },
+  "plates": {
+    "Shot01": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot01.jpg",
+      "refs": [
+        "actor_chuzheng.jpg",
+        "actor_chuxuan.jpg"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 75.22,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image i2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "efe84b6a-0922-4ac0-9b5d-6a3d045f2260",
+            "workflow_id": "d1dc7419-d0b7-47c0-ae48-bd74295945fb",
+            "seed": 1892638080,
+            "prompt": "Man wearing silk robe  Man wearing silk robe  Shot on ARRI Alexa 65 anamorphic lens, shallow depth of field, warm amber paper lantern key light against deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Medium two-shot outside a traditional Chinese wooden tavern at night under warm swaying red paper lanterns and wet cobblestone street; Chu Zheng (from first ref, right, dark teal-black silk robe with white jade crown) stepping over the wooden threshold facing his older brother Chu Xuan (from second ref, left, deep burgundy-plum silk robe with gold filigree crown) waiting calmly under the eaves, completely sober, subtle tension in their eyes.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_LANDSCAPE",
+            "dimensions": {
+              "width": 1376,
+              "height": 768
+            },
+            "fife_url": "https://flow-content.google/image/efe84b6a-0922-4ac0-9b5d-6a3d045f2260?Expires=1795553432&KeyName=labs-flow-prod-cdn-key&Signature=fXSqEjPz-Z7hs95bCkzVFTUOi7I",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot01.jpg"
+          }
+        ],
+        "ref_count": 2
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 727667,
+        "duration_sec": 0.04,
+        "width": 1376,
+        "height": 768,
+        "fps": "25/1",
+        "has_audio": false,
+        "audio_codec": null,
+        "audio_sample_rate": null
+      },
+      "stdout_tail": "stic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Medium two-shot outside a traditional Chinese wooden tavern at night under warm swaying red paper lanterns and wet cobblestone street; Chu Zheng (from first ref, right, dark teal-black silk robe with white jade crown) stepping over the wooden threshold facing his older brother Chu Xuan (from second ref, left, deep burgundy-plum silk robe with gold filigree crown) waiting calmly under the eaves, completely sober, subtle tension in their eyes.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_LANDSCAPE\",\n      \"dimensions\": {\n        \"width\": 1376,\n        \"height\": 768\n      },\n      \"fife_url\": \"https://flow-content.google/image/efe84b6a-0922-4ac0-9b5d-6a3d045f2260?Expires=1795553432&KeyName=labs-flow-prod-cdn-key&Signature=fXSqEjPz-Z7hs95bCkzVFTUOi7I\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot01.jpg\"\n    }\n  ],\n  \"ref_count\": 2\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_command\": \"image i2i\", \"cli_version\": \"0.106.0\", \"correlation_id\": \"c83fae63-2e75-447d-a5c2-864ad341c146\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:50:02.688125Z\"}\n"
+    },
+    "Shot02": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot02.jpg",
+      "refs": [
+        "actor_chuzheng.jpg",
+        "actor_chuxuan.jpg"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 59.74,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image i2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "c01d5682-213e-4f0c-8f30-66969a592d73",
+            "workflow_id": "2ba29372-cfb6-445b-b287-cc19cae67a5c",
+            "seed": 1561872386,
+            "prompt": "Man wearing silk robe  Man wearing silk robe  Shot on ARRI Alexa 65 anamorphic lens, shallow depth of field, warm amber paper lantern key light against deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Tight cinematic medium two-shot under the lantern-lit wooden tavern eaves with dark saddled horse silhouettes in the misty street background; Chu Xuan (from second ref, on left, burgundy-plum silk robe) glancing sidelong with a faint cold smile, Chu Zheng (from first ref, on right, dark teal-black silk robe) answering with calm amused composure, dramatic chiaroscuro lantern lighting.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_LANDSCAPE",
+            "dimensions": {
+              "width": 1376,
+              "height": 768
+            },
+            "fife_url": "https://flow-content.google/image/c01d5682-213e-4f0c-8f30-66969a592d73?Expires=1795553510&KeyName=labs-flow-prod-cdn-key&Signature=OZzVzWPpoO_M5TimmPUe3vPfXMY",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot02.jpg"
+          }
+        ],
+        "ref_count": 2
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 666335,
+        "duration_sec": 0.04,
+        "width": 1376,
+        "height": 768,
+        "fps": "25/1",
+        "has_audio": false,
+        "audio_codec": null,
+        "audio_sample_rate": null
+      },
+      "stdout_tail": "ht indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Tight cinematic medium two-shot under the lantern-lit wooden tavern eaves with dark saddled horse silhouettes in the misty street background; Chu Xuan (from second ref, on left, burgundy-plum silk robe) glancing sidelong with a faint cold smile, Chu Zheng (from first ref, on right, dark teal-black silk robe) answering with calm amused composure, dramatic chiaroscuro lantern lighting.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_LANDSCAPE\",\n      \"dimensions\": {\n        \"width\": 1376,\n        \"height\": 768\n      },\n      \"fife_url\": \"https://flow-content.google/image/c01d5682-213e-4f0c-8f30-66969a592d73?Expires=1795553510&KeyName=labs-flow-prod-cdn-key&Signature=OZzVzWPpoO_M5TimmPUe3vPfXMY\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot02.jpg\"\n    }\n  ],\n  \"ref_count\": 2\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_version\": \"0.106.0\", \"correlation_id\": \"17e91740-9e88-4c12-b25a-155396c5e866\", \"cli_command\": \"image i2i\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:51:21.506200Z\"}\n"
+    },
+    "Shot03": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot03.jpg",
+      "refs": [
+        "actor_ningxiaoxian.jpg"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 47.17,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image i2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "f79efab9-01b9-4e3f-8080-9ca487cfbfd6",
+            "workflow_id": "3dc004cf-99d6-4982-aa38-2bd3474dc780",
+            "seed": 932600626,
+            "prompt": "Actress posing for casting portrait  Shot on ARRI Alexa 65 anamorphic lens, shallow depth of field, warm amber paper lantern key light against deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Inside a quiet night courtyard of an ancient county yamen, warm amber candlelight spilling from an open carved wooden chamber doorway; Ning Xiaoxian (from ref, 27-year-old graceful actress in moon-white silk cloak with fur collar) stands framed in the glowing doorway, hands clasped tightly in front of her, weary yet piercingly composed gaze toward camera.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_LANDSCAPE",
+            "dimensions": {
+              "width": 1376,
+              "height": 768
+            },
+            "fife_url": "https://flow-content.google/image/f79efab9-01b9-4e3f-8080-9ca487cfbfd6?Expires=1795553560&KeyName=labs-flow-prod-cdn-key&Signature=z2vicXuQFwQs-DGJ1jzj2cAeFeY",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot03.jpg"
+          }
+        ],
+        "ref_count": 1
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 690841,
+        "duration_sec": 0.04,
+        "width": 1376,
+        "height": 768,
+        "fps": "25/1",
+        "has_audio": false,
+        "audio_codec": null,
+        "audio_sample_rate": null
+      },
+      "stdout_tail": "key light against deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Inside a quiet night courtyard of an ancient county yamen, warm amber candlelight spilling from an open carved wooden chamber doorway; Ning Xiaoxian (from ref, 27-year-old graceful actress in moon-white silk cloak with fur collar) stands framed in the glowing doorway, hands clasped tightly in front of her, weary yet piercingly composed gaze toward camera.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_LANDSCAPE\",\n      \"dimensions\": {\n        \"width\": 1376,\n        \"height\": 768\n      },\n      \"fife_url\": \"https://flow-content.google/image/f79efab9-01b9-4e3f-8080-9ca487cfbfd6?Expires=1795553560&KeyName=labs-flow-prod-cdn-key&Signature=z2vicXuQFwQs-DGJ1jzj2cAeFeY\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot03.jpg\"\n    }\n  ],\n  \"ref_count\": 1\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_command\": \"image i2i\", \"cli_version\": \"0.106.0\", \"correlation_id\": \"eded44a6-d4be-425c-83e0-e8468c98dc8a\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:52:23.362731Z\"}\n"
+    },
+    "Shot04": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot04.jpg",
+      "refs": [
+        "actor_chuxuan.jpg",
+        "actor_chuzheng.jpg"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 63.43,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image i2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "da70599b-5d36-47a3-8500-fc34d86bd1c0",
+            "workflow_id": "e0dd4364-a10a-40a2-bc44-22613786e927",
+            "seed": 1056499156,
+            "prompt": "Man wearing silk robe  Man wearing silk robe  Shot on ARRI Alexa 65 anamorphic lens, shallow depth of field, warm amber paper lantern key light against deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Night yamen courtyard outside freshly closed dark carved wooden chamber doors, warm interior light now shut away leaving only dim swaying courtyard lanterns; Chu Xuan (from first ref, on left, burgundy-plum silk robe) gazes toward the shut door in three-quarter profile, while Chu Zheng (from second ref, on right, dark teal-black silk robe) stands a pace away with calm guarded poise.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_LANDSCAPE",
+            "dimensions": {
+              "width": 1376,
+              "height": 768
+            },
+            "fife_url": "https://flow-content.google/image/da70599b-5d36-47a3-8500-fc34d86bd1c0?Expires=1795553623&KeyName=labs-flow-prod-cdn-key&Signature=BveeaiLa85du1z8b19fzw6D7ZJ0",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot04.jpg"
+          }
+        ],
+        "ref_count": 2
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 642966,
+        "duration_sec": 0.04,
+        "width": 1376,
+        "height": 768,
+        "fps": "25/1",
+        "has_audio": false,
+        "audio_codec": null,
+        "audio_sample_rate": null
+      },
+      "stdout_tail": "ght indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Night yamen courtyard outside freshly closed dark carved wooden chamber doors, warm interior light now shut away leaving only dim swaying courtyard lanterns; Chu Xuan (from first ref, on left, burgundy-plum silk robe) gazes toward the shut door in three-quarter profile, while Chu Zheng (from second ref, on right, dark teal-black silk robe) stands a pace away with calm guarded poise.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_LANDSCAPE\",\n      \"dimensions\": {\n        \"width\": 1376,\n        \"height\": 768\n      },\n      \"fife_url\": \"https://flow-content.google/image/da70599b-5d36-47a3-8500-fc34d86bd1c0?Expires=1795553623&KeyName=labs-flow-prod-cdn-key&Signature=BveeaiLa85du1z8b19fzw6D7ZJ0\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot04.jpg\"\n    }\n  ],\n  \"ref_count\": 2\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_version\": \"0.106.0\", \"cli_command\": \"image i2i\", \"correlation_id\": \"f1f49f71-e30e-49da-967c-bbba00612f2f\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:53:13.971182Z\"}\n"
+    },
+    "Shot05": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot05.jpg",
+      "refs": [
+        "actor_chuzheng.jpg",
+        "actor_chuxuan.jpg"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 63.3,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image i2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "069277b2-ba7a-495a-9408-f8a7743ffc35",
+            "workflow_id": "2db8c8e3-db41-4146-8064-8d3e93fd732f",
+            "seed": 1895234319,
+            "prompt": "Man wearing silk robe  Man wearing silk robe  Shot on ARRI Alexa 65 anamorphic lens, shallow depth of field, warm amber paper lantern key light against deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Urgent night yamen courtyard scene under flickering amber lanterns; a nervous 45-year-old Chinese county prefect in dark green embroidered Song-Ming official robe hurriedly bows in the left foreground holding up a mud-stained urgent dispatch scroll, while Chu Zheng (from first ref, center, dark teal-black robe) and Chu Xuan (from second ref, right, burgundy-plum robe) look on intently.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_LANDSCAPE",
+            "dimensions": {
+              "width": 1376,
+              "height": 768
+            },
+            "fife_url": "https://flow-content.google/image/069277b2-ba7a-495a-9408-f8a7743ffc35?Expires=1795553689&KeyName=labs-flow-prod-cdn-key&Signature=7D1P-3e1-tUcyE3w-JzZlAF7h4c",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot05.jpg"
+          }
+        ],
+        "ref_count": 2
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 715626,
+        "duration_sec": 0.04,
+        "width": 1376,
+        "height": 768,
+        "fps": "25/1",
+        "has_audio": false,
+        "audio_codec": null,
+        "audio_sample_rate": null
+      },
+      "stdout_tail": " indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Urgent night yamen courtyard scene under flickering amber lanterns; a nervous 45-year-old Chinese county prefect in dark green embroidered Song-Ming official robe hurriedly bows in the left foreground holding up a mud-stained urgent dispatch scroll, while Chu Zheng (from first ref, center, dark teal-black robe) and Chu Xuan (from second ref, right, burgundy-plum robe) look on intently.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_LANDSCAPE\",\n      \"dimensions\": {\n        \"width\": 1376,\n        \"height\": 768\n      },\n      \"fife_url\": \"https://flow-content.google/image/069277b2-ba7a-495a-9408-f8a7743ffc35?Expires=1795553689&KeyName=labs-flow-prod-cdn-key&Signature=7D1P-3e1-tUcyE3w-JzZlAF7h4c\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot05.jpg\"\n    }\n  ],\n  \"ref_count\": 2\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"correlation_id\": \"20a155d0-73ab-4ef6-a5da-0021e4ae69ca\", \"cli_version\": \"0.106.0\", \"cli_command\": \"image i2i\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:54:20.450265Z\"}\n"
+    },
+    "Shot06": {
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot06.jpg",
+      "refs": [
+        "actor_chuzheng.jpg",
+        "actor_chuxuan.jpg"
+      ],
+      "returncode": 0,
+      "elapsed_sec": 64.01,
+      "media_id": null,
+      "json_payload": {
+        "status": "ok",
+        "command": "image i2i",
+        "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+        "model": "NARWHAL",
+        "count": 1,
+        "images": [
+          {
+            "media_name": "ee5d4887-ce50-46a2-bc7b-08226fe9e114",
+            "workflow_id": "fd3fd7f2-373f-4c52-9f69-08a4f98eadba",
+            "seed": 474328650,
+            "prompt": "Man wearing silk robe  Man wearing silk robe  Shot on ARRI Alexa 65 anamorphic lens, shallow depth of field, warm amber paper lantern key light against deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Intimate cinematic close-up two-shot in the blue-black night courtyard; Chu Xuan (from second ref, right, burgundy-plum robe) leans in slightly reaching a steady hand toward a small fallen dark locust leaf resting on the left shoulder of Chu Zheng (from first ref, left, dark teal-black robe), warm lantern rim light illuminating both actors' intensely nuanced real faces.",
+            "model_name_type": null,
+            "aspect_ratio": "IMAGE_ASPECT_RATIO_LANDSCAPE",
+            "dimensions": {
+              "width": 1376,
+              "height": 768
+            },
+            "fife_url": "https://flow-content.google/image/ee5d4887-ce50-46a2-bc7b-08226fe9e114?Expires=1795553755&KeyName=labs-flow-prod-cdn-key&Signature=6I8xdTq_RthkEFatel9VHyur1-w",
+            "is_signed_url": true,
+            "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot06.jpg"
+          }
+        ],
+        "ref_count": 2
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 663815,
+        "duration_sec": 0.04,
+        "width": 1376,
+        "height": 768,
+        "fps": "25/1",
+        "has_audio": false,
+        "audio_codec": null,
+        "audio_sample_rate": null
+      },
+      "stdout_tail": "st deep midnight indigo courtyard shadows, wet dark stone pavement, realistic film grain, strictly photorealistic live-action Chinese historical TV drama aesthetic like Longest Day in Chang'an and Brotherhood of Blades, zero anime, zero CGI, zero text, zero watermark. Intimate cinematic close-up two-shot in the blue-black night courtyard; Chu Xuan (from second ref, right, burgundy-plum robe) leans in slightly reaching a steady hand toward a small fallen dark locust leaf resting on the left shoulder of Chu Zheng (from first ref, left, dark teal-black robe), warm lantern rim light illuminating both actors' intensely nuanced real faces.\",\n      \"model_name_type\": null,\n      \"aspect_ratio\": \"IMAGE_ASPECT_RATIO_LANDSCAPE\",\n      \"dimensions\": {\n        \"width\": 1376,\n        \"height\": 768\n      },\n      \"fife_url\": \"https://flow-content.google/image/ee5d4887-ce50-46a2-bc7b-08226fe9e114?Expires=1795553755&KeyName=labs-flow-prod-cdn-key&Signature=6I8xdTq_RthkEFatel9VHyur1-w\",\n      \"is_signed_url\": true,\n      \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot06.jpg\"\n    }\n  ],\n  \"ref_count\": 2\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"correlation_id\": \"a0c39f9b-eb9d-42c1-8182-8a97eb6240ff\", \"cli_command\": \"image i2i\", \"cli_version\": \"0.106.0\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:55:26.633268Z\"}\n"
+    }
+  },
+  "videos": {
+    "Shot01": {
+      "plate": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot01.jpg",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot01_raw.mp4",
+      "subtitle": "楚轩：小五，你连酒楼掌柜的生意也管？ / 楚铮：父亲叫我少惹是非，只好拿灯笼练练手。",
+      "returncode": 0,
+      "elapsed_sec": 98.33,
+      "media_id": "d0a6f50d-ca80-4f19-8976-041cfefccdf1",
+      "json_payload": {
+        "status": "ok",
+        "command": "video i2v",
+        "media_id": "d0a6f50d-ca80-4f19-8976-041cfefccdf1",
+        "generation_status": "MEDIA_GENERATION_STATUS_SUCCESSFUL",
+        "succeeded": true,
+        "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot01_raw.mp4",
+        "failure_reasons": [],
+        "error_message": null,
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 10,
+          "count": 1,
+          "seed": null
+        }
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 4210315,
+        "duration_sec": 10.027,
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1",
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000"
+      },
+      "stdout_tail": "{\n  \"status\": \"ok\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"d0a6f50d-ca80-4f19-8976-041cfefccdf1\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_SUCCESSFUL\",\n  \"succeeded\": true,\n  \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot01_raw.mp4\",\n  \"failure_reasons\": [],\n  \"error_message\": null,\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 10,\n    \"count\": 1,\n    \"seed\": null\n  }\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"correlation_id\": \"3f1f9abd-ca16-422d-9c2b-b136b4c19b45\", \"cli_command\": \"video i2v\", \"cli_version\": \"0.106.0\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:57:12.566081Z\"}\n"
+    },
+    "Shot02": {
+      "plate": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot02.jpg",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot02_raw.mp4",
+      "subtitle": "楚轩：回京路上，南线鹰堂的人不必跟着小仙了。 / 楚铮：轻如在鹰堂有规矩，回京我难免挨数落。",
+      "returncode": 0,
+      "elapsed_sec": 93.45,
+      "media_id": "6cc3aded-3cca-4f34-bacc-eb0402f53d0c",
+      "json_payload": {
+        "status": "ok",
+        "command": "video i2v",
+        "media_id": "6cc3aded-3cca-4f34-bacc-eb0402f53d0c",
+        "generation_status": "MEDIA_GENERATION_STATUS_SUCCESSFUL",
+        "succeeded": true,
+        "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot02_raw.mp4",
+        "failure_reasons": [],
+        "error_message": null,
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 10,
+          "count": 1,
+          "seed": null
+        }
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 3556417,
+        "duration_sec": 10.027,
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1",
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000"
+      },
+      "stdout_tail": "{\n  \"status\": \"ok\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"6cc3aded-3cca-4f34-bacc-eb0402f53d0c\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_SUCCESSFUL\",\n  \"succeeded\": true,\n  \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot02_raw.mp4\",\n  \"failure_reasons\": [],\n  \"error_message\": null,\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 10,\n    \"count\": 1,\n    \"seed\": null\n  }\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_command\": \"video i2v\", \"correlation_id\": \"6ad9aab9-4b3a-4212-92a3-ac44aba10ab0\", \"cli_version\": \"0.106.0\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:59:10.059042Z\"}\n"
+    },
+    "Shot03": {
+      "plate": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot03.jpg",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot03_raw.mp4",
+      "subtitle": "宁小仙：若遇上山匪，夫君人马自然护我；若不是山匪，多几名高手又有何用？",
+      "returncode": 0,
+      "elapsed_sec": 98.82,
+      "media_id": "0a5a2ffd-b9d8-4c69-837c-98087b484100",
+      "json_payload": {
+        "status": "ok",
+        "command": "video i2v",
+        "media_id": "0a5a2ffd-b9d8-4c69-837c-98087b484100",
+        "generation_status": "MEDIA_GENERATION_STATUS_SUCCESSFUL",
+        "succeeded": true,
+        "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot03_raw.mp4",
+        "failure_reasons": [],
+        "error_message": null,
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 10,
+          "count": 1,
+          "seed": null
+        }
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 3627371,
+        "duration_sec": 10.027,
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1",
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000"
+      },
+      "stdout_tail": "{\n  \"status\": \"ok\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"0a5a2ffd-b9d8-4c69-837c-98087b484100\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_SUCCESSFUL\",\n  \"succeeded\": true,\n  \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot03_raw.mp4\",\n  \"failure_reasons\": [],\n  \"error_message\": null,\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 10,\n    \"count\": 1,\n    \"seed\": null\n  }\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_version\": \"0.106.0\", \"cli_command\": \"video i2v\", \"correlation_id\": \"62545ab3-4f95-419d-81ab-3c6479d05249\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T15:00:49.585199Z\"}\n"
+    },
+    "Shot04": {
+      "plate": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot04.jpg",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot04_raw.mp4",
+      "subtitle": "楚轩：小仙今日劳累，外头的事有劳五弟。 / 楚铮：总不能让嫂嫂一路听着刀剑响。",
+      "returncode": 0,
+      "elapsed_sec": 98.43,
+      "media_id": "9d40917f-a243-47fd-9be1-9c2b1688cf76",
+      "json_payload": {
+        "status": "ok",
+        "command": "video i2v",
+        "media_id": "9d40917f-a243-47fd-9be1-9c2b1688cf76",
+        "generation_status": "MEDIA_GENERATION_STATUS_SUCCESSFUL",
+        "succeeded": true,
+        "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot04_raw.mp4",
+        "failure_reasons": [],
+        "error_message": null,
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 10,
+          "count": 1,
+          "seed": null
+        }
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 3652107,
+        "duration_sec": 10.027,
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1",
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000"
+      },
+      "stdout_tail": "{\n  \"status\": \"ok\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"9d40917f-a243-47fd-9be1-9c2b1688cf76\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_SUCCESSFUL\",\n  \"succeeded\": true,\n  \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot04_raw.mp4\",\n  \"failure_reasons\": [],\n  \"error_message\": null,\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 10,\n    \"count\": 1,\n    \"seed\": null\n  }\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_version\": \"0.106.0\", \"correlation_id\": \"f5cb309b-337e-44a8-9b62-43ef3d4f7481\", \"cli_command\": \"video i2v\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T15:02:32.507647Z\"}\n"
+    },
+    "Shot05": {
+      "plate": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot05.jpg",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot05_raw.mp4",
+      "subtitle": "刘海：汝西县城外发现男尸，疑遭劫杀！ / 楚轩：倒是巧了……这便有了人命。",
+      "returncode": 0,
+      "elapsed_sec": 99.36,
+      "media_id": "35f78722-cfa3-41a7-ab2f-73371f706067",
+      "json_payload": {
+        "status": "ok",
+        "command": "video i2v",
+        "media_id": "35f78722-cfa3-41a7-ab2f-73371f706067",
+        "generation_status": "MEDIA_GENERATION_STATUS_SUCCESSFUL",
+        "succeeded": true,
+        "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot05_raw.mp4",
+        "failure_reasons": [],
+        "error_message": null,
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 10,
+          "count": 1,
+          "seed": null
+        }
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 4526648,
+        "duration_sec": 10.027,
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1",
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000"
+      },
+      "stdout_tail": "{\n  \"status\": \"ok\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"35f78722-cfa3-41a7-ab2f-73371f706067\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_SUCCESSFUL\",\n  \"succeeded\": true,\n  \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot05_raw.mp4\",\n  \"failure_reasons\": [],\n  \"error_message\": null,\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 10,\n    \"count\": 1,\n    \"seed\": null\n  }\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"correlation_id\": \"5b6aa924-cdd0-41bb-b1a2-7c247e1735d0\", \"cli_version\": \"0.106.0\", \"cli_command\": \"video i2v\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T15:04:15.556358Z\"}\n"
+    },
+    "Shot06": {
+      "plate": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/plates/plate_shot06.jpg",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot06_raw.mp4",
+      "subtitle": "楚铮：大哥，小弟今日竟叫你操心了。 / 楚轩：自家兄弟，何须客气。",
+      "returncode": 0,
+      "elapsed_sec": 98.46,
+      "media_id": "acce8514-d746-45da-b1e0-2164807519b1",
+      "json_payload": {
+        "status": "ok",
+        "command": "video i2v",
+        "media_id": "acce8514-d746-45da-b1e0-2164807519b1",
+        "generation_status": "MEDIA_GENERATION_STATUS_SUCCESSFUL",
+        "succeeded": true,
+        "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot06_raw.mp4",
+        "failure_reasons": [],
+        "error_message": null,
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 10,
+          "count": 1,
+          "seed": null
+        }
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 4217023,
+        "duration_sec": 10.027,
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1",
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000"
+      },
+      "stdout_tail": "{\n  \"status\": \"ok\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"acce8514-d746-45da-b1e0-2164807519b1\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_SUCCESSFUL\",\n  \"succeeded\": true,\n  \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/renders/shot06_raw.mp4\",\n  \"failure_reasons\": [],\n  \"error_message\": null,\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 10,\n    \"count\": 1,\n    \"seed\": null\n  }\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_version\": \"0.106.0\", \"correlation_id\": \"e5379f89-f0c7-405d-8d76-914339899b3b\", \"cli_command\": \"video i2v\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T15:05:59.506043Z\"}\n"
+    }
+  },
+  "project_id": "22072ba3-4120-4787-a481-464a0baf887a",
+  "credits_before": 24836,
+  "updated_at_utc": "2026-11-24T15:07:36.245512+00:00",
+  "assembly": {
+    "elapsed_sec": 38.55,
+    "bgm_source": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/assets/music_library/how_markets_break/hmb_04_aftermath_resolve.wav",
+    "flowmusic_friction": {
+      "song_url": "https://www.flowmusic.app/song/292f4645-347d-4290-b6d5-d9537a369210",
+      "status": "generated_but_blob_download_not_persisted_by_webview",
+      "detail": "flowmusic.app generated 2:28 instrumental track, but client-side blob download returned dl.path()==null in AGY browser subagent sandbox; fell back cleanly to local commercial library WAV."
+    },
+    "exports": {
+      "clean_1080p": {
+        "path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Sequel_Ch001_LiveAction_1080p_Clean.mp4",
+        "size_bytes": 21323961,
+        "duration_sec": 60.6
+      },
+      "subtitled_1080p": {
+        "path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Sequel_Ch001_LiveAction_1080p_Subtitled.mp4",
+        "size_bytes": 20707288,
+        "duration_sec": 60.6
+      },
+      "colab_baseline": {
+        "path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Legacy_Colab_Ep03_Baseline.mp4",
+        "size_bytes": 34334152,
+        "duration_sec": 60.791
+      },
+      "split_compare": {
+        "path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Flow_LiveAction_vs_Colab_Manju_Compare.mp4",
+        "size_bytes": 8961856,
+        "duration_sec": 20.0
+      }
+    }
+  },
+  "credits_after": 24656,
+  "credits_spent_live_action": 180,
+  "credits_spent_including_prior_3d_probe": 204,
+  "motion_check": {
+    "flow_live_action_clean": {
+      "pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Sequel_Ch001_LiveAction_1080p_Clean.mp4": {
+        "still": 0.2095,
+        "hold2": 0.0,
+        "cam": 0.4719,
+        "layer": 0.0904,
+        "nonuni": 0.5547,
+        "pushpull": 27.5556,
+        "zoom": 4.3873,
+        "p75": 10.1,
+        "cutmin": 5.9537,
+        "duration_s": 60.47,
+        "_holds": [],
+        "flagged": [
+          "p75"
+        ]
+      }
+    },
+    "legacy_colab_ep03_baseline": {
+      "pipelines/short_drama/sequel_ch001_live_action/exports/ChuShiChunQiu_Legacy_Colab_Ep03_Baseline.mp4": {
+        "still": 0.2008,
+        "hold2": 0.0,
+        "cam": 0.5672,
+        "layer": 0.2754,
+        "nonuni": 0.6482,
+        "pushpull": 102.7778,
+        "zoom": 5.1803,
+        "p75": 10.1333,
+        "cutmin": 5.9243,
+        "duration_s": 60.77,
+        "_holds": [],
+        "flagged": [
+          "p75"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "benchmark_name": "ChuShiChunQiu Ep03 Flow vs Colab",
+  "created_at_utc": "2026-11-24T14:36:43.496221+00:00",
+  "shots": {
+    "Shot01": {
+      "shot_id": "Shot01",
+      "first_frame": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/assets_manju_v2/manju_ep03_shot01_first_frame_1344x768.png",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/ep03_flow_benchmark/renders/shot01_raw.mp4",
+      "resolution_flag": "720p",
+      "returncode": 0,
+      "elapsed_sec": 119.41,
+      "media_id": "527a4ebc-984e-42fa-b6eb-1857aac55521",
+      "json_payload": {
+        "status": "ok",
+        "command": "video i2v",
+        "media_id": "527a4ebc-984e-42fa-b6eb-1857aac55521",
+        "generation_status": "MEDIA_GENERATION_STATUS_SUCCESSFUL",
+        "succeeded": true,
+        "local_path": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/ep03_flow_benchmark/renders/shot01_raw.mp4",
+        "failure_reasons": [],
+        "error_message": null,
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 8,
+          "count": 1,
+          "seed": null
+        }
+      },
+      "ffprobe": {
+        "exists": true,
+        "size_bytes": 4338980,
+        "duration_sec": 8.043,
+        "width": 1280,
+        "height": 720,
+        "fps": "24/1",
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate": "48000"
+      },
+      "stdout_tail": "{\n  \"status\": \"ok\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"527a4ebc-984e-42fa-b6eb-1857aac55521\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_SUCCESSFUL\",\n  \"succeeded\": true,\n  \"local_path\": \"/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/ep03_flow_benchmark/renders/shot01_raw.mp4\",\n  \"failure_reasons\": [],\n  \"error_message\": null,\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 8,\n    \"count\": 1,\n    \"seed\": null\n  }\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"correlation_id\": \"c218ba62-1b63-428e-9039-c1668f5e3d69\", \"cli_version\": \"0.106.0\", \"cli_command\": \"video i2v\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:36:45.247559Z\"}\n{\"issue_ref\": \"#749\", \"note\": \"Flow keeps this across reloads: agent mode stays off until switched on again\", \"event\": \"migrated.agent_mode_exited\", \"correlation_id\": \"c218ba62-1b63-428e-9039-c1668f5e3d69\", \"cli_version\": \"0.106.0\", \"cli_command\": \"video i2v\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:36:55.490925Z\"}\n"
+    },
+    "Shot02": {
+      "shot_id": "Shot02",
+      "first_frame": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/assets_manju_v2/manju_ep03_shot02_first_frame_1344x768.png",
+      "out_file": "/Users/kaykel/AI_PROJECTS/AI OS Backup_Mac/google-ai-ultra-lab/pipelines/short_drama/ep03_flow_benchmark/renders/shot02_raw.mp4",
+      "resolution_flag": "720p",
+      "returncode": 1,
+      "elapsed_sec": 54.87,
+      "media_id": "cc277685-ed8c-4f45-81d2-789b0a6436d1",
+      "json_payload": {
+        "status": "fail",
+        "command": "video i2v",
+        "media_id": "cc277685-ed8c-4f45-81d2-789b0a6436d1",
+        "generation_status": "MEDIA_GENERATION_STATUS_FAILED",
+        "succeeded": false,
+        "local_path": null,
+        "failure_reasons": [],
+        "error_message": "Flow failed the generation (code 3): PUBLIC_ERROR_MINOR",
+        "request": {
+          "model": "omni_1_2_flash",
+          "mode": "i2v",
+          "aspect": "landscape",
+          "duration": 8,
+          "count": 1,
+          "seed": null
+        },
+        "charged": "maybe",
+        "next_action": "reconcile",
+        "operation_id": "cc277685-ed8c-4f45-81d2-789b0a6436d1"
+      },
+      "ffprobe": {
+        "exists": false
+      },
+      "stdout_tail": "{\n  \"status\": \"fail\",\n  \"command\": \"video i2v\",\n  \"media_id\": \"cc277685-ed8c-4f45-81d2-789b0a6436d1\",\n  \"generation_status\": \"MEDIA_GENERATION_STATUS_FAILED\",\n  \"succeeded\": false,\n  \"local_path\": null,\n  \"failure_reasons\": [],\n  \"error_message\": \"Flow failed the generation (code 3): PUBLIC_ERROR_MINOR\",\n  \"request\": {\n    \"model\": \"omni_1_2_flash\",\n    \"mode\": \"i2v\",\n    \"aspect\": \"landscape\",\n    \"duration\": 8,\n    \"count\": 1,\n    \"seed\": null\n  },\n  \"charged\": \"maybe\",\n  \"next_action\": \"reconcile\",\n  \"operation_id\": \"cc277685-ed8c-4f45-81d2-789b0a6436d1\"\n}\n",
+      "stderr_tail": "{\"event\": \"client.context_cookie_seed_unavailable\", \"cli_version\": \"0.106.0\", \"cli_command\": \"video i2v\", \"correlation_id\": \"3faee19d-88b1-4012-b450-1e8fb215149a\", \"level\": \"warning\", \"timestamp\": \"2026-11-24T14:40:07.043858Z\"}\n"
+    }
+  },
+  "upscales": {
+    "Shot01": {
+      "media_id": "527a4ebc-984e-42fa-b6eb-1857aac55521",
+      "returncode": 15,
+      "elapsed_sec": 47.6,
+      "error": "BrowserSessionClosedError / TargetClosedError during gflow video upscale --scale 1080p",
+      "fallback": "FFmpeg Lanczos 1920x1080 upscale"
+    }
+  },
+  "project_id": "a2b5ffc4-2b7d-4633-8ae4-98c6ccf81309",
+  "model": "omni-1.2-flash",
+  "duration_requested": 8,
+  "resolution_requested": "720p",
+  "updated_at_utc": "2026-11-24T14:41:00.262365+00:00",
+  "credits_before": 24860,
+  "credits_after_shot01": 24836
+}

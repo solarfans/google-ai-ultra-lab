@@ -68,3 +68,12 @@ pipelines/ai_explainer_ep01/pk_*/remotion/public/voice*.mp3
 pipelines/ai_explainer_ep01/pk_*/remotion/stills*/
 pipelines/ai_explainer_ep02/audio/
 pipelines/ai_explainer_ep02/outputs/
+pipelines/short_drama/ep03_flow_benchmark/renders/
+pipelines/short_drama/ep03_flow_benchmark/upscaled/
+pipelines/short_drama/ep03_flow_benchmark/audio/
+pipelines/short_drama/ep03_flow_benchmark/exports/
+pipelines/short_drama/sequel_ch001_live_action/actors/
+pipelines/short_drama/sequel_ch001_live_action/plates/
+pipelines/short_drama/sequel_ch001_live_action/renders/
+pipelines/short_drama/sequel_ch001_live_action/audio/
+pipelines/short_drama/sequel_ch001_live_action/exports/
